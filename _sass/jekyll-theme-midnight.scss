@@ -189,23 +189,25 @@ dt {
 
         a {
           color: white;
-          border: 1px solid #5d910b;
-          background: linear-gradient(#93bd20, #659e10);
-          border-radius: 2px;
-          box-shadow: inset 0px 1px 0px rgba(255,255,255,.3), 0px 3px 7px rgba(0,0,0,.7);
+          border: 3px solid #000000;
+          background: linear-gradient(#ffdd80, #FFC000);
+          border-radius: 5px;
+          box-shadow: inset 0px 1px 0px rgba(255,255,255,.3), 7px 7px 3px rgba(55,55,0,.7);
 
-          background-color: #93bd20;
-          padding: 10px 12px;
-          margin-top: 6px;
+          background-color: #ffdd80;
+          padding: 12px 12px;
+          margin-top: 2px;
           line-height:14px;
-          font-size:14px;
+          font-size:24px;
           display:inline-block;
           text-align:center;
+		  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		  font-weight: bold;
 
           &:hover {
-            background: linear-gradient(#749619, #527f0e);
-            background-color: #659e10;
-            border: 1px solid #527f0e;
+            background: linear-gradient(#a37b00, #786836);
+            background-color: #FFC000;
+            border: 3px solid #e3c76f;
             box-shadow: inset 0px 1px 1px rgba(0,0,0,.2), 0px 1px 0px rgba(0,0,0,.0);
           }
         }
@@ -234,18 +236,19 @@ section {
   max-width:650px;
   padding: 30px 0px 50px 0px;
   margin: 20px 0;
-  margin-top: 70px;
+  margin-top: 65px;
 
   #title {
     border: 0;
     outline: none;
-    margin: 0 0 50px 0;
-    padding: 0 0 5px 0;
+    margin: 0 0 12px 0;
+    padding: 0 0 50px 0;
 
     h1 {
-      font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: normal;
-      font-size: 40px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: bold;
+	  color: #FFC000;
+      font-size: 60px;
       text-align: center;
       line-height: 36px;
     }
@@ -259,7 +262,7 @@ section {
     }
 
     .credits {
-      font-size: 11px;
+      font-size: 16px;
       font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: normal;
       color: #696969;
