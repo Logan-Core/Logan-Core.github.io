@@ -2,9 +2,13 @@
 layout: default
 title:  "test 2"
 ---
-
-> ## <a href="https://logancore.com/2023/03/04/post-test2">test 2</a>
+> ### 04 March 2023
+> ## <a href="https://logancore.com/2023/03/04/post-test">test 2</a>
+>
 > Test Post. How far can text go before wrapping? Test Post. 
-> This is the second test
+> Second test...
 <br>
 > Is it working?
+>
+> 
+***
