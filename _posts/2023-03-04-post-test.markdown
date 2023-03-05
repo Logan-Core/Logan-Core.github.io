@@ -1,9 +1,9 @@
 ---
 layout: default
-title:  "3-4-2023 - 1st Test"
+title:  "test 1"
 ---
-## Post Test
 
+> ## <a href="https://logancore.com/2023/03/04/post-test">1st Post Title Test</a>
 > Test Post. How far can text go before wrapping? Test Post. 
 > How far can text go before wrapping? Test Post. How far can text go before wrapping? Test Post. How far can text go before wrapping? Test Post. How far can text go before wrapping? Test Post. How far can text go before wrapping? Test Post. How far can text go before wrapping? Test Post. How far can text go before wrapping? Test Post. How far can text go before wrapping? Test Post. How far can text go before wrapping?
 > Is it working?
@@ -12,4 +12,3 @@ title:  "3-4-2023 - 1st Test"
 > <iframe width="420" height="315"
 >	src="https://www.youtube.com/embed/bAMlZGhCyVg">
 > </iframe> 
->
