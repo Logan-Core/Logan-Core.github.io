@@ -1,5 +1,6 @@
 title: The Logan Core
 description: Updates
-show_downloads: true
+show_downloads: false
 google_analytics: G-E4XYBXPDCW
 theme: jekyll-theme-midnight
+future: true

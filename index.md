@@ -2,44 +2,23 @@
 layout: default
 ---
 
-[Example Theme Index](./3-3-2023-another-page.html).
+## [Post Test](./2023/03/04/post-test.html)
 
-***
-***
-***
-## Header 3
-
-> This is a blockquote following a header.
+> Just getting stuff setup.
+> Hopefully this works...
+> 
 >
-> When something is important enough, you do it even if the odds are not in your favor.
-
-## [Header link test](.3-3-2023-another-page.html)
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-
-
-
-# Header 1
-test
-
-# Header 2
-test
-
-## Header 3
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-## Header 3
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-```
-The final element.
-```
+> ```
+> Posted: 03-04-2023 23:28:26
+> ```
+ {% for post in site.posts %}
+  <article>
+    <h2>
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h2>
+    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
+    {{ post.content }}
+  </article>
+{% endfor %}

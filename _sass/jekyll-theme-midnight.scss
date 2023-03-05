@@ -177,6 +177,7 @@ dt {
       margin: 0;
       padding: 0;
 
+
       li {
         font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-weight: normal;
@@ -203,6 +204,10 @@ dt {
           text-align:center;
 		  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		  font-weight: bold;
+		  
+          margin-left:auto;
+          margin-right:auto;
+          width: 65%;		  
 
           &:hover {
             background: linear-gradient(#a37b00, #786836);
@@ -212,10 +217,25 @@ dt {
           }
         }
 
-        &.fork {
+        &.homepage {
           float: left;
-          margin-left: 0px;
+		  width: 25%;
         }
+		
+        &.updatepage {
+          float: left;
+		  width: 25%;
+        }		
+		
+        &.itchpage {
+          float: left;
+		  width: 25%;
+        }
+		
+        &.steampage {
+          float: left;
+		  width: 25%;
+        }		
 
         &.downloads {
           float: right;
