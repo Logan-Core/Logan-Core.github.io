@@ -157,7 +157,7 @@ dt {
 #header {
   z-index: 100;
   left:0;
-  top: 0px;
+  top: 5px;
   height: 60px;
   width: 100%;
   position: fixed;
@@ -169,7 +169,7 @@ dt {
     max-width: 650px;
     margin: 0 auto;
     padding: 0 10px;
-    background: blue;
+    background: white;
     margin: 6px auto;
 
     ul {
@@ -262,13 +262,13 @@ section {
     border: 0;
     outline: none;
     margin: 0 0 12px 0;
-    padding: 0 0 50px 0;
+    padding: 16px 0 50px 0;
 
     h1 {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-weight: bold;
 	  color: #FFC000;
-      font-size: 60px;
+      font-size: 50px;
       text-align: center;
       line-height: 36px;
     }
@@ -325,13 +325,13 @@ section {
 @media print, screen and (max-width: 480px) {
 
   #header {
-    margin-top: -20px;
+    margin-top: -10px;
   }
 
   section {
     margin-top: 40px;
   }
   nav {
-    display: none;
+    display: inline-block;
   }
 }
