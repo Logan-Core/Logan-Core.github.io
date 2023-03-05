@@ -3,7 +3,7 @@ layout: default
 title:  "test 1"
 ---
 
-> ## <a href="https://logancore.com/2023/03/04/post-test">1st Post Title Test</a>
+> ## <a href="https://logancore.com/2023/03/04/post-test">test 1</a>
 > Test Post. How far can text go before wrapping? Test Post. 
 > How far can text go before wrapping? Test Post. How far can text go before wrapping? Test Post. How far can text go before wrapping? Test Post. How far can text go before wrapping? Test Post. How far can text go before wrapping? Test Post. How far can text go before wrapping? Test Post. How far can text go before wrapping? Test Post. How far can text go before wrapping? Test Post. How far can text go before wrapping?
 > Is it working?
