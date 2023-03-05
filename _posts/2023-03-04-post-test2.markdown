@@ -3,12 +3,16 @@ layout: default
 title:  "test 2"
 ---
 > ### 04 March 2023
-> ## <a href="https://logancore.com/2023/03/04/post-test">test 2</a>
+> ## <a href="https://logancore.com/2023/03/04/post-test2">test 2</a>
 >
 > Test Post. How far can text go before wrapping? Test Post. 
 > Second test...
 <br>
 > Is it working?
+>
+> ![BenPicture](/assets/images/benMoment.png)
+> ![MegaBenPicture](/assets/images/megaBenPicture.png)
+> [![test16-9-aspectpicture](/assets/images/test16-9-aspectpicture.png)](https://logancore.com/assets/images/test16-9-aspectpicture.png)
 >
 > 
 ***
