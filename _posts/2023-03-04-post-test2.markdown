@@ -10,9 +10,9 @@ title:  "test 2"
 <br>
 > Is it working?
 >
-> ![BenPicture](/assets/images/benMoment.png)
-> ![MegaBenPicture](/assets/images/megaBenPicture.png)
-> [![test16-9-aspectpicture](/assets/images/test16-9-aspectpicture.png)](https://logancore.com/assets/images/test16-9-aspectpicture.png)
+> [![](/assets/images/benMoment.png)](https://logancore.com/assets/images/benMoment.png)
+> [![](/assets/images/megaBenPicture.png)](https://logancore.com/assets/images/megaBenPicture.png)
+> [![](/assets/images/test16-9-aspectpicture.png)](https://logancore.com/assets/images/test16-9-aspectpicture.png)
 >
 > 
 ***
