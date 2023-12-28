@@ -4,3 +4,4 @@ show_downloads: false
 google_analytics: G-E4XYBXPDCW
 theme: jekyll-theme-midnight
 future: true
+include: [".well-known"]
