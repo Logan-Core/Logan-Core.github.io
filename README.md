@@ -1,3 +1,0 @@
-# Logan Core
-
-N/A
