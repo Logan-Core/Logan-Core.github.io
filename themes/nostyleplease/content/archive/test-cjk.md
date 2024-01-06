@@ -1,7 +1,7 @@
 ---
 title: "Test CJK"
 date: 2022-08-26T22:30:10+08:00
-draft: true
+draft: false
 ---
 
 ### 1. 简体中文测试
