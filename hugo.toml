@@ -1,4 +1,4 @@
-baseURL = 'https://logan-core.github.io/'
+baseURL = 'https://logancore.com/'
 languageCode = 'en-us'
 title = 'Logan Test Site'
 theme = 'nostyleplease'
