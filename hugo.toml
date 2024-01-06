@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://logancore.com/'
 languageCode = 'en-us'
 title = 'Logan Test Site'
 theme = 'nostyleplease'
