@@ -1,23 +1,29 @@
 [[entries]]
-title = "all posts"
-
+title = "logan_core"
   [entries.post_list]
-  limit = 5
+  section = "logan_core"
+  limit = 4
   show_more = true
-  show_more_text = "See archive..."
-  show_more_url = "core"
-
+  show_more_text = "Show More"
+  show_more_url = "logan_core"
 
 
 [[entries]]
-title = "another list"
+title = "Core Game Database"
+  [entries.post_list]
+  section = "core_game_database"
+  limit = 4
+  show_more = true
+  show_more_text = "Show More"
+  show_more_url = "core_game_database"
+    [[entries.entries]]
+    title = "More Information"
+    url = "core_game_database/information"
 
-  [[entries.entries]]
-  title = "with subitems"
 
-    [[entries.entries.entries]]
-    title = "with subsubitems"
-
-    [[entries.entries.entries]]
-    title = "example page"
-    url = "https://logancore.com/"
+[[entries]]
+title = "All Posts"
+  [entries.post_list]
+  show_more = true
+  show_more_text = "Show More"
+  show_more_url = "core"
