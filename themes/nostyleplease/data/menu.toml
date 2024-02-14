@@ -1,5 +1,5 @@
 [[entries]]
-title = "logan_core"
+title = "logan_core_updates"
   [entries.post_list]
   section = "logan_core"
   limit = 4
@@ -9,7 +9,7 @@ title = "logan_core"
 
 
 [[entries]]
-title = "Core Game Database"
+title = "core_game_database"
   [entries.post_list]
   section = "core_game_database"
   limit = 4
@@ -22,7 +22,7 @@ title = "Core Game Database"
 
 
 [[entries]]
-title = "All Posts"
+title = "all_posts"
   [entries.post_list]
   show_more = true
   show_more_text = "Show More"
