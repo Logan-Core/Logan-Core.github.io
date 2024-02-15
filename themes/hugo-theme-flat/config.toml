@@ -1,0 +1,71 @@
+title = "Flat theme"
+theme = "hugo-theme-flat"
+themesDir = "../.."
+enableRobotsTXT = true
+hasCJKLanguage = true
+paginate = 4
+baseURL = ""
+
+# these values are hugo built in markup config
+[markup.highlight]
+anchorLineNos = false
+codeFences = true
+guessSyntax = false
+hl_Lines = ''
+lineAnchors = ''
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = false
+noClasses = false
+noHl = false
+style = 'monokailight'
+tabWidth = 4
+
+[params]
+description = "Example site for hugo-theme-flat"
+mainSections = ['logan_core','core_game_database']
+
+## uncomment belows and set proper values to enable remark42
+# [params.remark42]
+# host=''
+# site_id=''
+# max_shown_comments=100
+# theme='light'
+# locale='en'
+# show_email_subscription=false
+# simple_view=true
+
+
+# you can set multi row of footers like these
+[[params.footer_rows]]
+[[params.footer_rows.items]]
+pre = "<a href=\"https://creativecommons.org/licenses/by/4.0/\">Contact & FAQ</a>"
+
+
+[[menus.main]]
+name = "Logan Core Updates"
+url = "/logan_core/"
+weight = 30
+
+[[menus.main]]
+name = "Core Game Database"
+url = "/core_game_database/"
+weight = 40
+
+[[menus.main]]
+pageref = "frequently_asked_questions"
+name = "Contact & FAQ"
+weight = 80
+
+# 2-level sub menus are supported
+# [[menus.main]]
+# name = "Services"
+# weight = 60
+# [[menus.main]]
+# parent = "Services"
+# name = "Service A"
+# url = "#"
+# [[menus.main]]
+# parent = "Services"
+# name = "Service B"
+# url = "#"
