@@ -9,7 +9,7 @@ date: 2024-02-12
 > ![logan underscore core underscore dev at p m dot me](/images/dev_mail.webp)
 ---
 
-- **Are you on any other social media websites**
+- **Are you on any other social media websites?**
 >
 > Outside of this blog and the [archive channel](https://www.youtube.com/@LoganCore/featured),
 > 

@@ -59,23 +59,32 @@ h2, h3, h4, h5, h6 { margin-top: 3rem; }
 
 hr { margin: 2rem 0; }
 
-p { margin: 1rem 0; }
+p { margin: 0.45rem 0; 
+}
 
 li { margin: 0.4rem 0; }
 
 *:target { background: green; }
 
 .w {
-  max-width: 640px;
+  max-width: 60%;
   margin: 0 auto;
   padding: 4rem 2rem;
-  overflow: visible
+  overflow: visible;
 }
 
+.yt {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
 
 .toc {
   border: thin solid black;
   padding: 1rem;
+
 }
 
 hr {
@@ -120,16 +129,18 @@ blockquote {
   border: thin solid black;
   padding: 1rem;
   text-align: center;
-  
+  max-width: 50%;
+  margin: 2rem auto;
 
   p { margin: 0; }
 }
 
+
 img {
-  max-width: 200%;
+  max-width: 100%;
+  height: auto;
   display: block;
-	margin-left: 50%;
-	transform: translateX(-50%);
+  margin: 0 auto;
 }
 
 figcaption {

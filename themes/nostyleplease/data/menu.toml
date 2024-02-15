@@ -27,3 +27,7 @@ title = "all_posts"
   show_more = true
   show_more_text = "Show More"
   show_more_url = "core"
+  
+[[entries]]
+title = "Contact & FAQ"
+url = "/frequently_asked_questions"

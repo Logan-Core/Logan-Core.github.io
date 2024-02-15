@@ -10,7 +10,7 @@ date: [current_date]
 > 
 > **[Game Info]([game_url])**
 
-{{< youtube bAMlZGhCyVg >}}
+{{< youtube id="bAMlZGhCyVg">}}
 
 ## Game Info
 
@@ -36,7 +36,6 @@ Use as many or as few words as needed to express the experience with the game
 
 ![Sketch comic alt-text](/images/test_image.webp)
 
----
 ---
 
 [Home](/./) · 
