@@ -1,46 +1,42 @@
 ---
 draft: false
 title: "[game_title]"
-date: 2024-02-12
+date: [current_date]
 ---
 
-![Gameplay of [game_title]](/images/gameplay/6134_gameplay.webp)
+![Gameplay of [game_title]](/images/core_game_database/[game_id]_gameplay.webp)
 
 > The Dark Queen has attacked and kidnapped (toadnapped?) your best buddy. To make matters worse, she nabbed the best looking girl around! So, what will you do? Cry? Whimper? Hide? Call the Starcops? NO! Cause you're a Battletoad! Battletoads don't cry, hide or call for help! And they certainly don't whimper! They get MAD then they get EVEN! So grab your blaster, hop on the Toadster and go get 'em!
+> 
+> **[Game Info]([game_url])**
 
-{{< youtube yeMHRAPSip4   >}}
-
-## **bold text!**
+{{< youtube bAMlZGhCyVg >}}
 
 ## Game Info
-| Tables        | Are 
-|:-: |:-:|
+
+
+|||
+|:-:|:-:|
 | Release Year   | YYYY
-| Console Played     | centered
-| Time Played     | 40 Minutes
-| More Info | [MobyGames Page]([game_url])
+| Console Played     | CONSOLE_REPLACE
+| Time Played     | 99 Minutes
 
-> test block quotes
+> Short description about experience. Mention anything major reader should know before reading full review
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+### [game_title]
 
+A few paragraphs giving reader context to my history with game prior to playing
+
+Technical overview of game experience. Exclude any emulator-specific issues (Irrelevant)
+
+Full review goes here
+Use as many or as few words as needed to express the experience with the game
 
 ---
 
-## Line Breaks
+![Sketch comic alt-text](/images/test_image.webp)
 
-Here's a line for us to start with.
-
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
-
-This line is also begins a separate paragraph, but...
-This line is only separated by two trailing spaces and a single newline, so it's a separate line in the *same paragraph*.
-
-## Checkbox lists
-
-- [x] done
-- [ ] todo
-
+---
 ---
 
 [Home](/./) · 

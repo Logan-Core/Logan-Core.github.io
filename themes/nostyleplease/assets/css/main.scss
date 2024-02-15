@@ -69,7 +69,9 @@ li { margin: 0.4rem 0; }
   max-width: 640px;
   margin: 0 auto;
   padding: 4rem 2rem;
+  overflow: visible
 }
+
 
 .toc {
   border: thin solid black;
@@ -90,12 +92,15 @@ pre {
   overflow-x: auto; /* Fix pre content overflowing parent without scroll bar */
 }
 
-table { width: 100%; }
+table { width: 55%; 
+	margin: auto;
+	border-collapse:collapse
+}
 
 table, th, td {
   border: thin solid black;
-  border-collapse: collapse;
-  padding: 0.4rem;
+  padding: 0.25rem;
+	
 }
 
 code:not(pre > code) {
@@ -121,9 +126,10 @@ blockquote {
 }
 
 img {
-  max-width: 100%;
+  max-width: 200%;
   display: block;
-  margin: 0 auto;
+	margin-left: 50%;
+	transform: translateX(-50%);
 }
 
 figcaption {
