@@ -22,8 +22,7 @@ style = 'monokailight'
 tabWidth = 4
 
 [params]
-description = "Example site for hugo-theme-flat"
-mainSections = ['logan_core_games']
+mainSections = ['blog','game_reviews']
 
 ## uncomment belows and set proper values to enable remark42
 # [params.remark42]
@@ -61,19 +60,19 @@ name = "Contact & FAQ"
 weight = 80
 
 
-# 2-level sub menus are supported
+# Sub Menus
 [[menus.main]]
 name = "Category"
 weight = 60
 
 [[menus.main]]
 parent = "Category"
-name = "Logan Core Games"
-url = "/categories/logan_core_updates/"
+name = "Blog"
+url = "/categories/blog/"
 weight = 61
 
 [[menus.main]]
 parent = "Category"
-name = "Core Game Database"
-url = "/categories/core_game_database/"
+name = "Game Reviews"
+url = "/categories/game_reviews/"
 weight = 62

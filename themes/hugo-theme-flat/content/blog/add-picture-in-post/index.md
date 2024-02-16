@@ -3,7 +3,6 @@ title: "Add Picture In Blog"
 date: 2023-01-24T20:04:07+08:00
 tags: []
 categories: []
-weight: 50
 show_comments: true
 katex: false
 draft: false

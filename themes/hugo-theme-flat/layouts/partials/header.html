@@ -1,5 +1,8 @@
 <header class="header-wrapper">
+
+
     <div class="header">
+	
         <a class="site-title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 
         <nav class="menu">
@@ -9,6 +12,7 @@
                         <a href="{{ .URL }}">{{ .Name }}</a>
                     {{ else }}
                         <a>• {{ .Name }} •</a>
+						
                         <nav class="sub-menu">
                             {{ range .Children }}
 							
@@ -20,4 +24,5 @@
             {{ end }}
         </nav>
     </div>
+	<script src="/js/click_toggle_header.js"></script> 
 </header>

@@ -3,7 +3,7 @@ author = "Logan Core"
 title = "[game_title]"
 date = 2024-02-15
 categories = [
-    "core_game_database"
+    "Game_Reviews"
 ]
 +++
 
@@ -20,11 +20,11 @@ categories = [
 |:-:|:-:|
 | Release Year   | YYYY
 | Console Played     | CONSOLE_REPLACE
-| Time Played     | 99 Minutes
+| Time Played     | 30 Minutes
 
 > Short description about experience. Mention anything major reader should know before reading full review
 
-### [game_title]
+### Review
 
 A few paragraphs giving reader context to my history with game prior to playing
 
