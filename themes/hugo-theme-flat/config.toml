@@ -23,7 +23,7 @@ tabWidth = 4
 
 [params]
 description = "Example site for hugo-theme-flat"
-mainSections = ['logan_core','core_game_database']
+mainSections = ['logan_core_games']
 
 ## uncomment belows and set proper values to enable remark42
 # [params.remark42]
@@ -37,35 +37,43 @@ mainSections = ['logan_core','core_game_database']
 
 
 # you can set multi row of footers like these
+
 [[params.footer_rows]]
 [[params.footer_rows.items]]
-pre = "<a href=\"https://creativecommons.org/licenses/by/4.0/\">Contact & FAQ</a>"
+pre = """<a href="/">Home</a>"""
+
+[[params.footer_rows]]
+[[params.footer_rows.items]]
+pre = """<a href="/frequently_asked_questions/">Contact & FAQ</a>"""
+
+[[params.footer_rows]]
+[[params.footer_rows.items]]
+pre = """<a href="/index.xml">RSS Feed</a>"""
 
 
-[[menus.main]]
-name = "Logan Core Updates"
-url = "/logan_core/"
-weight = 30
 
-[[menus.main]]
-name = "Core Game Database"
-url = "/core_game_database/"
-weight = 40
+
+
 
 [[menus.main]]
 pageref = "frequently_asked_questions"
 name = "Contact & FAQ"
 weight = 80
 
+
 # 2-level sub menus are supported
-# [[menus.main]]
-# name = "Services"
-# weight = 60
-# [[menus.main]]
-# parent = "Services"
-# name = "Service A"
-# url = "#"
-# [[menus.main]]
-# parent = "Services"
-# name = "Service B"
-# url = "#"
+[[menus.main]]
+name = "Category"
+weight = 60
+
+[[menus.main]]
+parent = "Category"
+name = "Logan Core Games"
+url = "/categories/logan_core_updates/"
+weight = 61
+
+[[menus.main]]
+parent = "Category"
+name = "Core Game Database"
+url = "/categories/core_game_database/"
+weight = 62

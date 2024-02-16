@@ -1,4 +1,4 @@
 baseURL = 'https://logancore.com'
 languageCode = 'en-us'
-title = 'Home'
+title = 'Logan Core'
 theme = 'hugo-theme-flat'

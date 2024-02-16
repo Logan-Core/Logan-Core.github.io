@@ -1,8 +1,12 @@
----
-draft: false
-title: "[game_title]"
-date: [current_date]
----
++++
+author = "Logan Core"
+title = "[game_title]"
+date = 2024-02-15
+categories = [
+    "core_game_database"
+]
++++
+
 
 ![Gameplay of [game_title]](/images/core_game_database/[game_id]_gameplay.webp)
 
@@ -34,6 +38,3 @@ Use as many or as few words as needed to express the experience with the game
 ![Sketch comic alt-text](/images/test_image.webp)
 
 ---
-
-[Home](/./) · 
-[Contact & FAQ](/./frequently_asked_questions)
