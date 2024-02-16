@@ -500,14 +500,17 @@ body {
   width: 40%;
   margin: 40px auto;
   border-collapse: collapse;
+  vertical-align: middle;
   line-height: 1.5em;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .content th,
 .content td {
   text-align: left;
   padding-right: 20px;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .content table td,
@@ -516,6 +519,7 @@ body {
   border-style: solid;
   padding: 10px 15px;
   border-width: 1px 0 0 0;
+  vertical-align: middle;
 }
 .content thead th,
 .content thead th {
@@ -548,11 +552,13 @@ body {
   overflow-wrap: anywhere;
 }
 .content img {
-  max-width: 92%;
+  max-width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
+
 .content .anchor {
   visibility: hidden;
 }
