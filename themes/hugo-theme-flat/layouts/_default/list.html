@@ -6,15 +6,13 @@
     {{ end }}
 
     <section id="archive">
-        {{ range .Data.Pages.GroupByDate "2006" }}
+        
             <div class="group">
-                <h3 class="key">
-                    {{ .Key }}
-                </h3>
+
 
                 {{ range .Pages }}
                     <div class="value">
-                        <time class="date" datetime="{{ .PublishDate }}">{{ .PublishDate.Format "01/02" }}</time>
+                        <time class="date" datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006/01/02" }}</time>
 
                         <div class="title">
 
@@ -31,7 +29,7 @@
                 {{ end }}
 
             </div>
-        {{ end }}
+        
 
     </section>
 </div>

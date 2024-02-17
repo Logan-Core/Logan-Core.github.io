@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Game Reviews"
 tags: []
 categories: []
 weight: 30

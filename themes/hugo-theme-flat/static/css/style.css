@@ -26,7 +26,7 @@
   --color-dark-bg-shadow: #505050;
   --color-dark-fg-font-normal: #D2D2D3;
   --color-dark-fg-font-hover: #FFDF00;
-  --color-dark-fg-font-quote: #8B8680;
+  --color-dark-fg-font-quote: #C2C2C3;
   --color-dark-fg-tiny-line: #3B3B3B;
   --color-dark-fg-marker-quote: #6F6B66;
   --color-dark-fg-font-hyper: #FFDF00;
@@ -350,14 +350,20 @@ div.notices p:first-child:before {
     top: 2px;
     color: #fff;
     font-weight: 900;
-    content: "";
-    left: 10px;
+    content: "-";
+    left: 8px;
 }
 div.notices p:first-child:after {
     position: absolute;
     top: 2px;
     color: #fff;
     left: 1rem;
+}
+div.notices blockquote {
+	   margin-left: auto;
+	   margin-right: auto;
+	   padding: 0;
+	   width: 100%;
 }
 div.notices.info p {
     border-top: 30px solid #F0B37E;
@@ -367,12 +373,12 @@ div.notices.info p {
 div.notices.info p:first-child:after {
     content: 'Info';
 }
-div.notices.warning p {
+div.notices.important p {
     border-top: 30px solid rgba(217, 83, 79, 0.8);
     background: #403D3F;
 	text-align: left;
 }
-div.notices.warning p:first-child:after {
+div.notices.important p:first-child:after {
     content: 'Important';
 }
 div.notices.note p {
@@ -683,6 +689,7 @@ div.notices.tip p:first-child:after {
   overflow-wrap: anywhere;
 }
 .content img {
+	border: 5px solid #555;
   max-width: 100%;
   display: block;
   margin-left: auto;

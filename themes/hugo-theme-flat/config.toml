@@ -68,11 +68,11 @@ weight = 60
 [[menus.main]]
 parent = "Category"
 name = "Blog"
-url = "/categories/blog/"
+url = "/blog/"
 weight = 61
 
 [[menus.main]]
 parent = "Category"
 name = "Game Reviews"
-url = "/categories/game_reviews/"
+url = "/game_reviews/"
 weight = 62
