@@ -714,6 +714,39 @@ div.notices.tip p:first-child:after {
 }
 
 
+/*Audio player stuff*/
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#playlist,
+audio {
+	display: block;
+  background: #666;
+  width: 400px;
+  padding: 20px;
+  margin: auto;
+}
+
+.active a {
+  color: #5DB0E6;
+  text-decoration: none;
+}
+
+li a {
+  color: #eeeedd;
+  background: #333;
+  padding: 5px;
+  display: block;
+}
+
+li a:hover {
+  text-decoration: none;
+}
+
+
+
 
 .content .anchor {
   visibility: hidden;
