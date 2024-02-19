@@ -36,5 +36,3 @@ Use as many or as few words as needed to express the experience with the game
 ---
 
 [![Sketch comic alt-text](/images/test_image.webp)](/images/test_image.webp)
-
----

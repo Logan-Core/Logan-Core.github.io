@@ -3,12 +3,19 @@
 <section class="single">
     <h1 class="title">{{ .Title }}</h1>
 
-    <div class="tip">
+	<div class="tip">
+		Posted: 
+		<time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006/01/02" }}</time>
+		<br>
+		{{ if and (.Params.last_updated) (ne .PublishDate .Params.last_updated) }}
 		Last Updated: 
-        <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006/01/02" }}</time>
-        <!-- <span> {{ .WordCount }} words </span> -->
+		<time datetime="{{ .Params.last_updated }}">{{ (time .Params.last_updated).Format "2006/01/02" }}</time>
+		{{ end }}
+	</div>
 
-    </div>
+
+
+
 
     <div class="taxonomies">
         {{ with .Params.categories }}

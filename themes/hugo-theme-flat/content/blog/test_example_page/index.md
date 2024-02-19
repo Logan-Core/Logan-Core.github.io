@@ -2,6 +2,7 @@
 author = "Logan Core"
 title = "test_example_page"
 date = 2024-02-16
+last_updated = 2024-02-16
 categories = [
     "Blog"
 ]
@@ -58,11 +59,11 @@ print("hello world!")
 
 ---
 
+
 {{< /expand >}}
 
 
-
-
+{{<audio src="audio/0000_audio_test.mp3">}}
 
 > {{% button href="#top" color="#56a057" font-color="#d2d2d3 "%}}**Return**{{% /button %}}
 > {{% button href="../" color="#bb4e4c" font-color="#d2d2d3 "%}}**Go Back**{{% /button %}}

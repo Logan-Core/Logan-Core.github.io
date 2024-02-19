@@ -133,7 +133,10 @@ body {
 
   align-items: center;
 
-  background-color: var(--color-bg-page);
+  /* background-color: #2b2b2b; */
+  background-image: url('/images/core_background.webp');
+  
+  
   overflow-x: hidden;
 }
 
@@ -160,14 +163,24 @@ body {
 }
 
 /* set light background */
-.header-wrapper,
-.footer,
+
 .main,
 .side-recent,
 .side-categories,
 .side-tags
 {
-  background-color: var(--color-bg-content);
+  /* background-color: var(--color-bg-content); */
+  background-color: rgba(37,37,37,1.0);
+  border-top: 10px solid var(--color-fg-tiny-line); 
+  border-bottom: 10px solid var(--color-fg-tiny-line); 
+  border-left: 5px solid var(--color-fg-tiny-line); 
+  border-right: 5px solid var(--color-fg-tiny-line); 
+  
+}
+
+.header-wrapper,
+.footer{
+	 background-color: rgba(26,26,28,0.45);
 }
 
 /* place header in the center of header-wrapper */
@@ -204,6 +217,7 @@ body {
 .header {
   padding: var(--len-3);
   width: 100%;
+  
 }
 
 /* place title and menus horizonally */
@@ -212,6 +226,7 @@ body {
   flex-wrap: wrap;
   align-content: center;
   justify-content: space-between;
+  
 }
 
 .header .menu { justify-content: center; align-items: center; }
@@ -281,6 +296,7 @@ body {
   padding: var(--len-2) var(--len-4);
   box-shadow: var(--color-bg-shadow) 0px 0px 3px 1px;
   border-radius: 3px;
+  
 }
 
 /* beautify menu item */
@@ -512,6 +528,7 @@ div.notices.tip p:first-child:after {
   border: none;
   height: 1px;
   background-color: var(--color-bg-content);
+  
 
   margin: var(--len-2) 0;
 }
@@ -689,7 +706,7 @@ div.notices.tip p:first-child:after {
   overflow-wrap: anywhere;
 }
 .content img {
-	border: 5px solid #555;
+	border: 3px solid #555;
   max-width: 100%;
   display: block;
   margin-left: auto;
