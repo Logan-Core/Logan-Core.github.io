@@ -2,6 +2,9 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1">
 
 
+<script src="/pagefind/pagefind.min.js" defer></script>
+
+
 {{ $title := .Site.Title -}}
 {{ if .Params.Title -}}
     {{ $title = printf "%s | %s" .Params.Title $title -}}

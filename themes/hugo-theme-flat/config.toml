@@ -59,6 +59,11 @@ pageref = "frequently_asked_questions"
 name = "Contact & FAQ"
 weight = 80
 
+[[menus.main]]
+pageref = "search"
+name = "Search"
+weight = 81
+
 
 # Sub Menus
 [[menus.main]]

@@ -4,9 +4,11 @@
     <h1 class="title">{{ .Title }}</h1>
 
 	<div class="tip">
+		{{ if (.PublishDate) }}
 		Posted: 
 		<time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006/01/02" }}</time>
 		<br>
+		{{end}}
 		{{ if and (.Params.last_updated) (ne .PublishDate .Params.last_updated) }}
 		Last Updated: 
 		<time datetime="{{ .Params.last_updated }}">{{ (time .Params.last_updated).Format "2006/01/02" }}</time>
@@ -36,8 +38,6 @@
         {{ partial "comment.html" . }}
     {{ end }}
 </section>
-
-
 
 
 

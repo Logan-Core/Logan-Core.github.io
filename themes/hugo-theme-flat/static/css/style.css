@@ -729,10 +729,6 @@ audio {
   margin: auto;
 }
 
-.active a {
-  color: #5DB0E6;
-  text-decoration: none;
-}
 
 li a {
   color: #eeeedd;
@@ -741,11 +737,21 @@ li a {
   display: block;
 }
 
-li a:hover {
-  text-decoration: none;
+
+.menu-item a:hover .search-icon { 
+  fill: var( --color-dark-fg-font-hyper-hover);
 }
 
 
+.search-icon {
+  fill: var( --color-dark-fg-font-hyper);
+  
+}
+
+
+.search-icon:hover {
+  fill: var(--color-dark-fg-hyperlink-hover); !important
+}
 
 
 .content .anchor {
