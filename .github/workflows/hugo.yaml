@@ -65,6 +65,11 @@ jobs:
         with:
           path: ./public
 
+    # Search Indexing job
+    pfindex:
+        - name: Run Pagefind
+        run: npm_config_yes=true npx pagefind --site "public"
+
   # Deployment job
   deploy:
     environment:
