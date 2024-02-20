@@ -1,8 +1,9 @@
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-<script src="/pagefind/pagefind-ui.js"></script>
+<script src="/js/pagefind-ui_coreedit.js"></script>
 <div id="search"></div>
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-        new PagefindUI({ element: "#search", showSubResults: true });
+        new PagefindUI({ element: "#search", showSubResults: true, showImages: true, showEmptyFilters: true, resetStyles: true,debounceTimeoutMs: 0, autofocus: true
+		});
     });
 </script>
