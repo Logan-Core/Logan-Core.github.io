@@ -61,7 +61,7 @@ weight = 80
 
 [[menus.main]]
 pageref = "search"
-name = "Search "
+name = "Search"
 weight = 81
 
 
