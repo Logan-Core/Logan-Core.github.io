@@ -1,6 +1,6 @@
 +++
 author = "Logan Core"
-title = "test_example_page"
+title = "first page testing"
 date = 2024-02-16
 last_updated = 2024-02-20
 categories = [
