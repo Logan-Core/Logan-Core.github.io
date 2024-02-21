@@ -2563,7 +2563,7 @@
         }, xn = g => {
             g?.preventDefault(), t(15, et += i)
         }, $n = g => {
-    g.key === "Escape" && (t(6, S = ""), B.blur()), 
+    g.key === "Escape" && (B.blur(), g.preventDefault()),
     g.key === "Enter" && (B.blur(), g.preventDefault()) 
 };
 
