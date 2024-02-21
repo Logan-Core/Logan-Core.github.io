@@ -1,9 +1,45 @@
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="/js/pagefind-ui_coreedit.js"></script>
+<script src="/js/pagefind-ui_coreedit_process_result_title.js"></script>
+
+
 <div id="search"></div>
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-        new PagefindUI({ element: "#search", showSubResults: true, showImages: true, showEmptyFilters: true, resetStyles: true,debounceTimeoutMs: 0, autofocus: true
-		});
+        new PagefindUI({ 
+            element: "#search", 
+            showSubResults: true, 
+            showImages: true, 
+            showEmptyFilters: true, 
+            debounceTimeoutMs: 0, 
+            autofocus: true,
+			processResult: function (result) {
+				result.meta.title = result.meta.title;
+
+				// Find the "Posted: " marker 
+				const postedIndex = result.content.indexOf("Posted: ");
+
+				if (postedIndex !== -1) { // Check if "Posted: " is found
+					// Start slicing from the position after "Posted: "
+					const dateStart = postedIndex + "Posted: ".length; 
+
+					// Find the next space after the date (to isolate the date)
+					const dateEnd = result.content.indexOf(" ", dateStart); 
+
+					
+					result.excerpt = "Posted:" + result.content.substring(dateStart, dateEnd) + " | " + result.excerpt; 
+				} else {
+					// "Posted: " not found, use the content as is, or handle it differently
+					result.excerpt = result.content + result.excerpt; 
+				}
+				
+				console.log(result);
+				result.anchors = []
+				return result;
+			}
+        });
     });
 </script>
+
+
+
+

@@ -2,7 +2,7 @@
 author = "Logan Core"
 title = "test_example_page"
 date = 2024-02-16
-last_updated = 2024-02-16
+last_updated = 2024-02-20
 categories = [
     "Blog"
 ]
@@ -61,6 +61,9 @@ print("hello world!")
 
 
 {{< /expand >}}
+
+{{<image_gallery>}}
+
 
 {{<audio_player>}}
 

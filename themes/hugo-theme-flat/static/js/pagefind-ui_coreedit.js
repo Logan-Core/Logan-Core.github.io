@@ -2670,4 +2670,6 @@
         }
     };
     window.PagefindUI = xe;
+	
+	
 })();
