@@ -10,7 +10,7 @@ categories = [
 
 
 
-![Gameplay of [game_title]](./[game_id]_gameplay.webp)
+[![Gameplay of [game_title]](./[game_id]_gameplay.webp)](./[game_id]_gameplay.webp)
 
 > The Dark Queen has attacked and kidnapped (toadnapped?) your best buddy. To make matters worse, she nabbed the best looking girl around! So, what will you do? Cry? Whimper? Hide? Call the Starcops? NO! Cause you're a Battletoad! Battletoads don't cry, hide or call for help! And they certainly don't whimper! They get MAD then they get EVEN! So grab your blaster, hop on the Toadster and go get 'em!
 > 
