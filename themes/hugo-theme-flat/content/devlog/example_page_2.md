@@ -1,16 +1,16 @@
 +++
 author = "Logan Core"
-title = "first page testing"
-date = 2024-02-16
+title = "Example Page 2"
+date = 2024-02-17
 last_updated = 2024-02-20
 categories = [
-    "Blog"
+    "DevLog"
 ]
 +++
 
 
-> {{% button href="/" color="#407aa4" font-color="#d2d2d3 "%}}Test **Button**{{% /button %}}
-> {{% button href="/" color="#ffdf00" font-color="#000000 "%}}Another **Button**{{% /button %}}
+{{% button href="/" color="#407aa4" font-color="#d2d2d3 "%}}Test **Button**{{% /button %}}
+{{% button href="/" color="#ffdf00" font-color="#000000 "%}}Another **Button**{{% /button %}}
 
 {{% notice note %}}
 Notice Text
@@ -42,6 +42,12 @@ Important Text
 {{% /notice %}}
 
 
+|||
+|:-:|:-:|
+| 1   | 2
+| Hello     | World
+| Testing   | Out Stuff
+
 
 
 {{< expand "CLICK ME EXPAND" >}}
@@ -70,6 +76,7 @@ print("hello world!")
 
 {{<audio_player>}}
 
+---
 
-> {{% button href="#top" color="#56a057" font-color="#d2d2d3 "%}}**Return**{{% /button %}}
-> {{% button href="../" color="#bb4e4c" font-color="#d2d2d3 "%}}**Go Back**{{% /button %}}
+{{% button href="#top" color="#56a057" font-color="#d2d2d3 "%}}**Return**{{% /button %}}
+{{% button href="../" color="#bb4e4c" font-color="#d2d2d3 "%}}**Go Back**{{% /button %}}

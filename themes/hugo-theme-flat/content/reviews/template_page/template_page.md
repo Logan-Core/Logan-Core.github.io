@@ -2,13 +2,15 @@
 author = "Logan Core"
 title = "[game_title]"
 date = 2024-02-15
+last_updated = 2024-02-16
 categories = [
-    "Game_Reviews"
+    "Reviews"
 ]
 +++
 
 
-![Gameplay of [game_title]](/images/core_game_database/[game_id]_gameplay.webp)
+
+![Gameplay of [game_title]](./[game_id]_gameplay.webp)
 
 > The Dark Queen has attacked and kidnapped (toadnapped?) your best buddy. To make matters worse, she nabbed the best looking girl around! So, what will you do? Cry? Whimper? Hide? Call the Starcops? NO! Cause you're a Battletoad! Battletoads don't cry, hide or call for help! And they certainly don't whimper! They get MAD then they get EVEN! So grab your blaster, hop on the Toadster and go get 'em!
 > 
@@ -18,6 +20,7 @@ categories = [
 
 |||
 |:-:|:-:|
+|1|2
 | Release Year   | YYYY
 | Console Played     | CONSOLE_REPLACE
 | Time Played     | 30 Minutes

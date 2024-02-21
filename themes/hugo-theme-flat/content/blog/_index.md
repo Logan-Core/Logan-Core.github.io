@@ -1,7 +1,0 @@
----
-title: "Blog"
-tags: []
-categories: []
-weight: 30
-draft: false
----

@@ -3,7 +3,7 @@ author = "Logan Core"
 title = "Game Review Info"
 date = 2024-02-12
 categories = [
-    "Game_Reviews"
+    "Reviews"
 ]
 +++
 

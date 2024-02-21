@@ -8,7 +8,7 @@ categories = [
 +++
 ---
 - **Where can I contact you?**
-> ![logan underscore core underscore dev at p m dot me](/images/dev_mail.webp)
+> ![logan at logancore dot com](/images/dev_mail.webp)
 ---
 
 - **Are you on any other social media websites?**
