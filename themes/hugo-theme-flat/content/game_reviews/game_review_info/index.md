@@ -19,6 +19,6 @@ First, I created a program that randomly selects a game from a [large database](
 I'll play the game long enough to experience the main gameplay loop and potentially longer if I get hooked.
 Afterwards, I'll write about my experience and move on to the next game!
 
-[![Demo of program used to pick games](./core_database_demo.webp)](./core_database_demo.webp)
+[![Demo of program used to pick games](/images/core_database_demo.webp)](./core_database_demo.webp)
 >
-[![Diagram of logic flow for random game program program](./core_database_diagram.webp)](./core_database_diagram.webp)
+[![Diagram of logic flow for random game program program](/images/core_database_diagram.webp)](./core_database_diagram.webp)
