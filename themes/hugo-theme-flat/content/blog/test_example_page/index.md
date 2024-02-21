@@ -63,7 +63,8 @@ print("hello world!")
 {{< /expand >}}
 
 
-{{< image_gallery images="http://whitebuffalosolutions.com/WB-Template/images/photo1.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo2.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo3.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo4.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo5.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo6.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo7.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo9.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo10.jpg" >}}
+
+{{< image_gallery images="/images/test_image.webp,http://whitebuffalosolutions.com/WB-Template/images/photo1.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo2.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo3.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo4.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo5.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo6.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo7.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo9.jpg,http://whitebuffalosolutions.com/WB-Template/images/photo10.jpg" >}}
 
 
 

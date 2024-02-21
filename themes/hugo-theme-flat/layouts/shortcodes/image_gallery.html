@@ -1,11 +1,13 @@
 <div class="gallery">
     <div class="preview">
-        <img id="preview" src="" style="display:block;margin:0 auto;" alt=""  height="600" width="800"/>
+        <a id="preview-link" href="">
+            <img id="preview" src="" style="display:block;margin:0 auto;" alt=""  height="600" width="800"/>
+        </a>
     </div>
 
     <div class="gallery-thumbnails" style="margin:0 auto;text-align:center">
         {{ range $index, $img := split (.Get "images") "," }}
-            <img onclick="document.getElementById('preview').src=this.src" id="img{{ add $index 1 }}" src="{{ $img }}" alt="" />
+            <img onclick="document.getElementById('preview').src=this.src; document.getElementById('preview-link').href=this.src;" id="img{{ add $index 1 }}" src="{{ $img }}" alt="" />
         {{ end }}
     </div>
 </div>
@@ -14,5 +16,6 @@
     window.onload = function() {
         var images = "{{ .Get "images" }}".split(",");
         document.getElementById('preview').src = images[0];
+        document.getElementById('preview-link').href = images[0];
     }
 </script>
