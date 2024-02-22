@@ -115,6 +115,7 @@
 *, ::before, ::after {
   font-family: monospace;
   box-sizing: border-box;
+  
 }
 
 html {
@@ -708,6 +709,8 @@ div.notices.tip p:first-child:after {
 .content h2,
 .content h3 {
   font-weight: bold;
+  text-align: center;
+  color: var(--color-fg-font-quote);
 }
 .content p,
 .content pre {
@@ -727,18 +730,19 @@ div.notices.tip p:first-child:after {
 /*Audio player stuff*/
 iframe {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+	margin: auto;
+	
 }
-#playlist,
-audio {
-	display: block;
-  background: #666;
-  width: 400px;
-  padding: 20px;
-  margin: auto;
+#playlist,*{
+	list-style: none;
+	text-align: center;
 }
 
+audio {
+	display: block;
+  margin: auto;
+  width: 60%;
+}
 
 
 
