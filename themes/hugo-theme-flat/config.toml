@@ -22,7 +22,7 @@ style = 'monokailight'
 tabWidth = 4
 
 [params]
-mainSections = ['devlog','reviews']
+mainSections = ['blog','reviews']
 
 ## uncomment belows and set proper values to enable remark42
 # [params.remark42]
@@ -72,8 +72,8 @@ weight = 60
 
 [[menus.main]]
 parent = "Category"
-name = "DevLog"
-url = "/devlog/"
+name = "Blog"
+url = "/blog/"
 weight = 61
 
 [[menus.main]]
