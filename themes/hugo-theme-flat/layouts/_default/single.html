@@ -35,7 +35,7 @@
         {{ .Content }}
     </div>
 
-    {{ with .Params.show_comments }}
+    {{ if .Params.show_comments }}
         <hr />
         {{ partial "comment.html" . }}
     {{ end }}
