@@ -3,6 +3,7 @@ author = "Logan Core"
 title = "Example Page 2"
 date = 2024-02-17
 last_updated = 2024-02-20
+show_comments = true
 categories = [
     "Blog"
 ]

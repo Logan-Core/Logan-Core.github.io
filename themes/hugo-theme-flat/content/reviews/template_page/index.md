@@ -3,6 +3,7 @@ author = "Logan Core"
 title = "[game_title]"
 date = 2024-02-15
 last_updated = 2024-02-16
+show_comments = true
 categories = [
     "Reviews"
 ]

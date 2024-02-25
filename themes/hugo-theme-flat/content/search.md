@@ -1,9 +1,8 @@
 +++
 author = "Logan Core"
 title = ""
-categories = [
+categories = []
 
-]
 +++
 
 {{< search_pagefind >}}
