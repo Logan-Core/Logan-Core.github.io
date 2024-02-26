@@ -18,16 +18,16 @@
 	</div>
 
 
-    <div class="taxonomies">
-        {{ with .Params.categories }}
-        <div>
+	<div class="taxonomies">
+		{{ with .Params.categories }}
+		<div>
 		Category: 
-            {{ range . }}
-                <a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>
-            {{ end }}
-        </div>
-        {{ end }}
-    </div>
+			{{ range . }}
+				<a href="/{{ . | urlize }}">{{ . }}</a> 
+			{{ end }}
+		</div>
+		{{ end }}
+	</div>
 
     <hr />
 
@@ -37,7 +37,8 @@
 
     {{ if .Params.show_comments }}
         <hr />
-        {{ partial "comment.html" . }}
+		{{ partial "comment.html" . }}
+		
     {{ end }}
 </section>
 

@@ -68,8 +68,3 @@ print("hello world!")
 
 
 {{<audio_player>}}
-
----
-
-{{% button href="#top" color="#56a057" font-color="#d2d2d3 "%}}**Return**{{% /button %}}
-{{% button href="../" color="#bb4e4c" font-color="#d2d2d3 "%}}**Go Back**{{% /button %}}

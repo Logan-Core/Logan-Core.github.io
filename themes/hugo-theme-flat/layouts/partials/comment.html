@@ -1,2 +1,52 @@
+<div id="comment-loading-message"> </div>
 <script defer src="https://comments.logancore.com/comentario.js"></script>
-<comentario-comments></comentario-comments>
+<comentario-comments css-override="http://localhost:1313/css/comentario_coreedit.css" ></comentario-comments>
+
+
+<script>
+    var script = document.querySelector('script[src="https://comments.logancore.com/comentario.js"]');
+	
+	var loadingMessage = document.getElementById('comment-loading-message');
+	// Show loading message
+	loadingMessage.textContent = "Loading comments..."; 
+
+	// Optionally add styling
+	loadingMessage.style.color = "gray";
+	loadingMessage.style.textAlign = "center";
+
+	script.addEventListener('load', function() {
+	  // Hide loading message when comments load successfully
+	  loadingMessage.style.display = 'none'; 
+	});
+	
+	script.addEventListener('error', function() { // Updated event listener
+  // Hide loading message in case of error
+  loadingMessage.style.display = 'none';
+}); 
+	
+    script.addEventListener('error', displayErrorMessage);
+
+    function displayErrorMessage() {
+        // Create and show an error message element
+		var errorElement = document.createElement('p');
+	  // Create the first part of the text
+	  var errorText = document.createTextNode("An error has occurred! Cannot load comments! Please ");
+
+	  // Create the "Contact" link
+	  var contactLink = document.createElement('a');
+	  contactLink.href = "/frequently_asked_questions"; // Replace with your actual contact page URL
+	  contactLink.textContent = "Contact";
+
+	  // Append all the elements
+	  errorElement.appendChild(errorText); 
+	  errorElement.appendChild(contactLink);
+	  
+	  errorElement.style.color = "red"; 
+	  errorElement.style.textAlign = "center"; 
+	  
+	    // Target the main element
+  var mainDiv = document.querySelector('main'); 
+  mainDiv.appendChild(errorElement);
+
+    }
+</script>
