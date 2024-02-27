@@ -749,12 +749,13 @@ iframe {
 #playlist,*{
 	list-style: none;
 	text-align: center;
+	padding-left: 0;
 }
 
 audio {
 	display: block;
   margin: auto;
-  width: 60%;
+  width: 75%;
 }
 
 

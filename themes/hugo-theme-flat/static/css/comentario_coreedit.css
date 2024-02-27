@@ -405,8 +405,11 @@
   font-family:inherit;
   font-size:15px;
   line-height:1.5;
-  color:#343a40;
+  color:var(--color-fg-font-normal);
   margin: auto;
+  background-image: url('/images/core_background.webp');
+  border-radius:40px;
+  padding: 1em;
 }
 .comentario-root *,
 .comentario-root ::after,
@@ -519,10 +522,10 @@
   animation:comentario-collapse-animation 250ms ease-in-out forwards 1
 }
 .comentario-root .comentario-bg-highlight {
-  animation:comentario-bg-highlight-animation 5s ease forwards 1
+  /* animation:comentario-bg-highlight-animation 5s ease forwards 1 */
 }
 .comentario-root .comentario-bg-blink {
-  animation:comentario-bg-blink-animation 2s ease forwards 1
+  /* animation:comentario-bg-blink-animation 2s ease forwards 1 */
 }
 @keyframes comentario-expand-animation {
   from {
@@ -549,10 +552,10 @@
     background-color:rgba(0,0,0,0)
   }
   10% {
-    background-color:#bac8ff
+    background-color:#cdcdcd
   }
   50% {
-    background-color:#bac8ff
+    background-color:#cdcdcd
   }
   100% {
     background-color:rgba(0,0,0,0)
@@ -563,16 +566,16 @@
     background-color:rgba(0,0,0,0)
   }
   50% {
-    background-color:#ffe066
+    background-color:#cdcdcd
   }
   100% {
     background-color:rgba(0,0,0,0)
   }
 }
 .comentario-root .comentario-btn {
-  --cmntr-btn-color:#181fab;
+  --cmntr-btn-color:var(--color-fg-font-hyper);
   --cmntr-btn-bg:transparent;
-  --cmntr-btn-hover-color:#5b62e5;
+  --cmntr-btn-hover-color: var(--color-fg-hyperlink-hover);
   --cmntr-btn-hover-bg:transparent;
   --cmntr-btn-active-color:#5b62e5;
   --cmntr-btn-active-bg:transparent;
@@ -611,8 +614,10 @@
   box-shadow:0 .25rem .375rem rgba(50,50,93,.11),0 .0625rem .1875rem rgba(0,0,0,.08)
 }
 .comentario-root .comentario-btn.comentario-btn-link.comentario-btn-active {
-  font-weight:700
+  font-weight:unset
 }
+
+
 .comentario-root .comentario-btn-sm {
   font-size:12px;
   line-height:16px;
@@ -937,6 +942,8 @@
 }
 .comentario-root .comentario-badge-moderator {
   background:#ffdf00 !important;
+  font-weight: bold;
+  color: white;
 }
 
 
@@ -968,7 +975,7 @@
   position:relative;
   display:flex;
   align-items:center;
-  background-color:#dee2e6;
+  background-color:#000000;
   padding:6px 16px;
   line-height:24px;
   font-weight:700
@@ -1093,7 +1100,7 @@
 .comentario-root .comentario-card {
   display:flex;
   margin-top:16px;
-  border-top:1px solid #f1f3f5
+  border-top:transparent;
 }
 .comentario-root .comentario-card .comentario-card-expand-spacer {
   flex:0 0 12px
@@ -1212,8 +1219,8 @@
   filter:grayscale(.8)
 }
 .comentario-root .comentario-pending {
-  background:#e9ecef;
-  border:#fab005 dashed 1px
+  background:transparent;
+  border:transparent;
 }
 .comentario-root .comentario-rejected {
   background:#fff8c5
@@ -1252,8 +1259,8 @@
   padding:12px 0
 }
 .comentario-root .comentario-profile-bar .comentario-logged-in-as .comentario-name {
-  color:#343a40;
-  font-weight:700
+  color:var(--color-fg-font-normal);
+  font-weight:bold;
 }
 .comentario-root .comentario-sort-bar::after {
   display:block;
@@ -1335,8 +1342,10 @@
   color:#e8590c
 }
 .comentario-root.comentario-root-font * {
-  font-family:"Source Sans Pro",sans-serif;
+  font-family:monospace;
   text-align: left;
+  overflow-wrap: anywhere;
+  font-size: unset;
 }
 .comentario-root .comentario-border-0 {
   border-left:2px solid #ff6b6b!important
