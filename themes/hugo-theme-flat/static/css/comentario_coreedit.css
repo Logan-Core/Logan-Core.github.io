@@ -944,6 +944,8 @@
   background:#ffdf00 !important;
   font-weight: bold;
   color: white;
+  text-transform: unset;
+  margin-left: 0;
 }
 
 

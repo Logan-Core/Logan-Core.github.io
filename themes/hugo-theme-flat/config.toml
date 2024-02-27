@@ -51,8 +51,6 @@ pre = """<a href="/index.xml">RSS Feed</a>"""
 
 [[params.footer_rows]]
 [[params.footer_rows.items]]
-pre = """<a href="/tos/">Terms of Service</a>"""
-[[params.footer_rows.items]]
 pre = """<a href="/privacy/">Privacy Policy</a>"""
 
 
