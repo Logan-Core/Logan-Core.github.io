@@ -28,7 +28,7 @@
 
     function displayErrorMessage() {
         // Create and show an error message element
-		var errorElement = document.createElement('p');
+		var errorElement = document.createElement('error-p');
 	  // Create the first part of the text
 	  var errorText = document.createTextNode("An error has occurred! Cannot load comments! Please ");
 
@@ -40,9 +40,7 @@
 	  // Append all the elements
 	  errorElement.appendChild(errorText); 
 	  errorElement.appendChild(contactLink);
-	  
-	  errorElement.style.color = "red"; 
-	  errorElement.style.textAlign = "center"; 
+
 	  
 	    // Target the main element
   var mainDiv = document.querySelector('main'); 

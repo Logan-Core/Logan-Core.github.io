@@ -936,7 +936,7 @@
   color:#fff
 }
 .comentario-root .comentario-badge-moderator {
-  background:#ffdf00
+  background:#ffdf00 !important;
 }
 
 
@@ -1041,9 +1041,7 @@
   border-left-color:#adb5bd;
   border-bottom-color:#adb5bd
 }
-.comentario-root .comentario-footer {
-  display:none;
-}
+
 .comentario-root .comentario-comment-editor {
   width:100%;
   display:flex;

@@ -203,10 +203,17 @@ body {
 }
 
 
-#mainDiv p { /* Adjust the selector if necessary */
-  text-align: center;
-  color: red; /* Keep the color styling if desired */
-} 
+error-p {
+  color: red;
+  font-weight: bold; /* Emphasize the text */
+  width: 100%;
+  margin: auto;
+  padding-top: 15px;
+  
+}
+
+error-p a { text-decoration: none; color: var(--color-dark-fg-hyperlink); }
+error-p a:hover { color: var(--color-dark-fg-hyperlink-hover); }
 
 
 /********** set up break point **********/
