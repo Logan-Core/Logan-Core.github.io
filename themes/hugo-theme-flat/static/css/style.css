@@ -115,7 +115,8 @@
 *, ::before, ::after {
   font-family: monospace;
   box-sizing: border-box;
-  
+  list-style: none;
+  text-align: center;
 }
 
 html {
@@ -275,6 +276,10 @@ error-p a:hover { color: var(--color-dark-fg-hyperlink-hover); }
   font-family: monospace;
   font-size: var(--font-size-6);
   font-weight: bold;
+}
+
+strong{
+	color: #FCFCFC; !important
 }
 
 /********** set up menus layout **********/
@@ -530,7 +535,11 @@ div.notices.tip p:first-child:after {
 .list-item:last-child { border-bottom: 0; }
 
 .list-item:first-child { padding-top: 0;}
-.list-item             { padding: var(--len-3) 0; }
+.list-item             { padding: var(--len-3) 0; 
+	margin: auto;
+	width: fit-content;
+	list-style:circle;
+}
 .list-item:last-child  { padding-bottom: 0;}
 
 /**********************/
@@ -651,13 +660,14 @@ div.notices.tip p:first-child:after {
 .content blockquote {
   margin-top: 5px;
   margin-bottom: 5px;
-  padding-left: 1em;
-  /* border: 2px solid var(--color-fg-tiny-line); */
+  border: 2px solid var(--color-fg-tiny-line);
   color: var(--color-fg-font-quote);
   text-align: center;
   
   width: 100%;
   margin: 2em auto;
+  padding-left: 2px;
+  padding-right: 2px;
   
 }
 
@@ -746,7 +756,7 @@ iframe {
 	margin: auto;
 	
 }
-#playlist,*{
+#playlist{
 	list-style: none;
 	text-align: center;
 	padding-left: 0;

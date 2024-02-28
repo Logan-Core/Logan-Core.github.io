@@ -1,8 +1,8 @@
 +++
 author = "Logan Core"
 title = "[game_title]"
-date = 2024-02-15
-last_updated = 2024-02-16
+date = 2024-02-26
+last_updated = 2024-02-27
 show_comments = true
 categories = [
     "Reviews"
@@ -11,7 +11,7 @@ categories = [
 
 
 
-[![Gameplay of [game_title]](./[game_id]_gameplay.webp)](./[game_id]_gameplay.webp)
+[![Gameplay of [game_title]](/images/core_game_database/test_gameplay.webp)](/images/core_game_database/test_gameplay.webp)
 
 > The Dark Queen has attacked and kidnapped (toadnapped?) your best buddy. To make matters worse, she nabbed the best looking girl around! So, what will you do? Cry? Whimper? Hide? Call the Starcops? NO! Cause you're a Battletoad! Battletoads don't cry, hide or call for help! And they certainly don't whimper! They get MAD then they get EVEN! So grab your blaster, hop on the Toadster and go get 'em!
 > 
@@ -30,13 +30,14 @@ categories = [
 
 ### Review
 
-A few paragraphs giving reader context to my history with game prior to playing
+Write about game here.
 
-Technical overview of game experience. Exclude any emulator-specific issues (Irrelevant)
+Write about game here.
 
-Full review goes here
-Use as many or as few words as needed to express the experience with the game
+Write about game here.
+
+Write about game here.
 
 ---
 
-[![Sketch comic alt-text](/images/test_image.webp)](/images/test_image.webp)
+[![Sketch comic REPLACE ME](/images/test_image.webp)](/images/test_image.webp)
