@@ -279,7 +279,7 @@ error-p a:hover { color: var(--color-dark-fg-hyperlink-hover); }
 }
 
 strong{
-	color: #FCFCFC; !important
+	/* color: #FCFCFC; !important */
 }
 
 /********** set up menus layout **********/

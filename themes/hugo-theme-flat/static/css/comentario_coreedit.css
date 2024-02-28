@@ -443,7 +443,7 @@
   justify-content:center;
   align-items:center;
   align-content:center;
-  background-color:#fff;
+  background-color:#2b2b2b;
   font-size:15px
 }
 .comentario-root .comentario-add-comment-host:not(.comentario-editor-inserted) {
@@ -611,7 +611,9 @@
   box-shadow:inset 0 .25rem .375rem rgba(50,50,93,.11),inset .0625rem .1875rem rgba(0,0,0,.08)
 }
 .comentario-root .comentario-btn:not(.comentario-btn-link):not(.comentario-btn-active) {
-  box-shadow:0 .25rem .375rem rgba(50,50,93,.11),0 .0625rem .1875rem rgba(0,0,0,.08)
+  box-shadow:0 .25rem .375rem rgba(50,50,93,.11),0 .0625rem .1875rem rgba(0,0,0,.08);
+  font-weight: bolder;
+  
 }
 .comentario-root .comentario-btn.comentario-btn-link.comentario-btn-active {
   font-weight:unset
@@ -627,8 +629,8 @@
 .comentario-root .comentario-btn-submit {
   --cmntr-btn-color:#ffffff;
   --cmntr-btn-hover-color:#ffffff;
-  --cmntr-btn-bg:#4950d8;
-  --cmntr-btn-hover-bg:#5b62e5;
+  --cmntr-btn-bg:var(--color-fg-font-hyper);
+  --cmntr-btn-hover-bg:var(--color-fg-font-hyper-hover);
   font-weight:700
 }
 .comentario-root .comentario-btn-submit .comentario-icon {
@@ -636,9 +638,9 @@
 }
 .comentario-root .comentario-btn-secondary {
   --cmntr-btn-color:#ffffff;
-  --cmntr-btn-bg:#9ea0d5;
+  --cmntr-btn-bg:var(--color-fg-font-hyper);
   --cmntr-btn-hover-color:#ffffff;
-  --cmntr-btn-hover-bg:#d3d4ec;
+  --cmntr-btn-hover-bg:var(--color-fg-font-hyper-hover);
   --cmntr-btn-active-color:#ffffff;
   --cmntr-btn-active-bg:#686cbe
 }
@@ -726,10 +728,10 @@
 .comentario-root input[type=text],
 .comentario-root input[type=url],
 .comentario-root textarea {
-  background-color:#fff;
+  background-color:#3c3c3c;
   border:1px solid rgba(50,50,93,.1);
   border-radius:3px;
-  color:#565c63
+  color:var(--color-fg-font-normal);
 }
 .comentario-root input[type=email].comentario-touched:invalid,
 .comentario-root input[type=password].comentario-touched:invalid,
