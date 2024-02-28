@@ -9,6 +9,7 @@ categories = [
 ---
 ## **Where can I contact you?**
 ![logan at logancore dot com](/images/dev_mail.webp)
+
 ---
 
 ## **Are you on any other social media websites?**

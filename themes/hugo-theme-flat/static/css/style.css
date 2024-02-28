@@ -115,8 +115,19 @@
 *, ::before, ::after {
   font-family: monospace;
   box-sizing: border-box;
-  list-style: none;
+  list-style: disclosure-closed;
   text-align: center;
+}
+
+li{
+	text-align:left;
+	padding-left: 38%;
+	list-style-position: inside;
+}
+
+li.active{
+	padding-left: 40%;
+	
 }
 
 html {
@@ -365,9 +376,12 @@ strong{
 
 
 
+
 /*expand link formatting*/
 details summary { 
   color: var(--color-fg-hyperlink);
+  text-align: center;
+  list-style: revert;
 }
 details div { 
   color: var(--color-fg-hyperlink-hover);
