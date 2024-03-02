@@ -3,6 +3,7 @@ author = "Logan Core"
 title = "Privacy Policy"
 date = 2024-02-26
 last_updated = 2024-02-27
+hide_navigation = true
 categories = [
 
 ]

@@ -189,7 +189,9 @@ body {
 
 .main { padding: var(--len-4); }
 .side { padding-left: var(--len-4); }
-.main { flex: 0 0 100%; width: 100%; }
+.main { 
+flex: 0 0 100%; width: 100%; 
+}
 .side { flex: 0 0 28%; width: 28%; }
 
 /* mobile layout: place side to bottom */
@@ -1335,8 +1337,12 @@ legend.svelte-1v2r7ls.svelte-1v2r7ls{
   font-size: var(--font-size-2);
   margin-bottom: 12px;
 }
-#archive .group .value   { text-indent: -60px; padding-left: 60px; }
-#archive .group .value * { text-indent: 0; }
+#archive .group .value   { text-indent: -60px; padding-left: 60px; 
+text-align: left;
+}
+#archive .group .value * { text-indent: 0; 
+
+}
 #archive .group .value .date  { display: inline-block; margin-right: 1em;}
 #archive .group .value .title { display: inline; }
 

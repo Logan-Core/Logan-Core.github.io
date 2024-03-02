@@ -2,6 +2,7 @@
 author = "Logan Core"
 title = "Frequently Asked Questions"
 date = 2024-02-12
+hide_navigation = true
 categories = [
 
 ]

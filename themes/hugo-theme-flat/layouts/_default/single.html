@@ -34,12 +34,12 @@
    </div>
 
   <div class="navigation-links"> 
-    {{ if .PrevInSection }}
+    {{ if and (not .Params.hide_navigation) .PrevInSection }} 
       <a class="nav-link nav-link-prev" href="{{ .PrevInSection.Permalink }}"><b><-- </b>{{ .PrevInSection.Title }}</a>
     {{ else }}
       <div class="nav-link nav-link-prev"></div> {{ end }}
 
-    {{ if .NextInSection }}
+    {{ if and (not .Params.hide_navigation) .NextInSection }} 
       <a class="nav-link nav-link-next" href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }}<b> --></b></a>
     {{ end }}
  </div> 
