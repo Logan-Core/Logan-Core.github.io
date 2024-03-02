@@ -10,7 +10,7 @@ categories = [
 
 
 
-[![Gameplay of Sonic Adventure 2](/images/core_game_database/4455_gameplay.webp)](/images/core_game_database/4455_gameplay.webp)
+[![Gameplay of Sonic Adventure 2](/images/core_game_database/test_gameplay.webp)](/images/core_game_database/test_gameplay.webp)
 
 > CHANGEME Grab description from database and replace this before publishing!
 >

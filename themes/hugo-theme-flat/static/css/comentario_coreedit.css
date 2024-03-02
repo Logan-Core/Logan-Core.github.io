@@ -1295,7 +1295,7 @@
   --cmntr-btn-color:$gray-7;
   margin:0;
   padding:0;
-  width:32px;
+  width:auto;
   height:32px;
   opacity:.5
 }
