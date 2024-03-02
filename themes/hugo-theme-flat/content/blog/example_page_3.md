@@ -1,8 +1,7 @@
 +++
 author = "Logan Core"
-title = "Example Page 1"
-date = 2024-02-16
-last_updated = 2024-02-20
+title = "Example Page 3"
+date = 2024-03-01
 show_comments = true
 categories = [
     "Blog"
@@ -10,8 +9,6 @@ categories = [
 +++
 
 
-{{% button href="/" color="#407aa4" font-color="#d2d2d3 "%}}Test Button{{% /button %}}
-{{% button href="/" color="#ffdf00" font-color="#000000 "%}}Another Button{{% /button %}}
 
 {{% notice note %}}
 Notice Text

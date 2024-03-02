@@ -142,6 +142,25 @@ html {
 /**************************************************************/
 
 
+.post-navigation-container {
+  display: flex; 
+  flex-direction: column; /* Arrange elements vertically */
+  
+  justify-content: space-between; /* Aligns items on opposite sides */
+}
+
+.taxonomies { 
+    text-align: center;  /* Center the category content */
+}
+
+.navigation-links {
+  display: flex;
+  justify-content: space-between; /* Distribute navigation links */
+}
+
+
+
+
 
 body {
   display: flex;

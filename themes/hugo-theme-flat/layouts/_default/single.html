@@ -2,6 +2,9 @@
 
 <main data-pagefind-body>
 
+
+
+
 <section class="single">
     <h1 class="title">{{ .Title }}</h1>
 
@@ -18,16 +21,33 @@
 	</div>
 
 
-	<div class="taxonomies">
-		{{ with .Params.categories }}
-		<div>
-		Category: 
-			{{ range . }}
-				<a href="/{{ . | urlize }}">{{ . }}</a> 
-			{{ end }}
-		</div>
-		{{ end }}
-	</div>
+<div class="post-navigation-container"> 
+ <div class="taxonomies">
+      {{ with .Params.categories }}
+      <div>
+      Category: 
+         {{ range . }}
+            <a href="/{{ . | urlize }}">{{ . }}</a> 
+         {{ end }}
+      </div>
+      {{ end }}
+   </div>
+
+  <div class="navigation-links"> 
+    {{ if .PrevInSection }}
+      <a class="nav-link nav-link-prev" href="{{ .PrevInSection.Permalink }}"><b><-- </b>{{ .PrevInSection.Title }}</a>
+    {{ else }}
+      <div class="nav-link nav-link-prev"></div> {{ end }}
+
+    {{ if .NextInSection }}
+      <a class="nav-link nav-link-next" href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }}<b> --></b></a>
+    {{ end }}
+ </div> 
+</div>
+
+
+
+
 
     <hr />
 
