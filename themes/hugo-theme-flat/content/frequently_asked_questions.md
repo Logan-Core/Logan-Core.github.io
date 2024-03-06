@@ -9,7 +9,7 @@ categories = [
 +++
 ---
 ## **Where can I contact you?**
-![logan at logancore dot com](/images/dev_mail.webp)
+![logan core at logan core dot com](/images/dev_mail.webp)
 
 ---
 
