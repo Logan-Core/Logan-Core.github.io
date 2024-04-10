@@ -80,13 +80,6 @@ weight = 61
 
 [[menus.main]]
 parent = "Category"
-name = "Reviews"
-url = "/reviews/"
-weight = 62
-
-
-[[menus.main]]
-parent = "Category"
 name = "Projects"
 url = "/projects/"
-weight = 63
+weight = 62

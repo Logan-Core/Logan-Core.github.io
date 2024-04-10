@@ -112,12 +112,13 @@
 }
 
 
-*, ::before, ::after {
-  font-family: monospace;
-  box-sizing: border-box;
-  list-style: disclosure-closed;
-  text-align: center;
-}
+/*Keep this here for reference CHANGEME*/
+/* *, ::before, ::after { */
+  /* font-family: monospace; */
+  /* box-sizing: border-box; */
+  /* list-style: disclosure-closed; */
+  /* text-align: center; */
+/* } */
 
 li{
 	text-align:left;
