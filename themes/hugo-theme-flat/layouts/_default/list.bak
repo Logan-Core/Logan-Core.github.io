@@ -1,0 +1,37 @@
+{{ define "main" }}
+
+<div>
+    {{ if trim .Content " \n" }}
+        <div class="content archive-hint">{{ .Content }}</div>
+    {{ end }}
+
+    <section id="archive">
+        
+            <div class="group">
+
+
+                {{ range .Pages }}
+                    <div class="value">
+                        <time class="date" datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006/01/02" }}</time>
+
+                        <div class="title">
+
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+
+                            {{ with .Params.tags }}
+                                {{ range . }}
+                                    <a class="tags" href="{{ "tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+                                {{ end }}
+                            {{ end }}
+
+                        </div>
+                    </div>
+                {{ end }}
+
+            </div>
+        
+
+    </section>
+</div>
+
+{{ end }}

@@ -9,6 +9,7 @@ categories = [
 ]
 +++
 
+[Link to Example_page_2](../example_page_2)
 
 {{% button href="/" color="#407aa4" font-color="#d2d2d3 "%}}Test Button{{% /button %}}
 {{% button href="/" color="#ffdf00" font-color="#000000 "%}}Another Button{{% /button %}}

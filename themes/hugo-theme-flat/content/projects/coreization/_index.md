@@ -9,8 +9,16 @@ categories = [
 ]
 +++
 
+[hello](test_page)
+
 
 Landing Page for Coreization DocumentationLanding Page for Coreization DocumentationLanding Page for Coreization DocumentationLanding Page for Coreization DocumentationLanding Page for Coreization DocumentationLanding Page for Coreization DocumentationLanding Page for Coreization DocumentationLanding Page for Coreization DocumentationLanding Page for Coreization DocumentationLanding Page for Coreization DocumentationLanding Page for Coreization DocumentationLanding Page for Coreization DocumentationLanding Page for Coreization DocumentationLanding Page for Coreization DocumentationLanding Page for Coreization DocumentationLanding Page for Coreization Documentation
+
+[![test image for site](./test_image.webp)](./test_image.webp)
+
+
+
+{{< image_gallery images="./test_image.webp,./test_image.webp,./test_image.webp,./test_image.webp,./test_image.webp,./test_image.webp,./test_image.webp,./test_image.webp,./test_image.webp,./test_image.webp,./test_image.webp,./test_image.webp" >}}
 
 {{% button href="./player_controller" color="#407aa4" font-color="#d2d2d3 "%}}Player Controller{{% /button %}}
 
