@@ -60,16 +60,15 @@ Floating high above each level, the bell serve two purposes for the player:
 ---
 
 Possible Level Enviroments:
-- Space, Stars, and Galaxies
-- Icy Abyss
-- Volcanic Ash
-- Abandoned Temple
-- Techno Abstract Cityscape
 - Beautiful Sky Above the clouds
 - Mesa-like plateau
-- Astract Geometric shapes in weird void space
-- Hell
--
+- Hell [CERBERUS]
+- Icy Abyss
+- Abandoned Temple
+- Eclipse Abyss (DK3 Final boss reference) [THE HERETIC]
+- Volcanic Ash
+- Space, Stars, and Galaxies
+- Night Stormy sky above Dark Grey Clouds [FINAL BOSS] /// Night Sky Falling through clouds (Tornado-like wit lightning) [FINAL BOSS - PART 2]
 
 ## *Player Mechanics*
 Info available on [Player Controller](./player_controller) page
