@@ -1,9 +1,9 @@
 +++
 author = "Logan Core"
-title = "player_controller"
-date = 2024-05-10
+title = "Player Controller / Mechanics"
+date = 2024-05-12
 show_comments = false
 +++
 
-
+[Go Back](../#player-mechanics)
 Player Controller Stuff

@@ -38,7 +38,7 @@ Instead of a traditional scoring system, [placeholder_name] will have a timer th
 
 Each level will have a set time limit you must survive which isn't affected by calling in more waves early. I.E (The level is 120 seconds long and you call in more waves early by shooting the bell, speeding up the timer and getting more points, the level will still take a full 120 seconds to complete)
 
-After the level timer timeouts, all enemies will stop spawning and the music and scenery and adjust slightly to signify to the player that the round is complete. The score timer will pause and after the player finishes up clearing the enemies that are left standing, a hole will open up in the center of the level and the bell will fall through. At the player's leisure, they can jump into the hole and follow the bell to the next level.
+After the level timer timeouts, all enemies will stop spawning and the music and scenery and adjust slightly to signify to the player that the round is complete. The score timer will pause and after the player finishes up clearing the enemies that are left standing, The bell will crash through the center of the arena, leaving a hole. At the player's leisure, they can jump into the hole and follow the bell to the next level.
 
 ## **GameModes**
 There will be two gamemodes for the player to choose from:
@@ -51,6 +51,28 @@ After the player finishes a level in practice mode, the level transition hole th
 
 ---
 
+
+# *The Bell:*
+Floating high above each level, the bell serve two purposes for the player:
+1. Act as the level timer, letting the player know both visually and audibly how close they are to clearing a level. (The tone/pitch of the bell should go from low bass tones to some more higher pitch as the level gets nearer to completion)
+
+2. Can be attacked by the player which causes new waves to spawn in sooner than they normally would and also increment the score counter. Killing enemies serve the player by allowing their weapons to be upgraded, so players can have to option of facing more enemies to upgrade their weapons sooner than normal. Balancing Risk vs Reward
+---
+
+Possible Level Enviroments:
+- Space, Stars, and Galaxies
+- Icy Abyss
+- Volcanic Ash
+- Abandoned Temple
+- Techno Abstract Cityscape
+- Beautiful Sky Above the clouds
+- Mesa-like plateau
+- Astract Geometric shapes in weird void space
+- Hell
+-
+
+## *Player Mechanics*
+Info available on [Player Controller](./player_controller) page
 
 
 [![test image for site](./test_image.webp)](./test_image.webp)
