@@ -1,7 +1,8 @@
 +++
 author = "Logan Core"
-title = "[placeholder_name]"
+title = "Eternal Descent"
 date = 2024-05-10
+last_updated = 2024-05-13
 show_comments = false
 categories = [
     "Project"
@@ -12,14 +13,13 @@ categories = [
 Replace me with banner image of some kind
 {{% /notice %}}
 
-
 ## **What is this game about?**
 
-[placeholder_name] is a Single player First-Person bullet hell game which tasks the player with one goal:
+Eternal Descent is a Single player First-Person bullet hell game which tasks the player with one goal:
 
 Survive the onslaught of enemies long enough until the path to the next level is opened.
 
-Enemies will come out in waves which the player will need to deal with before the next wave spawns, stacking with enemies still present from previous waves which can quickly snowball into a chaotic mess.
+Enemies will come out in waves which the player will need to deal with before the next wave spawns, enemies form previous waves will stay in the arena if they are dealt with in time so the player will have to continuously stay on top of clearing enemies or they risk being overwhelmed.
 
 There will be 9 total levels, each representing a layer of hell from Dante's inferno literature.
 1. [Limbo](./level_1)
@@ -34,7 +34,7 @@ There will be 9 total levels, each representing a layer of hell from Dante's inf
 
 It should be noted that the game itself won't have a story, just planning on borrowing from Dante's Inferno for imagery and inspiration. Astute observers may notice the references but that's about it.
 
-Instead of a traditional scoring system, [placeholder_name] will have a timer that counts up which can be incremented both by staying alive and by activating more waves early by shooting the Bell that rests above each level
+Instead of a traditional scoring system, Eternal Descent will have a timer that counts up which can be incremented both by staying alive and by activating more waves early by shooting the Bell that rests above each level
 
 Each level will have a set time limit you must survive which isn't affected by calling in more waves early. I.E (The level is 120 seconds long and you call in more waves early by shooting the bell, speeding up the timer and getting more points, the level will still take a full 120 seconds to complete)
 
@@ -62,7 +62,7 @@ Floating high above each level, the bell serve two purposes for the player:
 Possible Level Enviroments:
 - Beautiful Sky Above the clouds
 - Mesa-like plateau
-- Hell [CERBERUS]
+- Empty Hell-like expanse with giant bio stalactites [CERBERUS]
 - Icy Abyss
 - Abandoned Temple
 - Eclipse Abyss (DK3 Final boss reference) [THE HERETIC]
