@@ -4,8 +4,7 @@ title = "Player Controller / Mechanics"
 date = 2024-05-12
 show_comments = false
 +++
-
-[Go Back](../#player-mechanics)
+{{% button href="../#player-mechanics" color="#2B2B2B" font-color="#d2d2d3 "%}}Go Back{{% /button %}}
 
 Beyond all else, the player needs to feel in control of their actions.
 

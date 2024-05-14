@@ -57,15 +57,16 @@
                 {{ end }}
                 </section>
 
-<div>
-    {{ if trim .Content " \n" }}
-        <div class="content archive-hint">{{ .Content }}</div>
-    {{ end }}
 
-    <section id="archive">
+<div>
+    <!--{{ if trim .Content " \n" }}
+        <div class="content archive-hint">{{ .Content }}</div>
+    {{ end }}-->
+
+    {{ if not .Params.hide_list_items }}
+        <section id="archive">
 
             <div class="group">
-
 
                 {{ range .Pages }}
                     <div class="value">
@@ -87,8 +88,9 @@
 
             </div>
 
-
-    </section>
+        </section>
+    {{ end }}
 </div>
+
 
 {{ end }}
