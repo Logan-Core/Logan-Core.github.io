@@ -29,8 +29,6 @@ Replace me with banner image of some kind
 
 Eternal Descent is a Single player First-person shooter which tasks the player with a simple goal:
 
----
-
 Survive the onslaught of enemies long enough to defeat the Catalyst and unlock the path to the next level.
 
 ---
@@ -107,5 +105,8 @@ Possible Level Enviroments:
 
 ## Player Mechanics
 Info available on [Player Controller](./player_controller) page
+
+## Enemy List
+Info available on [Enemy](./enemy_list) page
 
 ---
