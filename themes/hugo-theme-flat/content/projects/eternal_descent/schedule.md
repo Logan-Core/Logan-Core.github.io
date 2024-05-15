@@ -9,9 +9,8 @@ show_comments = false
 
 Don't forget to record timelapse footage for Godot!
 ## Week 1:
-- [ ] Entry Goes Here
-- [ ] Entry Goes Here 2
-- [ ] Entry Goes Here 3
+- [ ] First Draft of Design Document
+- [ ] Initialize Godot project / Git repo
 ---
 ## Week 2:
 - [ ] Entry Goes Here

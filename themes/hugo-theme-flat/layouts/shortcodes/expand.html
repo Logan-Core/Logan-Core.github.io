@@ -1,4 +1,10 @@
+<!--<details>
+ <summary style="cursor: pointer;">{{ .Get 0 }}</summary>
+ {{ .Inner | markdownify }}
+</details>-->
+
 <details>
  <summary style="cursor: pointer;">{{ (.Get 0) | markdownify}}</summary>
- {{ .Inner | markdownify }}
+ {{ .Inner }}
 </details>
+
