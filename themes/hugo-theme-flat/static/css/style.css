@@ -451,7 +451,7 @@ div.notices blockquote {
 div.notices.info p {
     border-top: 30px solid #F0B37E;
     background: #413F3E;
-	text-align: left;
+	text-align: center;
 }
 div.notices.info p:first-child:after {
     content: 'Info';
@@ -459,7 +459,7 @@ div.notices.info p:first-child:after {
 div.notices.important p {
     border-top: 30px solid rgba(217, 83, 79, 0.8);
     background: #403D3F;
-	text-align: left;
+	text-align: center;
 }
 div.notices.important p:first-child:after {
     content: 'Important';
@@ -467,7 +467,7 @@ div.notices.important p:first-child:after {
 div.notices.note p {
     border-top: 30px solid #6AB0DE;
     background: #3E3F42;
-	text-align: left;
+	text-align: center;
 }
 div.notices.note p:first-child:after {
     content: 'Note';
@@ -475,7 +475,7 @@ div.notices.note p:first-child:after {
 div.notices.tip p {
     border-top: 30px solid rgba(92, 184, 92, 0.8);
     background: #3E403F;
-	text-align: left;
+	text-align: center;
 }
 div.notices.tip p:first-child:after {
     content: 'Tip';
@@ -1311,7 +1311,10 @@ legend.svelte-1v2r7ls.svelte-1v2r7ls{
 
 
 .content .anchor {
+  position: absolute;
   visibility: hidden;
+  /* Adjust the positioning as needed */
+
 }
 .content h1:hover a,
 .content h2:hover a,

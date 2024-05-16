@@ -2,7 +2,7 @@
 author = "Logan Core"
 title = "Eternal Descent - Design Document"
 date = 2024-05-10
-last_updated = 2024-05-14
+last_updated = 2024-05-15
 show_comments = false
 hide_list_items = true
 +++
@@ -11,7 +11,7 @@ hide_list_items = true
 Replace me with banner image of some kind
 {{% /notice %}}
 
-{{% button href="./schedule" color="#ffdf00" font-color="#020202 "%}}Schedule{{% /button %}}
+{{% button href="./#schedule" color="#ffdf00" font-color="#020202 "%}}Schedule{{% /button %}}
 
 ---
 
@@ -46,15 +46,15 @@ Enemies will also have a "Frenzy Factor" that is influenced by the amount of oth
 ---
 
 There will be 9 total levels, each representing a layer of hell from Dante's inferno literature.
-1. [Limbo](./level_1)
-2. [Lust](./level_2)
-3. [Gluttony - Cerberus](./level_3)
-4. [Greed](./level_4)
-5. [Anger](./level_5)
-6. [Heresy - The Heretic](./level_6)
-7. [Violence](./level_7)
-8. [Fraud](./level_8)
-9. [Treachery - Catalyst](./level_9)
+1. [Limbo](./#level-1-limbo)
+2. [Lust](./#level-2-lust)
+3. [Gluttony - Cerberus](./#level-3-gluttony---cerberus)
+4. [Greed](./#level-4-greed)
+5. [Anger](./#level-5-anger)
+6. [Heresy - The Heretic](./#level-6-heresy---the-heretic)
+7. [Violence](./#level-7-violence)
+8. [Fraud](./#level-8-fraud)
+9. [Treachery - Catalyst](./#level-9-treachery---catalyst)
 
 It should be noted that the game itself won't have a story. All the player needs to know is to keep descending. just planning on borrowing from Dante's Inferno for imagery and inspiration. Astute observers may notice the references but that's about it.
 
@@ -92,8 +92,6 @@ After the player finishes a level in practice mode, the level transition hole th
 ---
 
 
-Possible Level Enviroments:
-- Beautiful Sky Above the clouds
 - Mesa-like plateau
 - Empty giant cave expanse with giant stalactites/rock columns [CERBERUS](./level_3/#cerberus)
 - Icy Abyss
@@ -104,9 +102,239 @@ Possible Level Enviroments:
 - Night Stormy sky above Dark Grey Clouds [Catalyst](./level_9) /// Night Sky Falling through clouds (Tornado-like with lightning) [Catalyst - PART 2](./level_9)
 
 ## Player Mechanics
-Info available on [Player Controller](./player_controller) page
+Beyond all else, the player needs to feel in control of their actions.
+
+## Weapon System
+The player will have two attacks available to them at all times:
+- Left Click: Fire Gun
+- Right Click: Sword
+
+# Gun
+
+# Sword
+When the player swings their sword, The relative velocity of the camera should determine the angle the sword swings at. I.E(If the player is rotating their camera to the right with no vertical movement, the sword should swing flat horizontally to the right // If the camera is rotating upwards towards the sky and also to the right, the Sword should swing at a near 45degree angle following that path)
+
+The slash of the sword will be instant and act as a wide angle hitscan weapon. Most enemies caught in the path of the sword will be cut cleanly and instantly have their hurtbox collisions disabled.
+
+The sword will be very strong but it will have some drawbacks:
+1. It will have a short cooldown between swings (Swarms of enemies will still overwhelm the player)
+2. The cooldown between swings will prevent the player from firing their gun as well.
+3. Some enemies will be resistant to the instant-kill affect. (I'll have a specific color represent armor and teach player through gameplay that the sword can't attack through it no matter what. Maybe give tougher enemies on later levels bits of armor the player would have to slice around?)
+
 
 ## Enemy List
-Info available on [Enemy](./enemy_list) page
+
+## Swarmer
+The simplest enemy. Loosely flies towards the player at all times. Spawns in large groups and quickly amalgamate into frenzied swarms that fly faster and at tighter angles towards the player.
+
+---
+
+## Tripwire
+A post-shaped walking quadruped with a ball top that can connect with other Tripwires to create short barriers the player can either cut with their sword to remove the immediate obstacle or attack either post directly to destroy the pair. Slow moving and have a limit to how many can occupy the arena.
+
+---
+
+## Missile Drone
+A sharp-looking flying creature that hones in on the player at very speed. Should emit a recognizable sound to warn the player they are incoming.
+
+---
+
+## Enemy 4
+Info about enemy goes here
+
+---
+
+## Levels
+## Level 1: *Limbo*
+**{{< fontcolor color="#69AFDE" >}}Blue Cloudy Sky{{< /fontcolor >}}**
+Picturesque blue sky with large mountain-like clouds in all directions.
+Have a hint of the sun poking out somewhere high in the sky with painted light shafts over clouds
+
+{{% notice important %}}
+Replace me with Art Image Gallery
+{{% /notice %}}
+
+The first level in the game has a very important role to fill. The player will spend MOST of the time here.
+
+The player is expected to reset hundreds if not thousands of times in order to gain the skills and experience needed to complete a full run through the game. By the end, players that stick to it will definitely become so familiar with this level they could pretty much do it blindfolded.
+
+More so than later levels, Level 1 needs to have near-perfect "invisible" appeal. Something that draws the player in and help alleviate the pain of having lost their previous attempt. The specific qualities I'm looking for will be difficult to write down but either way, out of every level in the game, this one will be under the most scrutiny and have the most revisions for sure.
+
+
+## Level 2: *Lust*
+
+
+test
+
+{{% notice important %}}
+Replace me with Art Image Gallery
+{{% /notice %}}
+
+## *What is introduced?:*
+
+{{% notice note %}}
+New Introduction: test
+{{% /notice %}}
+
+---
+
+## Level 3: *Gluttony - Cerberus*
+The third level in the game will have the first boss the player encounters.
+
+
+A super large cave expanse so large the walls can bearly be seen through distant fog. with giant stalactites/rock columns obscuring vision closer to the arena.
+When Cerberus appears, parts of his moving snake body should appear off int eh distance coiling up and around the environment to give him an impossibly large sense of scale compared to previous enemies the player has encountered.
+
+{{% notice important %}}
+Replace me with Art Image Gallery
+{{% /notice %}}
+
+## **Cerberus**
+There are certain rules that are typically followed for the "first boss" in an action video game. It is not untypical for the first boss to be treated as a glorified tutorial, however, that need not be the case for this guy. I want Cerberus to 100% be the first major wall the player has to overcome.
+
+Intro:
+The player drops into the arena from the previous level and the Catalyst floats quietly above the edge of the platform. Rumbling sounds are played and Cerberus's body begins to appear from the outskirts in the distance. A few moments later, a large creature with the body of a snake jets up to the left of the Catalyst, then a second on the right, and finally a third one jets up higher than the others directly behind the catalyst and chomps down on it, A vertical slit eyeball pupil appears on the catalyst and then the figth begins
+
+Player Objective:
+Attack the Catalyst inside Cerberus's mouth. The creature holding the Catalyst will occasionally back away into the abyss and send out enemies for the player to deal with.
+The other 2 Cerberus heads will navigate semi-randomly around the arena and unleash simple attacks, the player will have the attention and focus split between different enemies in all directions at worse
+
+---
+
+## Level 4: *Greed*
+
+
+test
+{{% notice important %}}
+Replace me with Art Image Gallery
+{{% /notice %}}
+
+Another test?? Really?
+
+Trying something out
+
+---
+
+## Level 5: *Anger*
+
+
+Environment info goes here
+
+{{% notice important %}}
+Replace me with Art Image Gallery
+{{% /notice %}}
+
+
+---
+
+## Level 6: *Heresy - The Heretic*
+
+
+Environment info goes here
+
+{{% notice important %}}
+Replace me with Art Image Gallery
+{{% /notice %}}
+
+
+At the beginning of the level. There will be no music and barely any ambience. The Catalyst will fly high up into the skybox and create an eclipse-like scenery. It will then spawn in the boss
+
+---
+
+## Level 7: *Violence*
+
+
+Environment info goes here
+
+{{% notice important %}}
+Replace me with Art Image Gallery
+{{% /notice %}}
+
+## Level 8: *Fraud*
+
+
+Environment info goes here
+
+{{% notice important %}}
+Replace me with Art Image Gallery
+{{% /notice %}}
+
+## Level 9: *Treachery - Catalyst*
+
+
+Environment info goes here
+
+{{% notice important %}}
+Replace me with Art Image Gallery
+{{% /notice %}}
+
+---
+
+{{% notice note %}}
+Estimated Project Completion:
+██▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ 2%
+{{% /notice %}}
+
+## Schedule
+Don't forget to record timelapse footage for Godot!
+## Week 1:
+- [ ] First Draft of Design Document
+- [ ] Initialize Godot project / Git repo
+---
+## Week 2:
+- [ ] Add Placeholder Template Artwork (Follow SteamWork Guidelines)
+- [ ] Bring somebody up to speed and sanity check documentation together
+- [ ] test one
+---
+## Week 3:
+- [ ] Entry Goes Here
+- [ ] Entry Goes Here 2
+- [ ] Entry Goes Here 3
+---
+## Week 4:
+- [ ] Entry Goes Here
+- [ ] Entry Goes Here 2
+- [ ] Entry Goes Here 3
+---
+## Week 5:
+- [ ] Entry Goes Here
+- [ ] Entry Goes Here 2
+- [ ] Entry Goes Here 3
+---
+## Week 6:
+- [ ] Entry Goes Here
+- [ ] Entry Goes Here 2
+- [ ] Entry Goes Here 3
+---
+## Week 7:
+- [ ] Entry Goes Here
+- [ ] Entry Goes Here 2
+- [ ] Entry Goes Here 3
+---
+## Week 8:
+- [ ] Entry Goes Here
+- [ ] Entry Goes Here 2
+- [ ] Entry Goes Here 3
+---
+## Week 9:
+- [ ] Entry Goes Here
+- [ ] Entry Goes Here 2
+- [ ] Entry Goes Here 3
+---
+## Week 10:
+- [ ] Entry Goes Here
+- [ ] Entry Goes Here 2
+- [ ] Entry Goes Here 3
+---
+## Week 11:
+- [ ] Entry Goes Here
+- [ ] Entry Goes Here 2
+- [ ] Entry Goes Here 3
+---
+## Week 12:
+- [ ] Entry Goes Here
+- [ ] Entry Goes Here 2
+- [ ] Entry Goes Here 3
+---
 
 ---

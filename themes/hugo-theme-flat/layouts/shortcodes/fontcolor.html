@@ -1,0 +1,8 @@
+{{ $color := .Get "color" }}
+{{ $hexColor := printf $color }}
+
+{{ if .IsNamedParams }}
+  <p style="color: {{ $hexColor }}; font-size: xx-large;">{{ .Inner | safeHTML }}</p>
+{{ else }}
+  <p style="color: {{ $hexColor }}; font-size: xx-large;">{{ .Inner }}</p>
+{{ end }}
