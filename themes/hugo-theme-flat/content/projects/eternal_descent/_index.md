@@ -45,6 +45,22 @@ Enemies will also have a "Frenzy Factor" that is influenced by the amount of oth
 
 ---
 
+## What do the first few minutes of Eternal Descent look like?:
+- The player launches the game from Steam.
+- A "Logan_Core" credit splashscreen appears with the tagline "Created in Godot".
+- Fade transition from splashscreen to main menu.
+- Menu Buttons available to the player:
+	- [Play](./#play)
+	- [Practice](./#practice) (Should be hidden from player until very first Playthrough)
+	- [Leaderboard](./#leaderboard)
+	- [Options](./#options)
+	- Quit
+- Player Selects Play
+- Transition to gameplay, starting the player off in a empty grey void with nothing but a platform to walk around on and the Catalyst above the center of the arena.
+- The player attacks the Catalyst for it to then immediately activates and breaks through the center leaving a portal for the player to follow to level 1.
+-
+---
+
 There will be 9 total levels, each representing a layer of hell from Dante's inferno literature.
 1. [Limbo](./#level-1-limbo)
 2. [Lust](./#level-2-lust)
@@ -92,14 +108,14 @@ After the player finishes a level in practice mode, the level transition hole th
 ---
 
 
-- Mesa-like plateau
-- Empty giant cave expanse with giant stalactites/rock columns [CERBERUS](./level_3/#cerberus)
-- Icy Abyss
-- Abandoned Temple
-- Eclipse Abyss (Dark Souls 3 Final boss reference) [THE HERETIC](./level_6)
-- Volcanic Ash
-- Space, Stars, and Galaxies (Recreate parallax planet from BioMetal)
-- Night Stormy sky above Dark Grey Clouds [Catalyst](./level_9) /// Night Sky Falling through clouds (Tornado-like with lightning) [Catalyst - PART 2](./level_9)
+## Options
+
+---
+
+
+## Leaderboard
+
+---
 
 ## Player Mechanics
 Beyond all else, the player needs to feel in control of their actions.
@@ -162,7 +178,7 @@ More so than later levels, Level 1 needs to have near-perfect "invisible" appeal
 
 
 ## Level 2: *Lust*
-
+**{{< fontcolor color="#f4a35c" >}}Mesa Plateau{{< /fontcolor >}}**
 
 test
 
@@ -179,6 +195,8 @@ New Introduction: test
 ---
 
 ## Level 3: *Gluttony - Cerberus*
+**{{< fontcolor color="#83855f" >}}Impossibly Large Cave{{< /fontcolor >}}**
+
 The third level in the game will have the first boss the player encounters.
 
 
@@ -202,7 +220,7 @@ The other 2 Cerberus heads will navigate semi-randomly around the arena and unle
 ---
 
 ## Level 4: *Greed*
-
+**{{< fontcolor color="#adeef9" >}}Icy Abyss{{< /fontcolor >}}**
 
 test
 {{% notice important %}}
@@ -216,7 +234,7 @@ Trying something out
 ---
 
 ## Level 5: *Anger*
-
+**{{< fontcolor color="#0c9d0b" >}}Abandoned Jungle Temple{{< /fontcolor >}}**
 
 Environment info goes here
 
@@ -228,9 +246,9 @@ Replace me with Art Image Gallery
 ---
 
 ## Level 6: *Heresy - The Heretic*
+**{{< fontcolor color="#715e5c" >}}Eclipse{{< /fontcolor >}}**
 
-
-Environment info goes here
+Environment info goes here (Dark Souls 3 Final boss reference)
 
 {{% notice important %}}
 Replace me with Art Image Gallery
@@ -242,7 +260,7 @@ At the beginning of the level. There will be no music and barely any ambience. T
 ---
 
 ## Level 7: *Violence*
-
+**{{< fontcolor color="#f42514" >}}Volcano Hellscape{{< /fontcolor >}}**
 
 Environment info goes here
 
@@ -251,7 +269,7 @@ Replace me with Art Image Gallery
 {{% /notice %}}
 
 ## Level 8: *Fraud*
-
+**{{< fontcolor color="#ffffff" >}}Space, Stars, and Galaxies{{< /fontcolor >}}**
 
 Environment info goes here
 
@@ -260,9 +278,9 @@ Replace me with Art Image Gallery
 {{% /notice %}}
 
 ## Level 9: *Treachery - Catalyst*
+**{{< fontcolor color="#5a5a5a" >}}Night Stormy Sky{{< /fontcolor >}}**
 
-
-Environment info goes here
+Environment info goes here Night Sky Falling through clouds (Tornado-like with lightning)
 
 {{% notice important %}}
 Replace me with Art Image Gallery
@@ -272,11 +290,11 @@ Replace me with Art Image Gallery
 
 {{% notice note %}}
 Estimated Project Completion:
-██▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ 2%
+███▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ 3%
 {{% /notice %}}
 
 ## Schedule
-Don't forget to record timelapse footage for Godot!
+Don't forget to record timelapse footage for Archive!
 ## Week 1:
 - [ ] First Draft of Design Document
 - [ ] Initialize Godot project / Git repo
