@@ -15,6 +15,7 @@ Replace me with banner image of some kind
 
 ---
 
+Design everything with intent. Avoid arbitrary design decisions
 
 {{< expand "Quick Navigation" >}}
 
@@ -22,21 +23,18 @@ Replace me with banner image of some kind
 
 {{< /expand >}}
 
-
-
-
 ## What is this game about?
 
 Eternal Descent is a Single player First-person shooter which tasks the player with a simple goal:
 
-Survive the onslaught of enemies long enough to defeat the Catalyst and unlock the path to the next level.
+Survive the onslaught of enemies long enough to defeat the [Catalyst](./#the-catalyst) and unlock the path to the next level.
 
 ---
 
 The game will be built with quick-restarts in mind. The player will die in one hit and mistakes from the player will unlikely be forgiven. (Enemies must have predictable patterns that the player can learn. The player should **always** feel like their deaths are due to mistakes on their part and not something unfair the game did.) The game will be tuned to be more difficult than average and feature an online leaderboard powered by Steamworks
 
 ---
-
+Until the Catalyst is defeated, it will shoot out portals that new enemies spawn from. Increasing in intensity overtime. The player will have to race against the clock to progress.
 Enemies will spawn in waves which the player will need to deal with before the next wave spawns, enemies from previous waves will stay in the arena if they are not dealt with in time so the player will have to continuously stay on top of clearing enemies or risk being overwhelmed.
 
 ---
@@ -46,19 +44,25 @@ Enemies will also have a "Frenzy Factor" that is influenced by the amount of oth
 ---
 
 ## What do the first few minutes of Eternal Descent look like?:
-- The player launches the game from Steam.
-- A "Logan_Core" credit splashscreen appears with the tagline "Created in Godot".
-- Fade transition from splashscreen to main menu.
-- Menu Buttons available to the player:
+1. The player launches the game from Steam.
+2. A "Logan_Core" credit splashscreen appears with the tagline "Created in Godot".
+3. Fade transition from splashscreen to main menu.
+4. Menu Buttons available to the player:
 	- [Play](./#play)
 	- [Practice](./#practice) (Should be hidden from player until very first Playthrough)
 	- [Leaderboard](./#leaderboard)
 	- [Options](./#options)
 	- Quit
-- Player Selects Play
-- Transition to gameplay, starting the player off in a empty grey void with nothing but a platform to walk around on and the Catalyst above the center of the arena.
-- The player attacks the Catalyst for it to then immediately activates and breaks through the center leaving a portal for the player to follow to level 1.
--
+5. Player Selects Play
+6. Transition to gameplay, starting the player off in a empty grey void with nothing but a platform to walk around on and the Catalyst above the center of the arena.
+7. This is a quick tutorial show the player the objective. Once the player attacks the Catalyst. It will being flying around erratically and show damage. Once the player hits it enough, it'll fly above the center of the arena and crash through leaving a portal for the player to follow to level 1.
+8. The main gameplay loop begins:
+	- Catalyst floats around the outskirts of the level shooting out portals that enemy waves will spawn from.
+	- The player deals enough damage to the catalyst, causing it to flee. Leaving a open portal on the ground for the player to follow.
+	- Player jumps through and reaches the next level and then the cycle repeats. Each level should take around 2 minutes at most with earlier levels having more opportunities to speed through faster. (fewer armor moments for the Catalyst). Bosses on every third level. Final boss on Level 9.
+9. When the player dies. Show stats, basic leaderboard info and show how far down the player made it on the attempt.
+10. Prompt the player to restart, return to main menu, or quit.
+11. When the player presses the restart button. Start the player midway through the first portal already transitioning to level 1. Skip the intro/tutorial
 ---
 
 There will be 9 total levels, each representing a layer of hell from Dante's inferno literature.
@@ -110,11 +114,17 @@ After the player finishes a level in practice mode, the level transition hole th
 
 ## Options
 
+List all games options. Don't forget epilepsy/accessibility stuff
+
 ---
 
 
 ## Leaderboard
 
+Add leaderboard information stuff here later.
+
+The game will have one Achievement:
+	Catalyst: Reach the Bottom
 ---
 
 ## Player Mechanics
