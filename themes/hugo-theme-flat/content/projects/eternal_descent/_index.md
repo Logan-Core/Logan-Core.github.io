@@ -45,7 +45,7 @@ Enemies will also have a "Frenzy Factor" that is influenced by the amount of oth
 
 ## What do the first few minutes of Eternal Descent look like?:
 1. The player launches the game from Steam.
-2. A "Logan_Core" credit splashscreen appears with the tagline "Created in Godot".
+2. A "Logan_Core" credit splashscreen appears with epilepsy warning and tagline "Created in Godot".
 3. Fade transition from splashscreen to main menu.
 4. Menu Buttons available to the player:
 	- [Play](./#play)
@@ -115,6 +115,7 @@ After the player finishes a level in practice mode, the level transition hole th
 ## Options
 
 List all games options. Don't forget epilepsy/accessibility stuff
+Don't use words like "epilepsy safe mode", there's gotta be legal issues with that. "Reduced Visual Effects" or something instead
 
 ---
 
@@ -130,10 +131,17 @@ The game will have one Achievement:
 ## Player Mechanics
 Beyond all else, the player needs to feel in control of their actions.
 
-## Weapon System
-The player will have two attacks available to them at all times:
-- Left Click: Fire Gun
-- Right Click: Sword
+# Default Player Controls:
+Allow Player to rebind these from options:
+- [Left Click] Fire Gun
+- [Right Click] Swing Sword
+- [W A S D] Movement
+- [Space] Jump
+- [Mousewheel] Adjust Gun Muzzle
+- [1 2 3 4] Quick Adjust Gun Muzzle
+- [Escape] Return to Main Menu
+- [R] Quick Restart (Should work from death screen)
+- [TAB] Toggle HUD Elements
 
 # Gun
 
