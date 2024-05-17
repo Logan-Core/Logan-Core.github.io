@@ -167,10 +167,9 @@ Allow Player to rebind these from options:
 Replace me with weapon concept art
 {{% /notice %}}
 
-The distinctive feature of the player's weapon will be its ability to adjust its own muzzle angle to affect the characteristics of the shots that are fired.
+The distinctive feature of the player's gun will be its ability to adjust its muzzle angle to affect the characteristics of the shots that are fired.
+The mousewheel will be used to smoothly transition from narrow and wide fire modes:
 
-
-Gun Muzzle Modes:
 - Narrow:
 	- Low FireRate
 	- High Damage
@@ -205,7 +204,7 @@ The simplest enemy. Loosely flies towards the player at all times. Spawns in lar
 ---
 
 ## Tripwire
-A post-shaped walking quadruped with a ball top that can connect with other Tripwires to create short barriers the player can either cut with their sword to remove the immediate obstacle or attack either post directly to destroy the pair. Slow moving and have a limit to how many can occupy the arena.
+A post-shaped walking quadruped with a ball top that can connect with other Tripwires to create short barriers the player can either jump over, cut with their sword to remove the immediate obstacle or attack either post directly to destroy the pair.
 
 ---
 
@@ -214,10 +213,48 @@ A sharp-looking flying creature that hones in on the player at very speed. Shoul
 
 ---
 
-## Enemy 4
-Info about enemy goes here
+## Sniper
+Enemy that hangs back floating in the distance. Lobs explosive shots into the arena. The player will need to adjust gun muzzle in order to hit these enemies.
 
 ---
+
+## Shield
+Large Octogon-shaped enemy that slowly approaches the player with a consistent speed. Has no frenzy ability and has segments of armor that the player can cut around using their Sliceshot
+
+---
+
+## Treasure
+Golden mini Catalyst-looking enemy that moves around in an unpredictable pattern. Spawns from the Catalyst after enough damage has been dealt. Defeating it upgrades the player's weapons (May change my mind o this guy later. Weapon upgrades need to have a more elegant process for acquiring)
+
+---
+
+## Snake
+Mini Cerberus guy that appears near the edge of the arena, will swipe at players that walk near it. (Needs to have a very recognizable sound for when it spawns. Player getting caught off guard by one of these guys would be unfair)
+
+---
+
+## Enemy Info
+Enemy Info
+
+---
+
+## Enemy info
+Enemy Info
+
+---
+
+## Enemy info
+Enemy Info
+
+---
+
+## Enemy info
+Enemy Info
+
+---
+
+
+
 
 ## Levels
 ## Level 1: *Limbo*
@@ -279,7 +316,7 @@ The other 2 Cerberus heads will navigate semi-randomly around the arena and unle
 ---
 
 ## Level 4: *Greed*
-**{{< fontcolor color="#adeef9" >}}Icy Abyss{{< /fontcolor >}}**
+**{{< fontcolor color="#0c9d0b" >}}Abandoned Jungle Temple{{< /fontcolor >}}**
 
 test
 {{% notice important %}}
@@ -293,7 +330,7 @@ Trying something out
 ---
 
 ## Level 5: *Anger*
-**{{< fontcolor color="#0c9d0b" >}}Abandoned Jungle Temple{{< /fontcolor >}}**
+**{{< fontcolor color="#adeef9" >}}Icy Abyss{{< /fontcolor >}}**
 
 Environment info goes here
 
