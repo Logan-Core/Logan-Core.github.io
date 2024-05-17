@@ -15,7 +15,7 @@ Replace me with banner image of some kind
 
 ---
 
-Design everything with intent. Avoid arbitrary design decisions
+Design everything with intent. Avoid arbitrary decisions
 
 {{< expand "Quick Navigation" >}}
 
@@ -31,36 +31,38 @@ Survive the onslaught of enemies long enough to defeat the [Catalyst](./#the-cat
 
 ---
 
-The game will be built with quick-restarts in mind. The player will die in one hit and mistakes from the player will unlikely be forgiven. (Enemies must have predictable patterns that the player can learn. The player should **always** feel like their deaths are due to mistakes on their part and not something unfair the game did.) The game will be tuned to be more difficult than average and feature an online leaderboard powered by Steamworks
+The game will be built with quick-restarts in mind. The game will be tuned to be more difficult than average and feature an online leaderboard powered by Steamworks where other users on Steam can compete for the fastest time!
 
 ---
-Until the Catalyst is defeated, it will shoot out portals that new enemies spawn from. Increasing in intensity overtime. The player will have to race against the clock to progress.
+
+The Catalyst appears as a floating white orb and serves as the main antagonist of the game. It will shoot out portals that new enemies will spawn from and must be defeated by the player each level in order to progress further.
+
+---
+
 Enemies will spawn in waves which the player will need to deal with before the next wave spawns, enemies from previous waves will stay in the arena if they are not dealt with in time so the player will have to continuously stay on top of clearing enemies or risk being overwhelmed.
 
----
-
-Enemies will also have a "Frenzy Factor" that is influenced by the amount of others enemies surrounding them. If enemies start to bunch up and the arena gets crowded. Their "Frenzy" stat will increase and this will influence multiple stats on the enemy making them a more dangerous threat
+Most enemies will also have a "Frenzy Factor" that is influenced by the amount of others enemies surrounding them. If enemies start to bunch up and the arena gets crowded. The The "Frenzy" stat will increase and this will boost multiple stats making them a more dangerous threat.
 
 ---
 
 ## What do the first few minutes of Eternal Descent look like?:
 1. The player launches the game from Steam.
 2. A "Logan_Core" credit splashscreen appears with an epilepsy warning followed by a "Created in Godot" splashscreen.
-3. Fade transition to main menu.
+3. Fade transition into main menu.
 4. Menu Buttons available to the player:
 	- [Play](./#play)
-	- [Practice](./#practice) (Should be hidden from player until after very first Playthrough)
+	- [Practice](./#practice) (Should be hidden from player until after they completes tutorial for the first time)
 	- [Leaderboard](./#leaderboard)
 	- [Options](./#options)
 	- Quit
 5. Player Selects Play
 6. Transition to gameplay, starting the player off in a empty grey void with nothing but a platform (with guard rails) to walk around on and the Catalyst above the center of the arena.
-7. This is a quick tutorial to show the player the objective. Once the player attacks the Catalyst (There's nothing else to do, The player should naturally try shooting it.). It will begin flying around erratically and show that it's being damaged. The Catalyst will fly far enough away to the point where the default mode of the gun can no longer reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. Once the player hits it enough, it'll fly above the center of the arena and crash through leaving a portal for the player to follow to level 1.
+7. This is a quick tutorial to show the player the objective. Once the player attacks the Catalyst (There's nothing else to do, The player should naturally try shooting it). It will begin flying around erratically and show that it's being damaged. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. Once the player damages the catalyst enough, it'll fly above the center of the arena and crash through leaving a portal for the player to follow to level 1.
 8. The main gameplay loop begins:
 	- Catalyst floats around the outskirts of the level shooting out portals that enemies will spawn from.
 	- The player deals enough damage to the catalyst, causing it to flee. Leaving a open portal on the ground for the player to follow.
-	- Player jumps through and reaches the next level and then the cycle repeats. Each level should take around 2 minutes at most with earlier levels having more opportunities to finish faster. (fewer armor moments for the Catalyst). Bosses on every third level. Final boss on Level 9.
-9. When the player dies. Show stats, basic leaderboard info and show how far down the player made it on the attempt.
+	- Player jumps through and reaches the next level and then the cycle repeats. Each level should take around 2 minutes at most with earlier levels having more opportunities to finish faster. (fewer armor moments for the Catalyst). Have Boss fights on every third level. Final boss on Level 9.
+9. When the player dies. Show stats, basic leaderboard info and lastly show how far down the player made it on the attempt. (Show the Player that there are 9 total levels. Last thing I want is for the player to believe the game is infinite and there is no end goal besides their score.)
 10. Prompt the player to restart, return to main menu, or quit.
 11. When the player presses the restart button. Start the player midway through the first portal already transitioning into level 1. Skip the intro/tutorial until the next time the game is launched.
 ---
@@ -100,12 +102,14 @@ I.E(Reaching the 5 minute mark on Level 1 should be very difficult but reaching 
 
 After the Catalysts escapes, the shockwave it creates will erase all remaining enemies and the music and scenery will instantly change to signify to the player that the level is complete. The score timer will pause. At the player's leisure, they can jump into the hole and follow the Catalyst to the next level.
 
-## GameModes
+---
+
+# GameModes
 There will be two gamemodes for the player to choose from:
 
-# Play:
+## Play:
 The standard mode that starts the player from the beginning allowing the player to progress to new levels.
-# Practice:
+## Practice:
 Allows the player to start from any of the floors they've previously reached and select starting weapon resources.
 After the player finishes a level in practice mode, the level transition hole that opens up will reset the player's weapons and drop them transition them to the same level on repeat until they switch back to Play mode.
 
@@ -140,7 +144,7 @@ Start listing things here. Cleanup/organize later:
 Add leaderboard information stuff here later.
 
 Each run through the game will also automatically record a demo that can be played back later for leaderboard validation and for review and such.
-Because of the length of the game and certain factors that may not be completely deterministic, Each demo will end right when the Catalyst breaches through the level and then a new recording will begin right when the next level begins. (Players could potentially go afk after a level, so it'll be better if I don't accidentally record that.)
+Because of the length of the game and certain factors that may not be completely deterministic, Each demo will end right when the Catalyst breaches through the level and then a new demo recording will begin right when the next level begins. (Players could potentially go afk after a level, so it'll be better if I don't accidentally record that.)
 When playing back the demos. I'll have some kind of visual transition to switch between levels
 
 The game will have one Achievement:
@@ -150,16 +154,30 @@ The game will have one Achievement:
 ## Player Mechanics
 At no point do I want to player to feel like they have to fight the controls. It will pay to make the system as intuitive as possible.
 
+The player will die in one hit. (Enemies must have predictable patterns that the player can learn. The player should **always** feel like their deaths are due to mistakes on their part and not something unfair the game did.)
+
+# Upgrading
+The player will have 4 stages of upgrades available to unlock in any given run.
+0. Player starts at this level
+1. Major boost to weapon damage. Minor Boost to other stats. Projectiles change shape to something more pointy
+2. Major boost to Firerate, absolute stream of bullets at this level. (Flame effect out gun exhaust)
+3. Boost to all stats (Flame effect turns into plasma. Projectiles now shine a special color)
+4. SliceShot Cooldown removed & Range/Area increased (Show overflowing line of energy along gun tip)
+
+How does the player upgrade? Write down later
+
+
 # Default Player Controls:
 Allow Player to rebind these from options:
 - [Left Click] Fire Gun
 - [Right Click] Slice Shot
 - [W A S D] Movement
 - [Space] Jump
-- [Mousewheel] Adjust Gun Muzzle
+- [Mousewheel UP] Adjust Gun Muzzle
+- [Mousewheel DOWN] Adjust Gun Muzzle
 - [1 2 3 4] Quick Adjust Gun Muzzle
 - [Escape] Return to Main Menu
-- [R] Quick Restart (Should work from death screen)
+- [R] Quick Restart (Should also work from death screen)
 - [TAB] Toggle HUD Elements
 
 # Gun
@@ -171,13 +189,13 @@ The distinctive feature of the player's gun will be its ability to adjust its mu
 The mousewheel will be used to smoothly transition from narrow and wide fire modes:
 
 When the gun's muzzle is set all the way to either the Narrow or Wide firemode, it should click into place and give the player some ability related to the current mode:
-I.E (When the gun is set to full narrow, Holding LeftClick charges a more powerful blast, etc.)
+I.E (When the gun is set to full narrow, Holding LeftClick charges a more powerful blast, etc.) (This actually may complicate things too much for the player. Will have to prototype/playtest)
 
 - Narrow:
-	- Low FireRate
+	- Low FireRate (Short charge/windup before shots)
 	- High Damage
 	- Perfect Accuracy
-	- Very fast projectile speed (Near hitscan)
+	- Very fast projectile speed
 - Using the Mousewheel, the player can smoothly transition between the two modes.
 - Wide:
 	- High FireRate
@@ -185,13 +203,15 @@ I.E (When the gun is set to full narrow, Holding LeftClick charges a more powerf
 	- Spreadshot Accuracy
 	- Slower projectile speed
 
-The projectiles the player fire will not be hitscan. Each individual bullet will have velocity and have flight time between the gun to the target.
+The projectiles will not be hitscan. Each individual bullet will have velocity and have flight time between the gun to the target.
 The projectiles will be colored based on the amount of damage they deal.
 
-# Slice Shot
+# Slice Shots
 The relative velocity of the camera should determine the angle of the slice. I.E(If the player is rotating their camera to the right with no vertical movement, the slice should be flat horizontally // If the camera is rotating upwards towards the sky and also to the right, the Sword should swing at a near 45degree angle following that path)
 
 The slice shot is a short-range wide angle hitscan weapon. Most enemies caught in the path of the sword will be cut cleanly and instantly have their hurtbox collisions disabled.
+
+The rings around the end of the gun tip should rotate along with the camera movement to give the player visual feedback on where the slice will go (a very soft motor whirl sound could be cool.)
 
 The Slice Shot will be very strong but it will have some major drawbacks:
 1. It will have a short cooldown between shots (Swarms of enemies will still overwhelm the player)
