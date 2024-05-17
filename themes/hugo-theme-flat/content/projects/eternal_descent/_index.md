@@ -45,24 +45,24 @@ Enemies will also have a "Frenzy Factor" that is influenced by the amount of oth
 
 ## What do the first few minutes of Eternal Descent look like?:
 1. The player launches the game from Steam.
-2. A "Logan_Core" credit splashscreen appears with epilepsy warning and tagline "Created in Godot".
-3. Fade transition from splashscreen to main menu.
+2. A "Logan_Core" credit splashscreen appears with an epilepsy warning followed by a "Created in Godot" splashscreen.
+3. Fade transition to main menu.
 4. Menu Buttons available to the player:
 	- [Play](./#play)
-	- [Practice](./#practice) (Should be hidden from player until very first Playthrough)
+	- [Practice](./#practice) (Should be hidden from player until after very first Playthrough)
 	- [Leaderboard](./#leaderboard)
 	- [Options](./#options)
 	- Quit
 5. Player Selects Play
-6. Transition to gameplay, starting the player off in a empty grey void with nothing but a platform to walk around on and the Catalyst above the center of the arena.
-7. This is a quick tutorial show the player the objective. Once the player attacks the Catalyst. It will being flying around erratically and show damage. Once the player hits it enough, it'll fly above the center of the arena and crash through leaving a portal for the player to follow to level 1.
+6. Transition to gameplay, starting the player off in a empty grey void with nothing but a platform (with guard rails) to walk around on and the Catalyst above the center of the arena.
+7. This is a quick tutorial to show the player the objective. Once the player attacks the Catalyst (There's nothing else to do, The player should naturally try shooting it.). It will begin flying around erratically and show that it's being damaged. The Catalyst will fly far enough away to the point where the default mode of the gun can no longer reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. Once the player hits it enough, it'll fly above the center of the arena and crash through leaving a portal for the player to follow to level 1.
 8. The main gameplay loop begins:
-	- Catalyst floats around the outskirts of the level shooting out portals that enemy waves will spawn from.
+	- Catalyst floats around the outskirts of the level shooting out portals that enemies will spawn from.
 	- The player deals enough damage to the catalyst, causing it to flee. Leaving a open portal on the ground for the player to follow.
-	- Player jumps through and reaches the next level and then the cycle repeats. Each level should take around 2 minutes at most with earlier levels having more opportunities to speed through faster. (fewer armor moments for the Catalyst). Bosses on every third level. Final boss on Level 9.
+	- Player jumps through and reaches the next level and then the cycle repeats. Each level should take around 2 minutes at most with earlier levels having more opportunities to finish faster. (fewer armor moments for the Catalyst). Bosses on every third level. Final boss on Level 9.
 9. When the player dies. Show stats, basic leaderboard info and show how far down the player made it on the attempt.
 10. Prompt the player to restart, return to main menu, or quit.
-11. When the player presses the restart button. Start the player midway through the first portal already transitioning to level 1. Skip the intro/tutorial
+11. When the player presses the restart button. Start the player midway through the first portal already transitioning into level 1. Skip the intro/tutorial until the next time the game is launched.
 ---
 
 There will be 9 total levels, each representing a layer of hell from Dante's inferno literature.
@@ -76,7 +76,7 @@ There will be 9 total levels, each representing a layer of hell from Dante's inf
 8. [Fraud](./#level-8-fraud)
 9. [Treachery - Catalyst](./#level-9-treachery---catalyst)
 
-It should be noted that the game itself won't have a story. All the player needs to know is to keep descending. just planning on borrowing from Dante's Inferno for imagery and inspiration. Astute observers may notice the references but that's about it.
+It should be noted that the game itself won't have a story. All the player needs to know is to just keep descending down. I'm just planning on borrowing from Dante's Inferno for imagery and inspiration. Astute observers may notice the references but that's about it.
 
 ---
 
@@ -96,9 +96,9 @@ I want to incentivize two different ways of playing the game:
 1. Go for the fastest time. defeating the Catalyst as fast as possible (This will be the expected form of play for most players)
 2. Go for the longest time / highest kill count. Levels are infinite and players can choose to stay on a level and ignore the catalyst while they rack up kills and time spent alive.
 Early levels will start by linearly increasing in difficulty with time while later levels will be more erratic and unforgiving
-I.E(Reaching the 5 minute mark on Level 1 should be very difficult but reaching that same time on Level 8 should be almost humanly impossible)
+I.E(Reaching the 5 minute mark on Level 1 should be very difficult but reaching that same time on Level 8 should be humanly impossible)
 
-After the Catalysts escapes, the shockwave it creates will erase all remaining enemies and the music and scenery will instantly adjust to signify to the player that the level is complete. The score timer will pause. At the player's leisure, they can jump into the hole and follow the Catalyst to the next level.
+After the Catalysts escapes, the shockwave it creates will erase all remaining enemies and the music and scenery will instantly change to signify to the player that the level is complete. The score timer will pause. At the player's leisure, they can jump into the hole and follow the Catalyst to the next level.
 
 ## GameModes
 There will be two gamemodes for the player to choose from:
@@ -117,6 +117,21 @@ After the player finishes a level in practice mode, the level transition hole th
 List all games options. Don't forget epilepsy/accessibility stuff
 Don't use words like "epilepsy safe mode", there's gotta be legal issues with that. "Reduced Visual Effects" or something instead
 
+Start listing things here. Cleanup/organize later:
+- Viewmodel Bobbing
+- Fullscreen
+- Resolution
+- Mouse Sensitivity (x,y) & lock
+- Sound Effect Volume
+- Music Volume
+- Reduced Visual Effects
+- Player Control Rebinds
+- Reset to Default
+- FOV
+- VSync
+- Max FPS
+- Show FPS
+- Gamma
 ---
 
 
@@ -124,17 +139,21 @@ Don't use words like "epilepsy safe mode", there's gotta be legal issues with th
 
 Add leaderboard information stuff here later.
 
+Each run through the game will also automatically record a demo that can be played back later for leaderboard validation and for review and such.
+Because of the length of the game and certain factors that may not be completely deterministic, Each demo will end right when the Catalyst breaches through the level and then a new recording will begin right when the next level begins. (Players could potentially go afk after a level, so it'll be better if I don't accidentally record that.)
+When playing back the demos. I'll have some kind of visual transition to switch between levels
+
 The game will have one Achievement:
 	Catalyst: Reach the Bottom
 ---
 
 ## Player Mechanics
-Beyond all else, the player needs to feel in control of their actions.
+At no point do I want to player to feel like they have to fight the controls. It will pay to make the system as intuitive as possible.
 
 # Default Player Controls:
 Allow Player to rebind these from options:
 - [Left Click] Fire Gun
-- [Right Click] Swing Sword
+- [Right Click] Slice Shot
 - [W A S D] Movement
 - [Space] Jump
 - [Mousewheel] Adjust Gun Muzzle
@@ -144,16 +163,38 @@ Allow Player to rebind these from options:
 - [TAB] Toggle HUD Elements
 
 # Gun
+{{% notice important %}}
+Replace me with weapon concept art
+{{% /notice %}}
 
-# Sword
-When the player swings their sword, The relative velocity of the camera should determine the angle the sword swings at. I.E(If the player is rotating their camera to the right with no vertical movement, the sword should swing flat horizontally to the right // If the camera is rotating upwards towards the sky and also to the right, the Sword should swing at a near 45degree angle following that path)
+The distinctive feature of the player's weapon will be its ability to adjust its own muzzle angle to affect the characteristics of the shots that are fired.
 
-The slash of the sword will be instant and act as a wide angle hitscan weapon. Most enemies caught in the path of the sword will be cut cleanly and instantly have their hurtbox collisions disabled.
 
-The sword will be very strong but it will have some drawbacks:
-1. It will have a short cooldown between swings (Swarms of enemies will still overwhelm the player)
-2. The cooldown between swings will prevent the player from firing their gun as well.
-3. Some enemies will be resistant to the instant-kill affect. (I'll have a specific color represent armor and teach player through gameplay that the sword can't attack through it no matter what. Maybe give tougher enemies on later levels bits of armor the player would have to slice around?)
+Gun Muzzle Modes:
+- Narrow:
+	- Low FireRate
+	- High Damage
+	- Perfect Accuracy
+	- Very fast projectile speed (Near hitscan)
+- Using the Mousewheel, the player can smoothly transition between the two modes.
+- Wide:
+	- High FireRate
+	- Low Damage
+	- Spreadshot Accuracy
+	- Slower projectile speed
+
+The projectiles the player fire will not be hitscan. Each individual bullet will have velocity and have flight time between the gun to the target.
+The projectiles will be colored based on the amount of damage they deal.
+
+# Slice Shot
+The relative velocity of the camera should determine the angle of the slice. I.E(If the player is rotating their camera to the right with no vertical movement, the slice should be flat horizontally // If the camera is rotating upwards towards the sky and also to the right, the Sword should swing at a near 45degree angle following that path)
+
+The slice shot is a short-range wide angle hitscan weapon. Most enemies caught in the path of the sword will be cut cleanly and instantly have their hurtbox collisions disabled.
+
+The Slice Shot will be very strong but it will have some major drawbacks:
+1. It will have a short cooldown between shots (Swarms of enemies will still overwhelm the player)
+2. The cooldown between shots will prevent the player from firing their gun.
+3. Some enemies will be resistant to the instant-kill effect. (I'll have a specific color represent armor and teach player through gameplay that the sword can't attack through it no matter what. Maybe give tougher enemies on later levels bits of armor the player would have to slice around?)
 
 
 ## Enemy List
