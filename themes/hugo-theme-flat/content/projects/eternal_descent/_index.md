@@ -83,7 +83,7 @@ It should be noted that the game itself won't have a story. All the player needs
 # The Catalyst:
 The Catalyst appears as a floating white orb that distorts surrounding light and serves as the main antagonist of the game. It will shoot out portals that new enemies will spawn from and must be defeated by the player on each level in order to progress further.
 
-After the Catalyst has lost a specific amount of health each level, WRITE STUFF HERE LATER
+After the Catalyst has lost a specific amount of health each level, Give it some kind of armor that can only be removed by clearing the next wave of enemies.
 
 After enough damage has been dealt to the Catalyst, it will float high above the center of the arena and begin charging up. After a short time, it will charge down and crash through the level leaving a hole for the player to follow to the next level. This action of charging through the level and leaving a hole will also release a shockwave killing all enemies left in the arena. (The Catalyst will have some form of armor it'll activate if too many enemies are alive. This will prevent some cheap tactics of just avoiding enemies and focusing on the Catalyst)
 
@@ -94,7 +94,7 @@ Each of the 9 levels will be infinite and have a repeating enemy spawn pattern t
 
 I want to incentivize two different ways of playing the game:
 1. Go for the fastest time. defeating the Catalyst as fast as possible (This will be the expected form of play for most players)
-2. Go for the longest time / highest kill count. Levels are infinite and players can choose to stay on a level and ignore the catalyst while they rack up kills and time spent alive.
+2. Go for the longest time. Levels are infinite and players can choose to stay on a level and ignore the catalyst while they rack up kills and time spent alive.
 Early levels will start by linearly increasing in difficulty with time while later levels will be more erratic and unforgiving
 I.E(Reaching the 5 minute mark on Level 1 should be very difficult but reaching that same time on Level 8 should be humanly impossible)
 
@@ -170,6 +170,9 @@ Replace me with weapon concept art
 The distinctive feature of the player's gun will be its ability to adjust its muzzle angle to affect the characteristics of the shots that are fired.
 The mousewheel will be used to smoothly transition from narrow and wide fire modes:
 
+When the gun's muzzle is set all the way to either the Narrow or Wide firemode, it should click into place and give the player some ability related to the current mode:
+I.E (When the gun is set to full narrow, Holding LeftClick charges a more powerful blast, etc.)
+
 - Narrow:
 	- Low FireRate
 	- High Damage
@@ -208,7 +211,7 @@ A post-shaped walking quadruped with a ball top that can connect with other Trip
 
 ---
 
-## Missile Drone
+## Missile
 A sharp-looking flying creature that hones in on the player at very speed. Should emit a recognizable sound to warn the player they are incoming.
 
 ---
@@ -307,11 +310,11 @@ Replace me with Art Image Gallery
 There are certain rules that are typically followed for the "first boss" in an action video game. It is not untypical for the first boss to be treated as a glorified tutorial, however, that need not be the case for this guy. I want Cerberus to 100% be the first major wall the player has to overcome.
 
 Intro:
-The player drops into the arena from the previous level and the Catalyst floats quietly above the edge of the platform. Rumbling sounds are played and Cerberus's body begins to appear from the outskirts in the distance. A few moments later, a large creature with the body of a snake jets up to the left of the Catalyst, then a second on the right, and finally a third one jets up higher than the others directly behind the catalyst and chomps down on it, A vertical slit eyeball pupil appears on the catalyst and then the figth begins
+The player drops into the arena from the previous level and after the player finishes the standard loop of the Catalyst spawning enemies and such. The Catalyst will floats quietly above the edge of the platform. Rumbling sounds are played and Cerberus's body begins to appear from the outskirts in the distance. A few moments later, a large creature with the body of a snake jets up to the left of the Catalyst, then a second on the right, and finally a third one jets up higher than the others directly behind the catalyst and chomps down on it, A vertical slit eyeball pupil appears on the catalyst and then the fight begins
 
 Player Objective:
 Attack the Catalyst inside Cerberus's mouth. The creature holding the Catalyst will occasionally back away into the abyss and send out enemies for the player to deal with.
-The other 2 Cerberus heads will navigate semi-randomly around the arena and unleash simple attacks, the player will have the attention and focus split between different enemies in all directions at worse
+The other 2 Cerberus heads will navigate semi-randomly around the arena and unleash simple attacks, Managing the player's attention between different directions will be the main goal of the fight
 
 ---
 
