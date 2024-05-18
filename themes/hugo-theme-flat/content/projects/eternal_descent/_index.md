@@ -2,7 +2,7 @@
 author = "Logan Core"
 title = "Eternal Descent - Design Document"
 date = 2024-05-10
-last_updated = 2024-05-15
+last_updated = 2024-05-18
 show_comments = false
 hide_list_items = true
 +++
@@ -31,43 +31,47 @@ Survive the onslaught of enemies long enough to defeat the [Catalyst](./#the-cat
 
 ---
 
-The game will be built with quick-restarts in mind. The game will be tuned to be more difficult than average and feature an online leaderboard powered by Steamworks where other users on Steam can compete for the fastest time!
+The game will be level-based with deaths restarting the player at level 1. Nothing will be carried over between attempts. The player will have the same starting conditions every time and only by gaining experience will they be able progress further.
+
+The game will be built with quick-restarts in mind. The game will be tuned to be more difficult than average and feature a online leaderboard where other users can compete for the fastest time!
 
 ---
 
-The Catalyst appears as a floating white orb and serves as the main antagonist of the game. It will shoot out portals that new enemies will spawn from and must be defeated by the player each level in order to progress further.
+Enemies will spawn in waves which the player will need to deal with before the next group spawns, enemies from previous waves will stay in the arena indefinitely until they are killed so if they are not dealt with, the player will quickly find themselves overwhelmed.
+
+Most enemies will also have a "Frenzy" stat that is influenced by the amount of others enemies surrounding them. If enemies start to bunch up and the arena gets crowded. The enemies' "Frenzy" stat will increase and change their behavior making them a more dangerous threat.
 
 ---
 
-Enemies will spawn in waves which the player will need to deal with before the next wave spawns, enemies from previous waves will stay in the arena if they are not dealt with in time so the player will have to continuously stay on top of clearing enemies or risk being overwhelmed.
+The Catalyst is floating orb and serves as the main antagonist of the game. It will float around the outskirts of each level and shoot out portals that new enemies will spawn from.
 
-Most enemies will also have a "Frenzy Factor" that is influenced by the amount of others enemies surrounding them. If enemies start to bunch up and the arena gets crowded. The The "Frenzy" stat will increase and this will boost multiple stats making them a more dangerous threat.
+Once the player deals enough damage to the Catalyst. It will retreat by opening a new portal that the player can follow through to the next level.
 
 ---
 
 ## What do the first few minutes of Eternal Descent look like?:
 1. The player launches the game from Steam.
-2. A "Logan_Core" credit splashscreen appears with an epilepsy warning followed by a "Created in Godot" splashscreen.
+2. A "Logan_Core" credit splashscreen appears with an epilepsy warning followed by a "Created in Godot" splashscreen. (Can be skipped to get into menu faster)
 3. Fade transition into main menu.
 4. Menu Buttons available to the player:
 	- [Play](./#play)
-	- [Practice](./#practice) (Should be hidden from player until after they completes tutorial for the first time)
+	- [Practice](./#practice) (Should be hidden from player until after they complete tutorial for the first time)
 	- [Leaderboard](./#leaderboard)
 	- [Options](./#options)
 	- Quit
 5. Player Selects Play
-6. Transition to gameplay, starting the player off in a empty grey void with nothing but a platform (with guard rails) to walk around on and the Catalyst above the center of the arena.
+6. Transition to gameplay, starting the player off in a infinite empty grey void. The Catalyst floats silently above a short distance away from the player.
 7. This is a quick tutorial to show the player the objective. Once the player attacks the Catalyst (There's nothing else to do, The player should naturally try shooting it). It will begin flying around erratically and show that it's being damaged. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. Once the player damages the catalyst enough, it'll fly above the center of the arena and crash through leaving a portal for the player to follow to level 1.
 8. The main gameplay loop begins:
 	- Catalyst floats around the outskirts of the level shooting out portals that enemies will spawn from.
-	- The player deals enough damage to the catalyst, causing it to flee. Leaving a open portal on the ground for the player to follow.
-	- Player jumps through and reaches the next level and then the cycle repeats. Each level should take around 2 minutes at most with earlier levels having more opportunities to finish faster. (fewer armor moments for the Catalyst). Have Boss fights on every third level. Final boss on Level 9.
-9. When the player dies. Show stats, basic leaderboard info and lastly show how far down the player made it on the attempt. (Show the Player that there are 9 total levels. Last thing I want is for the player to believe the game is infinite and there is no end goal besides their score.)
+	- The player deals enough damage to the Catalyst, causing it to flee. Leaving a open portal on the ground for the player to follow.
+	- Player jumps through and reaches the next level. This cycle repeats. Each level should take around 2 minutes at most with earlier levels having more opportunities to finish faster. (fewer armor moments for the Catalyst, less time waiting around for phases and such). Have Boss fights on every third level. Final boss on Level 9.
+9. When the player dies. Show stats, basic leaderboard info and lastly show how far down the player made it on the attempt. (It's important to show the Player that there are 9 total levels. I want the player to understand that there is an ending to play for and that the game isn't an infinite shooter where the only goal is to get a high score.)
 10. Prompt the player to restart, return to main menu, or quit.
 11. When the player presses the restart button. Start the player midway through the first portal already transitioning into level 1. Skip the intro/tutorial until the next time the game is launched.
 ---
 
-There will be 9 total levels, each representing a layer of hell from Dante's inferno literature.
+There will be 9 total levels, each loosely representing a layer of hell from Dante's inferno literature.
 1. [Limbo](./#level-1-limbo)
 2. [Lust](./#level-2-lust)
 3. [Gluttony - Cerberus](./#level-3-gluttony---cerberus)
@@ -87,15 +91,13 @@ The Catalyst appears as a floating white orb that distorts surrounding light and
 
 After the Catalyst has lost a specific amount of health each level, Give it some kind of armor that can only be removed by clearing the next wave of enemies.
 
-After enough damage has been dealt to the Catalyst, it will float high above the center of the arena and begin charging up. After a short time, it will charge down and crash through the level leaving a hole for the player to follow to the next level. This action of charging through the level and leaving a hole will also release a shockwave killing all enemies left in the arena. (The Catalyst will have some form of armor it'll activate if too many enemies are alive. This will prevent some cheap tactics of just avoiding enemies and focusing on the Catalyst)
-
-
+After enough damage has been dealt to the Catalyst, it will float high above the center of the arena and begin charging up. After a short time, it will charge down and crash through the level leaving a hole for the player to follow to the next level. This action of crashing through the level and leaving a hole will also release a shockwave killing all enemies left in the arena. (The Catalyst will have some form of armor it'll activate if too many enemies are alive. This will prevent some cheap tactics of just avoiding enemies and focusing on the Catalyst)
 
 ## Scoring
-Each of the 9 levels will be infinite and have a repeating enemy spawn pattern that loops every minute or so, getting more difficult as time goes on.
+Each level will be infinite and have a repeating enemy spawn pattern that loops every minute or so, getting more difficult as time goes on.
 
 I want to incentivize two different ways of playing the game:
-1. Go for the fastest time. defeating the Catalyst as fast as possible (This will be the expected form of play for most players)
+1. Go for the fastest time. Reaching the bottom and defeating the Catalyst as fast as possible (This will be the expected form of play for most players and the default view on the Leaderboard)
 2. Go for the longest time. Levels are infinite and players can choose to stay on a level and ignore the catalyst while they rack up kills and time spent alive.
 Early levels will start by linearly increasing in difficulty with time while later levels will be more erratic and unforgiving
 I.E(Reaching the 5 minute mark on Level 1 should be very difficult but reaching that same time on Level 8 should be humanly impossible)
@@ -110,8 +112,8 @@ There will be two gamemodes for the player to choose from:
 ## Play:
 The standard mode that starts the player from the beginning allowing the player to progress to new levels.
 ## Practice:
-Allows the player to start from any of the floors they've previously reached and select starting weapon resources.
-After the player finishes a level in practice mode, the level transition hole that opens up will reset the player's weapons and drop them transition them to the same level on repeat until they switch back to Play mode.
+Allows the player to start from any of the floors they've previously reached and select starting weapon level.
+After the player finishes a level in practice mode, the level transition hole that opens up will reset the player's weapons and drop them into the same level on repeat until they switch back to Play mode.
 
 ---
 
@@ -297,7 +299,7 @@ More so than later levels, Level 1 needs to have near-perfect "invisible" appeal
 
 
 ## Level 2: *Lust*
-**{{< fontcolor color="#f4a35c" >}}Mesa Plateau{{< /fontcolor >}}**
+**{{< fontcolor color="#1b00e0" >}}Rough Ocean{{< /fontcolor >}}**
 
 test
 
