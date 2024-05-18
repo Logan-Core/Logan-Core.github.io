@@ -167,6 +167,7 @@ The player will have 4 stages of upgrades available to unlock in any given run.
 4. SliceShot Cooldown removed & Range/Area increased (Show overflowing line of energy along gun tip)
 
 How does the player upgrade? Write down later
+Maybe have set upgrades after bosses? So every third level? I don't know
 
 
 # Default Player Controls:
@@ -376,7 +377,9 @@ Replace me with Art Image Gallery
 {{% /notice %}}
 
 
-At the beginning of the level. There will be no music and barely any ambience. The Catalyst will fly high up into the skybox and create an eclipse-like scenery. It will then spawn in the boss
+After the player does a short loop of fighting the Catalyst and defeatign enemies and such. The Catalyst will stop spawning enemies and the music and ambience will fade out. The Catalyst will fly high up into the skybox and create an eclipse-like scenery. It will then spawn in the boss
+
+NEED MORE INFO ON HERETIC HERE
 
 ---
 
@@ -401,7 +404,12 @@ Replace me with Art Image Gallery
 ## Level 9: *Treachery - Catalyst*
 **{{< fontcolor color="#5a5a5a" >}}Night Stormy Sky{{< /fontcolor >}}**
 
+phase 1:
+Environment info goes here Night Sky / Very stormy
+
+phase 2:
 Environment info goes here Night Sky Falling through clouds (Tornado-like with lightning)
+Super Large Catalyst spawning smaller versions of itself.
 
 {{% notice important %}}
 Replace me with Art Image Gallery
