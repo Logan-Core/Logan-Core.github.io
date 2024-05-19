@@ -11,7 +11,7 @@ hide_list_items = true
 Add logo image
 {{% /notice %}}
 
-{{% button href="./#schedule" color="#ffdf00" font-color="#020202 "%}}Schedule{{% /button %}}
+
 
 ---
 
@@ -20,6 +20,7 @@ Design everything with intent. Avoid arbitrary decisions
 {{< expand "Quick Navigation" >}}
 
 {{% button href="./#what-is-this-game-about" color="#8B43A9" font-color="#020202 "%}}What is this game about?{{% /button %}}
+{{% button href="./#schedule" color="#ffdf00" font-color="#020202 "%}}Schedule{{% /button %}}
 
 {{< /expand >}}
 
@@ -31,7 +32,7 @@ Survive the onslaught of enemies long enough to defeat the [Catalyst](./#the-cat
 
 ---
 
-The game will be level-based with deaths restarting the player at level 1. Nothing will be carried over between attempts. The player will have the same starting conditions every time and only by gaining experience will they be able to progress further down.
+The game will be level-based with deaths restarting the player at level 1. Nothing will be carried over between attempts. The player will have the same starting conditions every time and only by gaining experience will they be able to progress further.
 
 The game will be built with quick-restarts in mind. The game will be tuned to be more difficult than average and feature a online leaderboard where other users can compete for the fastest time!
 
@@ -61,17 +62,18 @@ Once the player deals enough damage to the Catalyst. It will retreat by crashing
 	- Quit
 5. Player Selects Play
 6. Transition into gameplay, starting the player off in a infinite empty grey void. The Catalyst floats silently above near the player.
-7. This is a quick tutorial to show the player the objective. Once the player attacks the Catalyst (There's nothing else to do, The player will eventually try shooting it). It react violently and begin flying around and appear to be taking damage. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer effectively reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. Once the player damages the Catalyst enough, it'll fly above the center of the arena and crash through leaving a portal for the player to follow to level 1.
+7. This is a quick tutorial to show the player the objective. Once the player attacks the Catalyst (There's nothing else to do, The player will eventually try shooting it). It will react violently and begin flying around and appear to be taking damage. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer effectively reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. Once the player damages the Catalyst enough, it'll fly above the center of the arena and crash through leaving a portal for the player to follow to level 1.
 8. The main gameplay loop begins:
 	- Catalyst floats around the outskirts of the level shooting out portals that enemies will spawn from.
-	- The player deals enough damage to the Catalyst, causing it to flee. Opening a portal on the floor that'll expand slowly that the player will eventually have to fall into.
-	- Player jumps through and reaches the next level. This cycle repeats. Each level should take around 2 minutes at most with earlier levels having more opportunities to finish faster. (fewer armor moments for the Catalyst, less time waiting around for phases and such). Boss fights on every third level. Final boss on Level 9.
+	- The player deals enough damage to the Catalyst, causing it to flee. Opening a portal on the floor that'll expand slowly that the player will eventually have to fall into to reach the next level.
+	- This cycle repeats. Each level should take around 2 minutes, with earlier levels offering more chances to finish quickly. (There are fewer armor moments for the Catalyst and less time spent waiting around for waves and such.) Expert players should be able to speed through the earlier levels to some extent.
+	- Boss fights on every third level. Final boss on Level 9.
 9. When the player dies. Show stats, basic leaderboard info and lastly show how far down the player made it on the attempt. (It's important to show the Player that there are 9 total levels. I want the player to understand that there is an ending to play for and that the game isn't an infinite shooter where the only goal is to get a high score.)
 10. Prompt the player to restart, return to main menu, or quit.
 11. When the player presses the restart button. Start the player midway through the first portal already transitioning into level 1. Skip the intro/tutorial until the next time the game is launched.
 ---
 
-There will be 9 total levels, each loosely representing a layer of hell from Dante's inferno literature.
+There will be 9 total levels, each loosely representing a layer of hell from Dante's Inferno.
 1. [Limbo](./#level-1-limbo)
 2. [Lust](./#level-2-lust)
 3. [Gluttony - Cerberus](./#level-3-gluttony---cerberus)
@@ -97,10 +99,12 @@ After enough damage has been dealt to the Catalyst, it will float high above the
 Each level will be infinite and have a repeating enemy spawn pattern that loops every minute or so, getting more difficult as time goes on.
 
 I want to incentivize two different ways of playing the game:
-1. Go for the fastest time. Reaching the bottom and defeating the Catalyst as fast as possible (This will be the expected form of play for most players and the default view on the Leaderboard)
-2. Go for the longest time. Levels are infinite and players can choose to stay on a level and ignore the catalyst while they rack up kills and time spent alive.
-Early levels will start by linearly increasing in difficulty with time while later levels will be more erratic and unforgiving
-I.E (Reaching the 5 minute mark on Level 1 should be very difficult but reaching that same time on Level 8 should be humanly impossible)
+1. Go for the fastest time.
+	- Reaching the bottom and defeating the Catalyst as fast as possible (This will be the expected form of play for most players and the default view on the Leaderboard)
+2. Go for the longest time.
+	- Levels are infinite and players can choose to stay on a level and ignore the catalyst while they rack up kills and time spent alive.
+	Early levels will start by linearly increasing in difficulty with time while later levels will be more erratic and unforgiving
+	I.E (Reaching the 5 minute mark on Level 1 should be very difficult but reaching that same time on Level 8 should be humanly impossible)
 
 After the Catalysts escapes, the shockwave it creates will erase all remaining enemies and the music and scenery will instantly change to signify to the player that the level is complete. The score timer will pause. At the player's leisure or until the portal expands far enough, the player will fall into the portal and follow the Catalyst to the next level.
 
@@ -113,7 +117,7 @@ There will be two gamemodes for the player to choose from:
 The standard mode that starts the player from the beginning allowing the player to progress to new levels.
 ## Practice:
 Allows the player to start from any of the floors they've previously reached and select starting weapon level.
-After the player finishes a level in practice mode, the level transition will reset the player's weapons and drop them into the same level on repeat until they switch back to Play mode.
+After the player finishes a level in practice mode, the level transition will reset the player's weapon and drop them into the same level on repeat until they switch back to Play mode.
 
 ---
 
@@ -149,6 +153,7 @@ Because of the length of the game and certain factors that may not be completely
 
 The game will have one Achievement:
 	Catalyst: Reach the Bottom
+
 ---
 
 ## Player Mechanics
@@ -157,15 +162,15 @@ At no point do I want to player to feel like they have to fight the controls. It
 The player will die in one hit. (Enemies must have predictable patterns that the player can learn. The player should **always** feel like their deaths are due to mistakes on their part and not something unfair that the game did.)
 
 # Upgrading
-The player will have 4 stages of upgrades available to unlock in any given run.
-0. Player starts at this level
-1. Major boost to weapon damage. Minor Boost to other stats. Projectiles change shape to something more pointy
-2. Major boost to Firerate, absolute stream of bullets at this level. (Flame effect out gun exhaust)
-3. Boost to all stats (Flame effect turns into plasma. Projectiles now shine a special color)
-4. SliceShot Cooldown removed & Range/Area increased (Show overflowing line of energy along gun tip)
+The player will have 5 stages of upgrades available to unlock in any given run.
+1. Player starts at this level
+2. Major boost to weapon damage. Minor Boost to other stats. Projectiles change shape to something more pointy
+3. Major boost to Firerate, absolute stream of bullets at this level. (Flame effect out gun exhaust)
+4. Boost to all stats (Flame effect turns into plasma. Projectiles now shine a special color)
+5. SliceShot Cooldown removed & Range/Area increased (Show overflowing line of energy along gun tip)
 
 How does the player upgrade? Write down later
-Maybe have set upgrades after bosses? So every third level? I don't know
+Maybe have set upgrades after bosses? So every third level? I don't know yet
 
 
 # Default Player Controls:
@@ -220,6 +225,7 @@ The Slice Shot will be very strong but it will have some major drawbacks:
 
 
 ## Enemy List
+The enemy names don't really matter. They won't be presented to the player in any form.
 
 {{< image_gallery images="./enemy_basic_shapes.webp" >}}
 
@@ -229,12 +235,12 @@ The simplest enemy. Loosely flies towards the player at all times. Spawns in lar
 ---
 
 ## Tripwire
-A post-shaped walking quadruped with a ball top that can connect with other Tripwires to create short barriers the player can either jump over, cut with their sword to remove the immediate obstacle or attack either post directly to destroy the pair.
+A post-shaped walking quadruped with a ball top that can connect with other Tripwires to create short barriers the player can either jump over, cut with their Sliceshot to remove the immediate obstacle or attack either Tripwire post directly to destroy the pair.
 
 ---
 
 ## Missile
-A sharp-looking flying creature that hones in on the player at very speed. Should emit a recognizable sound to warn the player they are incoming.
+A "sharp-looking" flying creature that hones in on the player at very fast speeds. Should emit a recognizable sound to warn the player they are incoming.
 
 ---
 
@@ -314,7 +320,7 @@ New Introduction: test
 ---
 
 ## Level 3: *Gluttony - Cerberus*
-**{{< fontcolor color="#83855f" >}}Impossibly Large Cave{{< /fontcolor >}}**
+**{{< fontcolor color="#83855f" >}}Large Cave{{< /fontcolor >}}**
 
 The third level in the game will have the first boss the player encounters.
 
