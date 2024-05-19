@@ -411,27 +411,28 @@ Don't forget to record timelapse footage for Archive!
 - [x] Initialize Godot project / Git repo
 ---
 ## Week 2 2024-05-20:
-- [ ] Add Placeholder Template Artwork (Follow SteamWork Guidelines)
+- [ ] Add Placeholder Template Artwork (Follow SteamWork Guidelines. Everything needs to be at specific resolutions)
 - [ ] Bring somebody up to speed and sanity check documentation together
 - [ ] Start writing out Technical Design Document
 ---
 ## Week 3 2024-05-27:
-- [ ] Start modeling Environments
+- [ ] Begin modeling Environments and get a accurate time estimation for schedule
 - [ ] Research Similar Games (Revise Design Documentation)
-- [ ] Entry Goes Here 3
+- [ ] Finalize Enemy Designs
+- [ ] Begin structuring Godot project (add in boilerplate stuff I'll definitely need)
 ---
 ## Week 4 2024-06-03:
-- [ ] Entry Goes Here
-- [ ] Entry Goes Here 2
-- [ ] Entry Goes Here 3
+- [ ] Non-boss Enemy Models Blocked out
+- [ ] Experiment with logo designs. (Do research before diving in here)
+- [ ] Initial Technical Design Document Draft Finished
 ---
 ## Week 5 2024-06-10:
-- [ ] Entry Goes Here
-- [ ] Entry Goes Here 2
-- [ ] Entry Goes Here 3
+- [ ] Non-boss Enemy Models Detailed and Textured
+- [ ] Game Logo finished
+- [ ] Technical Design Document Finished. (Leave nothing out, check everything top to bottom and then just follow the pseudocode)
 ---
 ## Week 6 2024-06-17:
-- [ ] Entry Goes Here
+- [ ] Build entity benchmark prototype and see if Godot can support 1000's of bullets/enemies on screen without object pooling or compute shaders.
 - [ ] Entry Goes Here 2
 - [ ] Entry Goes Here 3
 ---
