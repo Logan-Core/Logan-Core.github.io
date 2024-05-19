@@ -11,8 +11,6 @@ hide_list_items = true
 Add logo image
 {{% /notice %}}
 
-
-
 ---
 
 Design everything with intent. Avoid arbitrary decisions
@@ -146,7 +144,6 @@ Start listing things here. Cleanup/organize later:
 
 ## Leaderboard
 
-Add leaderboard information stuff here later.
 
 Each run through the game will also automatically record a demo that can be played back later for leaderboard validation and for review and such.
 Because of the length of the game and certain factors that may not be completely deterministic, Each demo will end right when the Catalyst breaches through the level and then a new demo recording will begin right when the next level begins. Preventing de-syncs will be vital. I'll need to do some proper research before I start implementing this
