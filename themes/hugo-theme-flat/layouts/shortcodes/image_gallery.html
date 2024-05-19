@@ -14,8 +14,19 @@
 
 <script>
     window.onload = function() {
-        var images = "{{ .Get "images" }}".split(",");
-        document.getElementById('preview').src = images[0];
-        document.getElementById('preview-link').href = images[0];
+        var galleries = document.getElementsByClassName('gallery');
+
+        // Loop through each gallery
+        for (var i = 0; i < galleries.length; i++) {
+            var gallery = galleries[i];
+            var images = gallery.getElementsByClassName('gallery-thumbnails')[0].getElementsByTagName('img');
+
+            // Set the preview image for each gallery
+            if (images.length > 0) {
+                gallery.getElementsByClassName('preview')[0].getElementsByTagName('img')[0].src = images[0].src;
+                gallery.getElementsByClassName('preview')[0].getElementsByTagName('a')[0].href = images[0].src;
+            }
+        }
     }
 </script>
+
