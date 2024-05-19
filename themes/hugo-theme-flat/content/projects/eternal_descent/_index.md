@@ -308,7 +308,7 @@ More so than later levels, Level 1 needs to have near-perfect "invisible" appeal
 Ocean environment with the arena floating slightly above the water.
 The ocean should continue off into the horizon in all directions and maybe have the weather change dynamically from sunny to stormy partway through the level?
 
-{{< image_gallery images="./level_2_002.webp,./level_2_001.webp,./level_2_003.webp" >}}
+{{< image_gallery images="./level_2_002.webp,./level_2_001.webp,./level_2_003.webp,./level_2_004.webp" >}}
 
 ## *What is introduced?:*
 
@@ -327,7 +327,7 @@ The third level in the game will have the first boss the player encounters.
 A super large cave expanse so large the walls can bearly be seen through distant fog. with giant stalactites/rock columns obscuring vision closer to the arena.
 When Cerberus appears, parts of his moving snake body should appear off int eh distance coiling up and around the environment to give him an impossibly large sense of scale compared to previous enemies the player has encountered.
 
-{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
+{{< image_gallery images="./level_3_001.webp,./level_3_002.webp" >}}
 
 ## **Cerberus**
 There are certain rules that are typically followed for the "first boss" in an action video game. It is not untypical for the first boss to be treated as a glorified tutorial, however, that need not be the case for this guy. I want Cerberus to 100% be the first major wall the player has to overcome.
