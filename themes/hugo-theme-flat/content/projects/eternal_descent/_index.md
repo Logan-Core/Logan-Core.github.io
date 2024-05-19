@@ -258,13 +258,13 @@ Mini Cerberus guy that appears near the edge of the arena, will swipe at players
 
 ---
 
-## Enemy Info
-Enemy Info
+## Spawner Portal
+The portals the Catalyst shoot out around the arena. The portals will remain and will spawn in a small wave of enemies every 15ish seconds.
 
 ---
 
-## Enemy info
-Enemy Info
+## Roamer
+Does not any knowledge of the player. Floats low to the ground and roams the arena in a random fashion.
 
 ---
 
