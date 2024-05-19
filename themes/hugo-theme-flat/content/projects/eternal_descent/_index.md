@@ -2,13 +2,13 @@
 author = "Logan Core"
 title = "Eternal Descent - Design Document"
 date = 2024-05-10
-last_updated = 2024-05-18
+last_updated = 2024-05-20
 show_comments = false
 hide_list_items = true
 +++
 
 {{% notice info %}}
-Replace me with banner image of some kind
+Add logo image
 {{% /notice %}}
 
 {{% button href="./#schedule" color="#ffdf00" font-color="#020202 "%}}Schedule{{% /button %}}
@@ -31,19 +31,19 @@ Survive the onslaught of enemies long enough to defeat the [Catalyst](./#the-cat
 
 ---
 
-The game will be level-based with deaths restarting the player at level 1. Nothing will be carried over between attempts. The player will have the same starting conditions every time and only by gaining experience will they be able progress further.
+The game will be level-based with deaths restarting the player at level 1. Nothing will be carried over between attempts. The player will have the same starting conditions every time and only by gaining experience will they be able to progress further down.
 
 The game will be built with quick-restarts in mind. The game will be tuned to be more difficult than average and feature a online leaderboard where other users can compete for the fastest time!
 
 ---
 
-Enemies will spawn in waves which the player will need to deal with before the next group spawns, enemies from previous waves will stay in the arena indefinitely until they are killed so if they are not dealt with, the player will quickly find themselves overwhelmed.
+Enemies will spawn in waves, which the player will need to deal with before the next group spawns. Enemies from previous waves will stay in the arena indefinitely until they are killed. So, if they are not dealt with, the player will quickly find themselves overwhelmed.
 
-Most enemies will also have a "Frenzy" stat that is influenced by the amount of others enemies surrounding them. If enemies start to bunch up and the arena gets crowded. The enemies' "Frenzy" stat will increase and change their behavior making them a more dangerous threat.
+Enemies will also have a "Frenzy" stat that is influenced by the amount of others enemies surrounding them. If enemies start to bunch up and the arena gets crowded. The enemies' "Frenzy" stat will increase and change their behavior making them a more dangerous threat.
 
 ---
 
-The Catalyst is floating orb and serves as the main antagonist of the game. It will float around the outskirts of each level and shoot out portals that new enemies will spawn from.
+The Catalyst is a floating orb and serves as the main antagonist of the game. It will float around the outskirts of each level and shoot out portals that new enemies will spawn from.
 
 Once the player deals enough damage to the Catalyst. It will retreat by opening a new portal that the player can follow through to the next level.
 
@@ -51,7 +51,7 @@ Once the player deals enough damage to the Catalyst. It will retreat by opening 
 
 ## What do the first few minutes of Eternal Descent look like?:
 1. The player launches the game from Steam.
-2. A "Logan_Core" credit splashscreen appears with an epilepsy warning followed by a "Created in Godot" splashscreen. (Can be skipped to get into menu faster)
+2. A few splashscreens are presented to the player: "Epilepsy warning", "Logan_Core credit", "Created in Godot". (Can be skipped to get into menu faster)
 3. Fade transition into main menu.
 4. Menu Buttons available to the player:
 	- [Play](./#play)
@@ -60,12 +60,12 @@ Once the player deals enough damage to the Catalyst. It will retreat by opening 
 	- [Options](./#options)
 	- Quit
 5. Player Selects Play
-6. Transition to gameplay, starting the player off in a infinite empty grey void. The Catalyst floats silently above a short distance away from the player.
-7. This is a quick tutorial to show the player the objective. Once the player attacks the Catalyst (There's nothing else to do, The player should naturally try shooting it). It will begin flying around erratically and show that it's being damaged. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. Once the player damages the catalyst enough, it'll fly above the center of the arena and crash through leaving a portal for the player to follow to level 1.
+6. Transition into gameplay, starting the player off in a infinite empty grey void. The Catalyst floats silently above near the player.
+7. This is a quick tutorial to show the player the objective. Once the player attacks the Catalyst (There's nothing else to do, The player will eventually try shooting it). It react violently and begin flying around and appear to be taking damage. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer effectively reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. Once the player damages the Catalyst enough, it'll fly above the center of the arena and crash through leaving a portal for the player to follow to level 1.
 8. The main gameplay loop begins:
 	- Catalyst floats around the outskirts of the level shooting out portals that enemies will spawn from.
 	- The player deals enough damage to the Catalyst, causing it to flee. Leaving a open portal on the ground for the player to follow.
-	- Player jumps through and reaches the next level. This cycle repeats. Each level should take around 2 minutes at most with earlier levels having more opportunities to finish faster. (fewer armor moments for the Catalyst, less time waiting around for phases and such). Have Boss fights on every third level. Final boss on Level 9.
+	- Player jumps through and reaches the next level. This cycle repeats. Each level should take around 2 minutes at most with earlier levels having more opportunities to finish faster. (fewer armor moments for the Catalyst, less time waiting around for phases and such). Boss fights on every third level. Final boss on Level 9.
 9. When the player dies. Show stats, basic leaderboard info and lastly show how far down the player made it on the attempt. (It's important to show the Player that there are 9 total levels. I want the player to understand that there is an ending to play for and that the game isn't an infinite shooter where the only goal is to get a high score.)
 10. Prompt the player to restart, return to main menu, or quit.
 11. When the player presses the restart button. Start the player midway through the first portal already transitioning into level 1. Skip the intro/tutorial until the next time the game is launched.
@@ -82,16 +82,16 @@ There will be 9 total levels, each loosely representing a layer of hell from Dan
 8. [Fraud](./#level-8-fraud)
 9. [Treachery - Catalyst](./#level-9-treachery---catalyst)
 
-It should be noted that the game itself won't have a story. All the player needs to know is to just keep descending down. I'm just planning on borrowing from Dante's Inferno for imagery and inspiration. Astute observers may notice the references but that's about it.
+It should be noted that the game itself won't have a story. All the player needs to know is to just to keep descending down. I'm just planning on borrowing from Dante's Inferno for imagery and inspiration. Astute observers may notice the references but that's about it.
 
 ---
 
 # The Catalyst:
 The Catalyst appears as a floating white orb that distorts surrounding light and serves as the main antagonist of the game. It will shoot out portals that new enemies will spawn from and must be defeated by the player on each level in order to progress further.
 
-After the Catalyst has lost a specific amount of health each level, Give it some kind of armor that can only be removed by clearing the next wave of enemies.
+The Catalyst will have some form of armor that'll activate when too many enemies are left alive. This will force the player's attention between fighting the Catalyst and also the enemies it spawns.
 
-After enough damage has been dealt to the Catalyst, it will float high above the center of the arena and begin charging up. After a short time, it will charge down and crash through the level leaving a hole for the player to follow to the next level. This action of crashing through the level and leaving a hole will also release a shockwave killing all enemies left in the arena. (The Catalyst will have some form of armor it'll activate if too many enemies are alive. This will prevent some cheap tactics of just avoiding enemies and focusing on the Catalyst)
+After enough damage has been dealt to the Catalyst, it will float high above the center of the arena and begin charging up. After a short time, it will charge down and crash through the level leaving a hole for the player to follow to the next level. This action of crashing through the level and leaving a hole will also release a shockwave killing all enemies left in the arena.
 
 ## Scoring
 Each level will be infinite and have a repeating enemy spawn pattern that loops every minute or so, getting more difficult as time goes on.
@@ -113,10 +113,9 @@ There will be two gamemodes for the player to choose from:
 The standard mode that starts the player from the beginning allowing the player to progress to new levels.
 ## Practice:
 Allows the player to start from any of the floors they've previously reached and select starting weapon level.
-After the player finishes a level in practice mode, the level transition hole that opens up will reset the player's weapons and drop them into the same level on repeat until they switch back to Play mode.
+After the player finishes a level in practice mode, the level transition will reset the player's weapons and drop them into the same level on repeat until they switch back to Play mode.
 
 ---
-
 
 ## Options
 
@@ -305,9 +304,7 @@ More so than later levels, Level 1 needs to have near-perfect "invisible" appeal
 
 test
 
-{{% notice important %}}
-Replace me with Art Image Gallery
-{{% /notice %}}
+{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
 ## *What is introduced?:*
 
@@ -326,9 +323,7 @@ The third level in the game will have the first boss the player encounters.
 A super large cave expanse so large the walls can bearly be seen through distant fog. with giant stalactites/rock columns obscuring vision closer to the arena.
 When Cerberus appears, parts of his moving snake body should appear off int eh distance coiling up and around the environment to give him an impossibly large sense of scale compared to previous enemies the player has encountered.
 
-{{% notice important %}}
-Replace me with Art Image Gallery
-{{% /notice %}}
+{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
 ## **Cerberus**
 There are certain rules that are typically followed for the "first boss" in an action video game. It is not untypical for the first boss to be treated as a glorified tutorial, however, that need not be the case for this guy. I want Cerberus to 100% be the first major wall the player has to overcome.
@@ -345,10 +340,7 @@ The other 2 Cerberus heads will navigate semi-randomly around the arena and unle
 ## Level 4: *Greed*
 **{{< fontcolor color="#0c9d0b" >}}Abandoned Jungle Temple{{< /fontcolor >}}**
 
-test
-{{% notice important %}}
-Replace me with Art Image Gallery
-{{% /notice %}}
+{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
 Another test?? Really?
 
@@ -361,9 +353,7 @@ Trying something out
 
 Environment info goes here
 
-{{% notice important %}}
-Replace me with Art Image Gallery
-{{% /notice %}}
+{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
 
 ---
@@ -373,9 +363,7 @@ Replace me with Art Image Gallery
 
 Environment info goes here (Dark Souls 3 Final boss reference)
 
-{{% notice important %}}
-Replace me with Art Image Gallery
-{{% /notice %}}
+{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
 
 After the player does a short loop of fighting the Catalyst and defeatign enemies and such. The Catalyst will stop spawning enemies and the music and ambience will fade out. The Catalyst will fly high up into the skybox and create an eclipse-like scenery. It will then spawn in the boss
@@ -389,18 +377,14 @@ NEED MORE INFO ON HERETIC HERE
 
 Environment info goes here
 
-{{% notice important %}}
-Replace me with Art Image Gallery
-{{% /notice %}}
+{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
 ## Level 8: *Fraud*
 **{{< fontcolor color="#ffffff" >}}Space, Stars, and Galaxies{{< /fontcolor >}}**
 
 Environment info goes here
 
-{{% notice important %}}
-Replace me with Art Image Gallery
-{{% /notice %}}
+{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
 ## Level 9: *Treachery - Catalyst*
 **{{< fontcolor color="#5a5a5a" >}}Night Stormy Sky{{< /fontcolor >}}**
@@ -412,9 +396,7 @@ phase 2:
 Environment info goes here Night Sky Falling through clouds (Tornado-like with lightning)
 Super Large Catalyst spawning smaller versions of itself.
 
-{{% notice important %}}
-Replace me with Art Image Gallery
-{{% /notice %}}
+{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
 ---
 
@@ -427,16 +409,16 @@ Estimated Project Completion:
 Don't forget to record timelapse footage for Archive!
 ## Week 1:
 - [ ] First Draft of Design Document
-- [ ] Initialize Godot project / Git repo
+- [x] Initialize Godot project / Git repo
 ---
 ## Week 2:
 - [ ] Add Placeholder Template Artwork (Follow SteamWork Guidelines)
 - [ ] Bring somebody up to speed and sanity check documentation together
-- [ ] test one
+- [ ] Start writing out Technical Design Document
 ---
 ## Week 3:
-- [ ] Entry Goes Here
-- [ ] Entry Goes Here 2
+- [ ] Start modeling Environments
+- [ ] Research Similar Games (Revise Design Documentation)
 - [ ] Entry Goes Here 3
 ---
 ## Week 4:
