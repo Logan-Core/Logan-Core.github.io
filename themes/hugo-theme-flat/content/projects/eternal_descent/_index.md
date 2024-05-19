@@ -224,6 +224,8 @@ The Slice Shot will be very strong but it will have some major drawbacks:
 
 ## Enemy List
 
+{{< image_gallery images="./enemy_basic_shapes.webp" >}}
+
 ## Swarmer
 The simplest enemy. Loosely flies towards the player at all times. Spawns in large groups and quickly amalgamate into frenzied swarms that fly faster and at tighter angles towards the player.
 
@@ -288,9 +290,8 @@ Enemy Info
 Picturesque blue sky with large mountain-like clouds in all directions.
 Have a hint of the sun poking out somewhere high in the sky with painted light shafts over clouds
 
-{{% notice important %}}
-Replace me with Art Image Gallery
-{{% /notice %}}
+{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
+
 
 The first level in the game has a very important role to fill. The player will spend MOST of the time here.
 
