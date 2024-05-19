@@ -45,7 +45,7 @@ Enemies will also have a "Frenzy" stat that is influenced by the amount of other
 
 The Catalyst is a floating orb and serves as the main antagonist of the game. It will float around the outskirts of each level and shoot out portals that new enemies will spawn from.
 
-Once the player deals enough damage to the Catalyst. It will retreat by opening a new portal that the player can follow through to the next level.
+Once the player deals enough damage to the Catalyst. It will retreat by crashing through the level, leaving a portal for the player to follow.
 
 ---
 
@@ -64,7 +64,7 @@ Once the player deals enough damage to the Catalyst. It will retreat by opening 
 7. This is a quick tutorial to show the player the objective. Once the player attacks the Catalyst (There's nothing else to do, The player will eventually try shooting it). It react violently and begin flying around and appear to be taking damage. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer effectively reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. Once the player damages the Catalyst enough, it'll fly above the center of the arena and crash through leaving a portal for the player to follow to level 1.
 8. The main gameplay loop begins:
 	- Catalyst floats around the outskirts of the level shooting out portals that enemies will spawn from.
-	- The player deals enough damage to the Catalyst, causing it to flee. Leaving a open portal on the ground for the player to follow.
+	- The player deals enough damage to the Catalyst, causing it to flee. Opening a portal on the floor that'll expand slowly that the player will eventually have to fall into.
 	- Player jumps through and reaches the next level. This cycle repeats. Each level should take around 2 minutes at most with earlier levels having more opportunities to finish faster. (fewer armor moments for the Catalyst, less time waiting around for phases and such). Boss fights on every third level. Final boss on Level 9.
 9. When the player dies. Show stats, basic leaderboard info and lastly show how far down the player made it on the attempt. (It's important to show the Player that there are 9 total levels. I want the player to understand that there is an ending to play for and that the game isn't an infinite shooter where the only goal is to get a high score.)
 10. Prompt the player to restart, return to main menu, or quit.
@@ -91,7 +91,7 @@ The Catalyst appears as a floating white orb that distorts surrounding light and
 
 The Catalyst will have some form of armor that'll activate when too many enemies are left alive. This will force the player's attention between fighting the Catalyst and also the enemies it spawns.
 
-After enough damage has been dealt to the Catalyst, it will float high above the center of the arena and begin charging up. After a short time, it will charge down and crash through the level leaving a hole for the player to follow to the next level. This action of crashing through the level and leaving a hole will also release a shockwave killing all enemies left in the arena.
+After enough damage has been dealt to the Catalyst, it will float high above the center of the arena and begin charging up. After a short time, it will charge down and crash through the level leaving a portal that'll slowly expand out, the player will eventually have no choice but to fall into. This action of crashing through the level and leaving a portal will also release a shockwave killing all enemies left in the arena.
 
 ## Scoring
 Each level will be infinite and have a repeating enemy spawn pattern that loops every minute or so, getting more difficult as time goes on.
@@ -100,9 +100,9 @@ I want to incentivize two different ways of playing the game:
 1. Go for the fastest time. Reaching the bottom and defeating the Catalyst as fast as possible (This will be the expected form of play for most players and the default view on the Leaderboard)
 2. Go for the longest time. Levels are infinite and players can choose to stay on a level and ignore the catalyst while they rack up kills and time spent alive.
 Early levels will start by linearly increasing in difficulty with time while later levels will be more erratic and unforgiving
-I.E(Reaching the 5 minute mark on Level 1 should be very difficult but reaching that same time on Level 8 should be humanly impossible)
+I.E (Reaching the 5 minute mark on Level 1 should be very difficult but reaching that same time on Level 8 should be humanly impossible)
 
-After the Catalysts escapes, the shockwave it creates will erase all remaining enemies and the music and scenery will instantly change to signify to the player that the level is complete. The score timer will pause. At the player's leisure, they can jump into the hole and follow the Catalyst to the next level.
+After the Catalysts escapes, the shockwave it creates will erase all remaining enemies and the music and scenery will instantly change to signify to the player that the level is complete. The score timer will pause. At the player's leisure or until the portal expands far enough, the player will fall into the portal and follow the Catalyst to the next level.
 
 ---
 
@@ -145,8 +145,7 @@ Start listing things here. Cleanup/organize later:
 Add leaderboard information stuff here later.
 
 Each run through the game will also automatically record a demo that can be played back later for leaderboard validation and for review and such.
-Because of the length of the game and certain factors that may not be completely deterministic, Each demo will end right when the Catalyst breaches through the level and then a new demo recording will begin right when the next level begins. (Players could potentially go afk after a level, so it'll be better if I don't accidentally record that.)
-When playing back the demos. I'll have some kind of visual transition to switch between levels
+Because of the length of the game and certain factors that may not be completely deterministic, Each demo will end right when the Catalyst breaches through the level and then a new demo recording will begin right when the next level begins. Preventing de-syncs will be vital. I'll need to do some proper research before I start implementing this
 
 The game will have one Achievement:
 	Catalyst: Reach the Bottom
@@ -155,7 +154,7 @@ The game will have one Achievement:
 ## Player Mechanics
 At no point do I want to player to feel like they have to fight the controls. It will pay to make the system as intuitive as possible.
 
-The player will die in one hit. (Enemies must have predictable patterns that the player can learn. The player should **always** feel like their deaths are due to mistakes on their part and not something unfair the game did.)
+The player will die in one hit. (Enemies must have predictable patterns that the player can learn. The player should **always** feel like their deaths are due to mistakes on their part and not something unfair that the game did.)
 
 # Upgrading
 The player will have 4 stages of upgrades available to unlock in any given run.
@@ -183,9 +182,8 @@ Allow Player to rebind these from options:
 - [TAB] Toggle HUD Elements
 
 # Gun
-{{% notice important %}}
-Replace me with weapon concept art
-{{% /notice %}}
+{{< image_gallery images="./weapon_001.webp" >}}
+
 
 The distinctive feature of the player's gun will be its ability to adjust its muzzle angle to affect the characteristics of the shots that are fired.
 The mousewheel will be used to smoothly transition from narrow and wide fire modes:
@@ -209,16 +207,16 @@ The projectiles will not be hitscan. Each individual bullet will have velocity a
 The projectiles will be colored based on the amount of damage they deal.
 
 # Slice Shots
-The relative velocity of the camera should determine the angle of the slice. I.E(If the player is rotating their camera to the right with no vertical movement, the slice should be flat horizontally // If the camera is rotating upwards towards the sky and also to the right, the Sword should swing at a near 45degree angle following that path)
+The slice shot is a short-range wide angle hitscan weapon. Most enemies caught in the path of the slice will be cut cleanly and instantly have their hurtbox collisions disabled.
 
-The slice shot is a short-range wide angle hitscan weapon. Most enemies caught in the path of the sword will be cut cleanly and instantly have their hurtbox collisions disabled.
+The relative velocity of the camera should determine the angle of the slice. I.E (If the player is rotating the camera to the right with no vertical motion, the slice should travel flat horizontally from the left to the right // If the camera is rotating up and to right at the same speed, the slice should travel at a 45degree angle following that path)
 
-The rings around the end of the gun tip should rotate along with the camera movement to give the player visual feedback on where the slice will go (a very soft motor whirl sound could be cool.)
+The two semi-rings around the end of the gun tip should rotate along with the camera movement to give the player visual feedback on where the slice will go (a very soft motor whirl sound could also be cool)
 
 The Slice Shot will be very strong but it will have some major drawbacks:
 1. It will have a short cooldown between shots (Swarms of enemies will still overwhelm the player)
 2. The cooldown between shots will prevent the player from firing their gun.
-3. Some enemies will be resistant to the instant-kill effect. (I'll have a specific color represent armor and teach player through gameplay that the sword can't attack through it no matter what. Maybe give tougher enemies on later levels bits of armor the player would have to slice around?)
+3. Some enemies will be resistant to the instant-kill effect. (I'll have a specific color represent armor and teach player through gameplay that the slice can't attack through it no matter what. Maybe give tougher enemies on later levels bits of armor the player would have to slice around?)
 
 
 ## Enemy List
@@ -246,12 +244,12 @@ Enemy that hangs back floating in the distance. Lobs explosive shots into the ar
 ---
 
 ## Shield
-Large Octogon-shaped enemy that slowly approaches the player with a consistent speed. Has no frenzy ability and has segments of armor that the player can cut around using their Sliceshot
+Large Octagon-shaped enemy that slowly approaches the player with a consistent speed. Has no frenzy ability and has segments of armor that the player can cut around using their Sliceshot
 
 ---
 
 ## Treasure
-Golden mini Catalyst-looking enemy that moves around in an unpredictable pattern. Spawns from the Catalyst after enough damage has been dealt. Defeating it upgrades the player's weapons (May change my mind o this guy later. Weapon upgrades need to have a more elegant process for acquiring)
+Golden mini Catalyst-looking enemy that moves around in an unpredictable pattern. Spawns from the Catalyst after enough damage has been dealt. Defeating it upgrades the player's weapons (May change my mind on this guy later. Weapon upgrades are important and the process to acquire them should be more special)
 
 ---
 
@@ -302,9 +300,10 @@ More so than later levels, Level 1 needs to have near-perfect "invisible" appeal
 ## Level 2: *Lust*
 **{{< fontcolor color="#1b00e0" >}}Rough Ocean{{< /fontcolor >}}**
 
-test
+Ocean environment with the arena floating slightly above the water.
+The ocean should continue off into the horizon in all directions and maybe have the weather change dynamically from sunny to stormy partway through the level?
 
-{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
+{{< image_gallery images="./level_2_002.webp,./level_2_001.webp,./level_2_003.webp" >}}
 
 ## *What is introduced?:*
 
@@ -407,61 +406,61 @@ Estimated Project Completion:
 
 ## Schedule
 Don't forget to record timelapse footage for Archive!
-## Week 1:
+## Week 1 2024-05-13:
 - [ ] First Draft of Design Document
 - [x] Initialize Godot project / Git repo
 ---
-## Week 2:
+## Week 2 2024-05-20:
 - [ ] Add Placeholder Template Artwork (Follow SteamWork Guidelines)
 - [ ] Bring somebody up to speed and sanity check documentation together
 - [ ] Start writing out Technical Design Document
 ---
-## Week 3:
+## Week 3 2024-05-27:
 - [ ] Start modeling Environments
 - [ ] Research Similar Games (Revise Design Documentation)
 - [ ] Entry Goes Here 3
 ---
-## Week 4:
+## Week 4 2024-06-03:
 - [ ] Entry Goes Here
 - [ ] Entry Goes Here 2
 - [ ] Entry Goes Here 3
 ---
-## Week 5:
+## Week 5 2024-06-10:
 - [ ] Entry Goes Here
 - [ ] Entry Goes Here 2
 - [ ] Entry Goes Here 3
 ---
-## Week 6:
+## Week 6 2024-06-17:
 - [ ] Entry Goes Here
 - [ ] Entry Goes Here 2
 - [ ] Entry Goes Here 3
 ---
-## Week 7:
+## Week 7 2024-06-24:
 - [ ] Entry Goes Here
 - [ ] Entry Goes Here 2
 - [ ] Entry Goes Here 3
 ---
-## Week 8:
+## Week 8 2024-07-01:
 - [ ] Entry Goes Here
 - [ ] Entry Goes Here 2
 - [ ] Entry Goes Here 3
 ---
-## Week 9:
+## Week 9 2024-07-08:
 - [ ] Entry Goes Here
 - [ ] Entry Goes Here 2
 - [ ] Entry Goes Here 3
 ---
-## Week 10:
+## Week 10 2024-07-15:
 - [ ] Entry Goes Here
 - [ ] Entry Goes Here 2
 - [ ] Entry Goes Here 3
 ---
-## Week 11:
+## Week 11 2024-07-22:
 - [ ] Entry Goes Here
 - [ ] Entry Goes Here 2
 - [ ] Entry Goes Here 3
 ---
-## Week 12:
+## Week 12 2024-07-29:
 - [ ] Entry Goes Here
 - [ ] Entry Goes Here 2
 - [ ] Entry Goes Here 3
