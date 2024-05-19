@@ -30,9 +30,9 @@ Survive the onslaught of enemies long enough to defeat the [Catalyst](./#the-cat
 
 ---
 
-The game will be level-based with deaths restarting the player at level 1. Nothing will be carried over between attempts. The player will have the same starting conditions every time and only by gaining experience will they be able to progress further.
+The game will be level-based with deaths restarting the player at level 1. Nothing will be carried over between attempts. The player will have the same starting conditions every run and only by playing and gaining experience will they be able to progress further.
 
-The game will be built with quick-restarts in mind. The game will be tuned to be more difficult than average and feature a online leaderboard where other users can compete for the fastest time!
+The game will be built with quick-restarts in mind. The game will be tuned to be more difficult than average and feature a online leaderboard where other users can compete!
 
 ---
 
@@ -60,11 +60,11 @@ Once the player deals enough damage to the Catalyst. It will retreat by crashing
 	- Quit
 5. Player Selects Play
 6. Transition into gameplay, starting the player off in a infinite empty grey void. The Catalyst floats silently above near the player.
-7. This is a quick tutorial to show the player the objective. Once the player attacks the Catalyst (There's nothing else to do, The player will eventually try shooting it). It will react violently and begin flying around and appear to be taking damage. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer effectively reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. Once the player damages the Catalyst enough, it'll fly above the center of the arena and crash through leaving a portal for the player to follow to level 1.
+7. This is a quick tutorial to show the player the objective. Once the player attacks the Catalyst (There's nothing else to do, The player will eventually try shooting it). The Catalyst will react violently and begin flying around and appear to be taking damage. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer effectively reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. Once the player damages the Catalyst enough, it'll fly above the center of the arena and crash through leaving a portal for the player to follow to level 1.
 8. The main gameplay loop begins:
-	- Catalyst floats around the outskirts of the level shooting out portals that enemies will spawn from.
+	- The Catalyst floats around the outskirts of the level shooting out portals that enemies will spawn from.
 	- The player deals enough damage to the Catalyst, causing it to flee. Opening a portal on the floor that'll expand slowly that the player will eventually have to fall into to reach the next level.
-	- This cycle repeats. Each level should take around 2 minutes, with earlier levels offering more chances to finish quickly. (There are fewer armor moments for the Catalyst and less time spent waiting around for waves and such.) Expert players should be able to speed through the earlier levels to some extent.
+	- This cycle repeats. Each level should take around 2 minutes, with earlier levels offering more chances to finish quickly. (There will be fewer armor moments for the Catalyst and less time spent waiting around for waves and such.) Expert players should be able to speed through the earlier levels to some extent.
 	- Boss fights on every third level. Final boss on Level 9.
 9. When the player dies. Show stats, basic leaderboard info and lastly show how far down the player made it on the attempt. (It's important to show the Player that there are 9 total levels. I want the player to understand that there is an ending to play for and that the game isn't an infinite shooter where the only goal is to get a high score.)
 10. Prompt the player to restart, return to main menu, or quit.
@@ -292,7 +292,10 @@ Enemy Info
 Picturesque blue sky with large mountain-like clouds in all directions.
 Have a hint of the sun poking out somewhere high in the sky with painted light shafts over clouds
 
+Environment Modifier: None
+
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
+
 
 
 The first level in the game has a very important role to fill. The player will spend MOST of the time here.
@@ -304,27 +307,25 @@ More so than later levels, Level 1 needs to have near-perfect "invisible" appeal
 
 ## Level 2: *Lust*
 **{{< fontcolor color="#1b00e0" >}}Rough Ocean{{< /fontcolor >}}**
-
 Ocean environment with the arena floating slightly above the water.
 The ocean should continue off into the horizon in all directions and maybe have the weather change dynamically from sunny to stormy partway through the level?
 
+Environment Modifier: Lightning
+
+
 {{< image_gallery images="./level_2_002.webp,./level_2_001.webp,./level_2_003.webp,./level_2_004.webp" >}}
-
-## *What is introduced?:*
-
-{{% notice note %}}
-New Introduction: test
-{{% /notice %}}
 
 ---
 
 ## Level 3: *Gluttony - Cerberus*
 **{{< fontcolor color="#83855f" >}}Large Cave{{< /fontcolor >}}**
 
+Environment Modifier: Uneven Rough Terrain
+
 The third level in the game will have the first boss the player encounters.
 
 
-A super large cave expanse so large the walls can bearly be seen through distant fog. with giant stalactites/rock columns obscuring vision closer to the arena.
+A super large cave expanse so large the walls can barely be seen through distant fog. with giant stalactites/rock columns obscuring vision closer to the arena.
 When Cerberus appears, parts of his moving snake body should appear off int eh distance coiling up and around the environment to give him an impossibly large sense of scale compared to previous enemies the player has encountered.
 
 {{< image_gallery images="./level_3_001.webp,./level_3_002.webp" >}}
@@ -344,6 +345,8 @@ The other 2 Cerberus heads will navigate semi-randomly around the arena and unle
 ## Level 4: *Greed*
 **{{< fontcolor color="#0c9d0b" >}}Abandoned Jungle Temple{{< /fontcolor >}}**
 
+Environment Modifier: Floor Spike Trap
+
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
 Another test?? Really?
@@ -357,6 +360,8 @@ Trying something out
 
 Environment info goes here
 
+Environment Modifier: Smaller ring-shaped Arena
+
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
 
@@ -366,6 +371,8 @@ Environment info goes here
 **{{< fontcolor color="#715e5c" >}}Eclipse{{< /fontcolor >}}**
 
 Environment info goes here (Dark Souls 3 Final boss reference)
+
+Environment Modifier: Extra Large Arena
 
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
@@ -381,12 +388,16 @@ NEED MORE INFO ON HERETIC HERE
 
 Environment info goes here
 
+Environment Modifier: Explosive Rocks
+
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
 ## Level 8: *Fraud*
 **{{< fontcolor color="#ffffff" >}}Space, Stars, and Galaxies{{< /fontcolor >}}**
 
 Environment info goes here
+
+Environment Modifier: None
 
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
@@ -395,6 +406,8 @@ Environment info goes here
 
 phase 1:
 Environment info goes here Night Sky / Very stormy
+
+Environment Modifier: Lightning
 
 phase 2:
 Environment info goes here Night Sky Falling through clouds (Tornado-like with lightning)
@@ -433,14 +446,16 @@ Don't forget to record timelapse footage for Archive!
 - [ ] Start writing out Technical Design Document
 ---
 ## Week 3 2024-05-27:
-- [ ] Begin modeling Environments and get a accurate time estimation for schedule
+- [ ] Begin modeling Environments and get a idea for modeling time estimation (Add Environment modeling into schedule after you get estimate)
 - [ ] Research Similar Games (Revise Design Documentation)
 - [ ] Finalize Enemy Designs
 - [ ] Begin structuring Godot project (add in boilerplate stuff I'll definitely need)
+- [ ] Technical Design Document at least 50% complete
 ---
 ## Week 4 2024-06-03:
+- [ ] Build entity benchmark prototype and see if Godot can support thousands of bullets/enemies on screen without object pooling or compute shaders.
 - [ ] Non-boss Enemy Models Blocked out
-- [ ] Experiment with logo designs. (Do research before diving in here)
+- [ ] Experiment with logo designs. (Market research and see what people think)
 - [ ] Initial Technical Design Document Draft Finished
 ---
 ## Week 5 2024-06-10:
@@ -449,9 +464,7 @@ Don't forget to record timelapse footage for Archive!
 - [ ] Technical Design Document Finished. (Leave nothing out, check everything top to bottom and then just follow the pseudocode)
 ---
 ## Week 6 2024-06-17:
-- [ ] Build entity benchmark prototype and see if Godot can support 1000's of bullets/enemies on screen without object pooling or compute shaders.
-- [ ] Entry Goes Here 2
-- [ ] Entry Goes Here 3
+- [ ] Remake Schedule with more accurate Time Estimates ( Every 6 Weeks )
 ---
 ## Week 7 2024-06-24:
 - [ ] Entry Goes Here
@@ -479,9 +492,7 @@ Don't forget to record timelapse footage for Archive!
 - [ ] Entry Goes Here 3
 ---
 ## Week 12 2024-07-29:
-- [ ] Entry Goes Here
-- [ ] Entry Goes Here 2
-- [ ] Entry Goes Here 3
+- [ ] Remake Schedule with more accurate Time Estimates ( Every 6 Weeks )
 ---
 
 ---
