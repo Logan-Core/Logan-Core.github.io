@@ -71,7 +71,7 @@ Once the player deals enough damage to the Catalyst. It will retreat by crashing
 11. When the player presses the restart button. Start the player midway through the first portal already transitioning into level 1. Skip the intro/tutorial until the next time the game is launched.
 ---
 
-There will be 9 total levels, each loosely representing a layer of hell from Dante's Inferno.
+There will be 10 total levels, each loosely representing a layer of hell from Dante's Inferno.
 1. [Limbo](./#level-1-limbo)
 2. [Lust](./#level-2-lust)
 3. [Gluttony - Cerberus](./#level-3-gluttony---cerberus)
@@ -81,6 +81,7 @@ There will be 9 total levels, each loosely representing a layer of hell from Dan
 7. [Violence](./#level-7-violence)
 8. [Fraud](./#level-8-fraud)
 9. [Treachery - Catalyst](./#level-9-treachery---catalyst)
+10. [Hell - Wall of Flesh](./#level-10-hell---wall-of-flesh)
 
 It should be noted that the game itself won't have a story. All the player needs to know is to just to keep descending down. I'm just planning on borrowing from Dante's Inferno for imagery and inspiration. Astute observers may notice the references but that's about it.
 
@@ -98,11 +99,12 @@ Each level will be infinite and have a repeating enemy spawn pattern that loops 
 
 I want to incentivize two different ways of playing the game:
 1. Go for the fastest time.
-	- Reaching the bottom and defeating the Catalyst as fast as possible (This will be the expected form of play for most players and the default view on the Leaderboard)
+	- Defeating the Catalyst as fast as possible (This will be the expected form of play for most players and the default view on the Leaderboard)
 2. Go for the longest time.
 	- Levels are infinite and players can choose to stay on a level and ignore the catalyst while they rack up kills and time spent alive.
 	Early levels will start by linearly increasing in difficulty with time while later levels will be more erratic and unforgiving
 	I.E (Reaching the 5 minute mark on Level 1 should be very difficult but reaching that same time on Level 8 should be humanly impossible)
+	- After the player finishes the game by destroying the Catalyst on Level 9. If the score timer is above a certain threshold, the player will instead be sent to a secret Level 10 where they'll have one final opportunity to stretch out the timer before ultimately dying.
 
 After the Catalysts escapes, the shockwave it creates will erase all remaining enemies and the music and scenery will instantly change to signify to the player that the level is complete. The score timer will pause. At the player's leisure or until the portal expands far enough, the player will fall into the portal and follow the Catalyst to the next level.
 
@@ -397,6 +399,18 @@ Environment info goes here Night Sky / Very stormy
 phase 2:
 Environment info goes here Night Sky Falling through clouds (Tornado-like with lightning)
 Super Large Catalyst spawning smaller versions of itself.
+
+If the score timer is above a certain amount after the Catalyst has been destroyed and we can determine the player is going for a "Time Spent Alive" highscore, the Catalyst will open up one last portal that will send the player to Level 10. otherwise, play the ending cinematic and show the player's stats. Update Main menu as a reward
+
+{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
+
+---
+
+## Level 10: *Hell - Wall of Flesh*
+**{{< fontcolor color="#FF0000" >}}Hell{{< /fontcolor >}}**
+
+A special final level that is only accessible if the player is making a attempt for the "Time Spent Alive" leaderboard. (Players who are going at normal speed through game will instead get the ending after killing the Catalyst and won't be sent here.)
+This will be a infinite gauntlet where the enemies no longer spawn from portals but appear from the surrounding environment. This is the last opportunity for the player to stretch out the score timer for higher placement on the "Time Spent Alive" leaderboard.
 
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
