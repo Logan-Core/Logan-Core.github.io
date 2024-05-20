@@ -26,7 +26,7 @@ Design everything with intent. Avoid arbitrary decisions
 
 Eternal Descent is a Single player First-person shooter which tasks the player with a simple goal:
 
-Survive the onslaught of enemies long enough to defeat the [Catalyst](./#the-catalyst) and unlock the path to the next level.
+You're stuck in a small arena and must survive the onslaught of enemies long enough to defeat the [Catalyst](./#the-catalyst) and unlock the path to the next level.
 
 ---
 
@@ -38,7 +38,7 @@ The game will be built with quick-restarts in mind. The game will be tuned to be
 
 Enemies will spawn in waves, which the player will need to deal with before the next group spawns. Enemies from previous waves will stay in the arena indefinitely until they are killed. So, if they are not dealt with, the player will quickly find themselves overwhelmed.
 
-Enemies will also have a "Frenzy" stat that is influenced by the amount of others enemies surrounding them. If enemies start to bunch up and the arena gets crowded. The enemies' "Frenzy" stat will increase and change their behavior making them a more dangerous threat.
+Some enemies will also have a "Frenzy" stat that is influenced by the amount of others enemies surrounding them. If enemies start to bunch up and the arena gets crowded. The enemies' "Frenzy" stat will increase and change their behavior making them a more dangerous threat.
 
 ---
 
@@ -163,15 +163,13 @@ At no point do I want to player to feel like they have to fight the controls. It
 The player will die in one hit. (Enemies must have predictable patterns that the player can learn. The player should **always** feel like their deaths are due to mistakes on their part and not something unfair that the game did.)
 
 # Upgrading
-The player will have 5 stages of upgrades available to unlock in any given run.
-1. Player starts at this level
-2. Major boost to weapon damage. Minor Boost to other stats. Projectiles change shape to something more pointy
-3. Major boost to Firerate, absolute stream of bullets at this level. (Flame effect out gun exhaust)
-4. Boost to all stats (Flame effect turns into plasma. Projectiles now shine a special color)
-5. SliceShot Cooldown removed & Range/Area increased (Show overflowing line of energy along gun tip)
 
-How does the player upgrade? Write down later
-Maybe have set upgrades after bosses? So every third level? I don't know yet
+Defeat and absorb the golden "Treasure" enemy that spawns from the Catalyst on 5 specific levels
+1. Boost to all Weapon stats. Gun's material goes from dull grey to shiny metal (Level 1)
+2. Major boost to weapon damage. Minor Boost to other stats. Projectiles change shape to something more pointy (Level 3)
+3. Major boost to Firerate, absolute stream of bullets at this level. (Flame effect out gun exhaust) (Level 5)
+4. Boost to all Weapon stats (Flame effect turns into plasma. Projectiles now shine a special color) (Level 7)
+5. SliceShot Cooldown removed & Range/Area increased (Show overflowing line of energy along gun tip. Gun becomes golden) (Level 9)
 
 
 # Default Player Controls:
@@ -191,21 +189,21 @@ Allow Player to rebind these from options:
 {{< image_gallery images="./weapon_001.webp" >}}
 
 
-The distinctive feature of the player's gun will be its ability to adjust its muzzle angle to affect the characteristics of the shots that are fired.
+The distinctive feature of the player's gun will be its ability to adjust the muzzle angle to affect the characteristics of the shots that are fired.
 The mousewheel will be used to smoothly transition from narrow and wide fire modes:
 
 When the gun's muzzle is set all the way to either the Narrow or Wide firemode, it should click into place and give the player some ability related to the current mode:
 I.E (When the gun is set to full narrow, the slice shot extends out further, etc.) (This actually may complicate things too much for the player. Will have to prototype/playtest)
 
 - Narrow:
-	- Low FireRate (Short charge/windup between shots)
-	- High Damage
+	- Low FireRate
+	- High Damage per Bullet
 	- Perfect Accuracy
 	- Very fast projectile speed
 - Using the Mousewheel, the player can smoothly transition between the two modes.
 - Wide:
 	- High FireRate
-	- Low Damage
+	- Low Damage per Bullet
 	- Spreadshot Accuracy
 	- Slower projectile speed
 
@@ -256,7 +254,7 @@ Large Octagon-shaped enemy that slowly approaches the player with a consistent s
 ---
 
 ## Treasure
-Golden mini Catalyst-looking enemy that moves around in an unpredictable pattern. Spawns from the Catalyst after enough damage has been dealt. Defeating it upgrades the player's weapons (May change my mind on this guy later. Weapon upgrades are important and the process to acquire them should be more special)
+Golden mini Catalyst-looking enemy that moves around in a unpredictable pattern. Spawns from the Catalyst on specific levels after enough damage has been dealt (50%). Defeating it upgrades the player's weapons (May change my mind on this guy later. Weapon upgrades are important and the process to acquire them may need to be more special)
 
 ---
 
@@ -302,9 +300,15 @@ Environment Modifier: None
 
 The first level in the game has a very important role to fill. The player will spend MOST of the time here.
 
-Most player will be expected to reset hundreds of times in order to gain the skills and experience needed to complete a full run through the game. By the end, players that stick to it will definitely become so familiar with this level they could pretty much do it blindfolded.
+Most players will be expected to reset hundreds of times in order to gain the skills and experience needed to complete a full run through the game. By the end, players that stick to it will definitely become so familiar with this level they could pretty much do it blindfolded.
 
 More so than later levels, Level 1 needs to have near-perfect "invisible" appeal. Something that draws the player in and help alleviate the pain of having lost their previous attempt. The ability to "master" a level and breeze through it would be a good fit here. Many of the specific qualities I'm looking for will be difficult to write down but either way, out of every level in the game, this one will be under the most scrutiny and have the most revisions for sure.
+
+- Enemies
+	- Swarmer
+	- Missile
+	- Roamer
+	- Treasure
 
 
 ## Level 2: *Lust*
@@ -316,6 +320,13 @@ Environment Modifier: Lightning
 
 
 {{< image_gallery images="./level_2_002.webp,./level_2_001.webp,./level_2_003.webp,./level_2_004.webp" >}}
+
+- Enemies
+	- Swarmer
+	- Missile
+	- Sniper
+	- Roamer
+	- Sponge
 
 ---
 
@@ -342,6 +353,14 @@ The other 2 Cerberus heads will navigate semi-randomly around the arena and unle
 
 Attack Patterns:
 
+- Enemies
+	- Swarmer
+	- Missile
+	- Sniper
+	- Treasure
+	- Roamer
+	- Sponge
+
 ---
 
 ## Level 4: *Greed*
@@ -351,6 +370,14 @@ Surrounded by exotic jungle in all directions. The arena takes on the apperence 
 Environment Modifier: Floor Spike Traps
 
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
+
+- Enemies
+	- Swarmer
+	- Tripwire
+	- Missile
+	- Snake
+	- Roamer
+	- Sponge
 
 ---
 
@@ -362,6 +389,14 @@ Environment Modifier: Broken up arena. Player will have to jump between sections
 
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
+- Enemies
+	- Swarmer
+	- Missile
+	- Sniper
+	- Shield
+	- Treasure
+	- Roamer
+	- Sponge
 
 ---
 
@@ -379,6 +414,16 @@ After the player does a short loop of fighting the Catalyst and defeating enemie
 
 WRITE DOWN BOSS FIGHT INFO HERE
 
+- Enemies
+	- Swarmer
+	- Tripwire
+	- Missile
+	- Sniper
+	- Shield
+	- Snake
+	- Roamer
+	- Sponge
+
 ---
 
 ## Level 7: *Violence*
@@ -390,6 +435,17 @@ Environment Modifier: Explosive Rocks
 
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
+- Enemies
+	- Swarmer
+	- Tripwire
+	- Missile
+	- Sniper
+	- Shield
+	- Treasure
+	- Snake
+	- Roamer
+	- Sponge
+
 ## Level 8: *Fraud*
 **{{< fontcolor color="#ffffff" >}}Space, Stars, and Galaxies{{< /fontcolor >}}**
 
@@ -398,6 +454,16 @@ Environment info goes here
 Environment Modifier: None
 
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
+
+- Enemies
+	- Swarmer
+	- Tripwire
+	- Missile
+	- Sniper
+	- Shield
+	- Snake
+	- Roamer
+	- Sponge
 
 ## Level 9: *Treachery - Catalyst*
 **{{< fontcolor color="#5a5a5a" >}}Night Stormy Sky{{< /fontcolor >}}**
@@ -415,6 +481,17 @@ If the score timer is above a certain amount after the Catalyst has been destroy
 
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
+- Enemies
+	- Swarmer
+	- Tripwire
+	- Missile
+	- Sniper
+	- Shield
+	- Treasure
+	- Snake
+	- Roamer
+	- Sponge
+
 ---
 
 ## Level 10: *Hell - Wall of Flesh*
@@ -425,17 +502,30 @@ This will be a infinite gauntlet where the enemies no longer spawn from portals 
 
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
+- Enemies
+	- Swarmer
+	- Tripwire
+	- Missile
+	- Sniper
+	- Shield
+	- Treasure
+	- Snake
+	- Roamer
+	- Sponge
+
 ---
+---
+---
+## Schedule
+Don't forget to record timelapse footage for Archive!
 
 {{% notice note %}}
 Estimated Project Completion:
 ███▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ 3%
 {{% /notice %}}
 
-## Schedule
-Don't forget to record timelapse footage for Archive!
 ## Week 1 2024-05-13:
-- [ ] First Draft of Design Document
+- [x] First Draft of Design Document
 - [x] Initialize Godot project / Git repo
 ---
 ## Week 2 2024-05-20:
