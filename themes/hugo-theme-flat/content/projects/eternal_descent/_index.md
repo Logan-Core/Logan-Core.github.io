@@ -61,12 +61,12 @@ Once the player deals enough damage to the Catalyst. It will retreat by crashing
 5. Player Selects Play
 6. Transition into gameplay, starting the player off in a infinite empty grey void. The Catalyst floats silently above near the player.
 7. This is a quick tutorial to show the player the objective. Once the player attacks the Catalyst (There's nothing else to do, The player will eventually try shooting it). The Catalyst will react violently and begin flying around and appear to be taking damage. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer effectively reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. Once the player damages the Catalyst enough, it'll fly above the center of the arena and crash through leaving a portal for the player to follow to level 1.
-8. The main gameplay loop begins:
+8. The Score Timer starts and the main gameplay loop begins:
 	- The Catalyst floats around the outskirts of the level shooting out portals that enemies will spawn from.
 	- The player deals enough damage to the Catalyst, causing it to flee. Opening a portal on the floor that'll expand slowly that the player will eventually have to fall into to reach the next level.
 	- This cycle repeats. Each level should take around 2 minutes, with earlier levels offering more chances to finish quickly. (There will be fewer armor moments for the Catalyst and less time spent waiting around for waves and such.) Expert players should be able to speed through the earlier levels to some extent.
 	- Boss fights on every third level. Final boss on Level 9.
-9. When the player dies. Show stats, basic leaderboard info and lastly show how far down the player made it on the attempt. (It's important to show the Player that there are 9 total levels. I want the player to understand that there is an ending to play for and that the game isn't an infinite shooter where the only goal is to get a high score.)
+9. When the player dies. Show stats, basic leaderboard info and lastly show how far down the player made it on the attempt. (It's important to show the Player that there are a finite number of levels. I want the player to understand that there is an ending to play for and that the game isn't an infinite shooter where the only goal is to get a high score.)
 10. Prompt the player to restart, return to main menu, or quit.
 11. When the player presses the restart button. Start the player midway through the first portal already transitioning into level 1. Skip the intro/tutorial until the next time the game is launched.
 ---
@@ -102,7 +102,7 @@ I want to incentivize two different ways of playing the game:
 	- Defeating the Catalyst as fast as possible (This will be the expected form of play for most players and the default view on the Leaderboard)
 2. Go for the longest time.
 	- Levels are infinite and players can choose to stay on a level and ignore the catalyst while they rack up kills and time spent alive.
-	Early levels will start by linearly increasing in difficulty with time while later levels will be more erratic and unforgiving
+	Early levels will start by linearly increasing in difficulty while later levels will be more erratic and unforgiving
 	I.E (Reaching the 5 minute mark on Level 1 should be very difficult but reaching that same time on Level 8 should be humanly impossible)
 	- After the player finishes the game by destroying the Catalyst on Level 9. If the score timer is above a certain threshold, the player will instead be sent to a secret Level 10 where they'll have one final opportunity to stretch out the timer before ultimately dying.
 
@@ -131,12 +131,14 @@ Start listing things here. Cleanup/organize later:
 - Fullscreen
 - Resolution
 - Mouse Sensitivity (x,y) & lock
+- Mouse Inversion
 - Sound Effect Volume
 - Music Volume
 - Reduced Visual Effects
 - Player Control Rebinds
 - Reset to Default
 - FOV
+- Viewmodel FOV
 - VSync
 - Max FPS
 - Show FPS
@@ -148,7 +150,7 @@ Start listing things here. Cleanup/organize later:
 
 
 Each run through the game will also automatically record a demo that can be played back later for leaderboard validation and for review and such.
-Because of the length of the game and certain factors that may not be completely deterministic, Each demo will end right when the Catalyst breaches through the level and then a new demo recording will begin right when the next level begins. Preventing de-syncs will be vital. I'll need to do some proper research before I start implementing this
+Because of the length of the game and certain factors that may not be completely deterministic, Each demo will end right when the Catalyst breaches through the level and then a new demo recording will start right when the next level begins. Preventing de-syncs will be vital. I'll need to do some proper research before I start implementing this
 
 The game will have one Achievement:
 	Catalyst: Reach the Bottom
@@ -193,10 +195,10 @@ The distinctive feature of the player's gun will be its ability to adjust its mu
 The mousewheel will be used to smoothly transition from narrow and wide fire modes:
 
 When the gun's muzzle is set all the way to either the Narrow or Wide firemode, it should click into place and give the player some ability related to the current mode:
-I.E (When the gun is set to full narrow, Holding LeftClick charges a more powerful blast, etc.) (This actually may complicate things too much for the player. Will have to prototype/playtest)
+I.E (When the gun is set to full narrow, the slice shot extends out further, etc.) (This actually may complicate things too much for the player. Will have to prototype/playtest)
 
 - Narrow:
-	- Low FireRate (Short charge/windup before shots)
+	- Low FireRate (Short charge/windup between shots)
 	- High Damage
 	- Perfect Accuracy
 	- Very fast projectile speed
@@ -224,12 +226,12 @@ The Slice Shot will be very strong but it will have some major drawbacks:
 
 
 ## Enemy List
-The enemy names don't really matter. They won't be presented to the player in any form.
+The enemy names don't really matter. They won't be presented to the player in any form. Just need names so I can refer to them when making the game
 
 {{< image_gallery images="./enemy_basic_shapes.webp" >}}
 
 ## Swarmer
-The simplest enemy. Loosely flies towards the player at all times. Spawns in large groups and quickly amalgamate into frenzied swarms that fly faster and at tighter angles towards the player.
+The simplest enemy. Loosely flies towards the player at all times. Spawns in large groups which will often cause the Catalyst to activate armor and due to the large amount that spawn at once, Swarmers will quickly amalgamate into frenzied swarms that fly faster and at tighter angles towards the player.
 
 ---
 
@@ -269,12 +271,12 @@ The portals the Catalyst shoot out around the arena. The portals will remain and
 ---
 
 ## Roamer
-Does not any knowledge of the player. Floats low to the ground and roams the arena in a random fashion.
+Does not have any knowledge of the player. Floats low to the ground and roams the arena in a random fashion.
 
 ---
 
-## Enemy info
-Enemy Info
+## Sponge
+Enemy that absorbs shots likes a magnet and can be effectively killed by switching to wide muzzle mode and filling them up until they burst. Completely armored, no sliceshot
 
 ---
 
@@ -300,9 +302,9 @@ Environment Modifier: None
 
 The first level in the game has a very important role to fill. The player will spend MOST of the time here.
 
-The player is expected to reset hundreds if not thousands of times in order to gain the skills and experience needed to complete a full run through the game. By the end, players that stick to it will definitely become so familiar with this level they could pretty much do it blindfolded.
+Most player will be expected to reset hundreds of times in order to gain the skills and experience needed to complete a full run through the game. By the end, players that stick to it will definitely become so familiar with this level they could pretty much do it blindfolded.
 
-More so than later levels, Level 1 needs to have near-perfect "invisible" appeal. Something that draws the player in and help alleviate the pain of having lost their previous attempt. The specific qualities I'm looking for will be difficult to write down but either way, out of every level in the game, this one will be under the most scrutiny and have the most revisions for sure.
+More so than later levels, Level 1 needs to have near-perfect "invisible" appeal. Something that draws the player in and help alleviate the pain of having lost their previous attempt. The ability to "master" a level and breeze through it would be a good fit here. Many of the specific qualities I'm looking for will be difficult to write down but either way, out of every level in the game, this one will be under the most scrutiny and have the most revisions for sure.
 
 
 ## Level 2: *Lust*
@@ -319,14 +321,12 @@ Environment Modifier: Lightning
 
 ## Level 3: *Gluttony - Cerberus*
 **{{< fontcolor color="#83855f" >}}Large Cave{{< /fontcolor >}}**
+A large cave expanse so large the walls can barely be seen through distant fog. with giant stalactites/rock columns obscuring vision closer to the arena.
+
+Before the boss fight begins, parts of his moving snake body should appear off in the distance coiling up and around the environment to give him an impossibly large sense of scale compared to previous enemies the player has encountered.
 
 Environment Modifier: Uneven Rough Terrain
 
-The third level in the game will have the first boss the player encounters.
-
-
-A super large cave expanse so large the walls can barely be seen through distant fog. with giant stalactites/rock columns obscuring vision closer to the arena.
-When Cerberus appears, parts of his moving snake body should appear off int eh distance coiling up and around the environment to give him an impossibly large sense of scale compared to previous enemies the player has encountered.
 
 {{< image_gallery images="./level_3_001.webp,./level_3_002.webp" >}}
 
@@ -334,33 +334,31 @@ When Cerberus appears, parts of his moving snake body should appear off int eh d
 There are certain rules that are typically followed for the "first boss" in an action video game. It is not untypical for the first boss to be treated as a glorified tutorial, however, that need not be the case for this guy. I want Cerberus to 100% be the first major wall the player has to overcome.
 
 Intro:
-The player drops into the arena from the previous level and after the player finishes the standard loop of the Catalyst spawning enemies and such. The Catalyst will floats quietly above the edge of the platform. Rumbling sounds are played and Cerberus's body begins to appear from the outskirts in the distance. A few moments later, a large creature with the body of a snake jets up to the left of the Catalyst, then a second on the right, and finally a third one jets up higher than the others directly behind the catalyst and chomps down on it, A vertical slit eyeball pupil appears on the catalyst and then the fight begins
+The player drops into the arena from the previous level and after the player finishes the standard loop of the Catalyst spawning enemies and such. The Catalyst will floats quietly above the edge of the arena. Rumbling sounds are played and Cerberus's body which has already been visible off in the distance will begin to move. A few moments later, a large creature with the body of a snake jets up to the left of the Catalyst, then a second on the right, and finally a third one jets up higher than the others directly behind the catalyst and chomps down on it, A vertical slit eyeball pupil appears on the catalyst and then the fight begins
 
 Player Objective:
 Attack the Catalyst inside Cerberus's mouth. The creature holding the Catalyst will occasionally back away into the abyss and send out enemies for the player to deal with.
-The other 2 Cerberus heads will navigate semi-randomly around the arena and unleash simple attacks, Managing the player's attention between different directions will be the main goal of the fight
+The other 2 Cerberus heads will navigate semi-randomly around the arena and unleash simple attacks, Managing the player's attention in all different directions will be the main source of difficulty in this fight.
+
+Attack Patterns:
 
 ---
 
 ## Level 4: *Greed*
 **{{< fontcolor color="#0c9d0b" >}}Abandoned Jungle Temple{{< /fontcolor >}}**
+Surrounded by exotic jungle in all directions. The arena takes on the apperence of a Jungle Temple with a grid pattern on the floor with spike traps scattered around that the player will have to avoid
 
-Environment Modifier: Floor Spike Trap
+Environment Modifier: Floor Spike Traps
 
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
-
-Another test?? Really?
-
-Trying something out
 
 ---
 
 ## Level 5: *Anger*
 **{{< fontcolor color="#adeef9" >}}Icy Abyss{{< /fontcolor >}}**
+Another cave system similar to Level 3. Bright warm orange lights off in the distance but have the immediate terrain around the player be bleak and unforgiving. Giant ice crystals everywhere.
 
-Environment info goes here
-
-Environment Modifier: Smaller ring-shaped Arena
+Environment Modifier: Broken up arena. Player will have to jump between sections or risk falling
 
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
@@ -377,9 +375,9 @@ Environment Modifier: Extra Large Arena
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
 
-After the player does a short loop of fighting the Catalyst and defeatign enemies and such. The Catalyst will stop spawning enemies and the music and ambience will fade out. The Catalyst will fly high up into the skybox and create an eclipse-like scenery. It will then spawn in the boss
+After the player does a short loop of fighting the Catalyst and defeating enemies and such. The Catalyst will stop spawning enemies and the music and ambience will fade out. The Catalyst will fly high up into the skybox and create a eclipse-like scenery (Recreate environment from DarkSouls 3's Lord of Cinder fight). It will then spawn in the boss
 
-NEED MORE INFO ON HERETIC HERE
+WRITE DOWN BOSS FIGHT INFO HERE
 
 ---
 
