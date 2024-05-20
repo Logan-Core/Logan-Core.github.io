@@ -15,6 +15,8 @@ Add logo image
 
 Design everything with intent. Avoid arbitrary decisions
 
+{{< image_gallery images="./test_anim_image.webp" >}}
+
 {{< expand "Quick Navigation" >}}
 
 {{% button href="./#what-is-this-game-about" color="#8B43A9" font-color="#020202 "%}}What is this game about?{{% /button %}}
