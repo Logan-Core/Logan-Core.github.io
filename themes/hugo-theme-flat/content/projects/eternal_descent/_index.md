@@ -389,7 +389,7 @@ Another cave system similar to Level 3. Bright warm orange lights off in the dis
 
 Environment Modifier: Broken up arena. Player will have to jump between sections or risk falling
 
-{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
+{{< image_gallery images="./level_5_001.webp,./level_5_002.webp" >}}
 
 - Enemies
 	- Swarmer
@@ -414,7 +414,11 @@ Environment Modifier: Extra Large Arena
 
 After the player does a short loop of fighting the Catalyst and defeating enemies and such. The Catalyst will stop spawning enemies and the music and ambience will fade out. The Catalyst will fly high up into the skybox and create a eclipse-like scenery (Recreate environment from DarkSouls 3's Lord of Cinder fight). It will then spawn in the boss
 
-WRITE DOWN BOSS FIGHT INFO HERE
+## **The Heretic**
+
+{{< image_gallery images="./heretic_001.webp,./heretic_002.webp,./heretic_003.webp,heretic_004.webp" >}}
+
+The Heretic is a human-like creature that has the upper torso of a man and
 
 - Enemies
 	- Swarmer
