@@ -334,14 +334,20 @@ Environment Modifier: Lightning
 
 ## Level 3: *Gluttony - Cerberus*
 **{{< fontcolor color="#83855f" >}}Large Cave{{< /fontcolor >}}**
-A large cave expanse so large the walls can barely be seen through distant fog. with giant stalactites/rock columns obscuring vision closer to the arena.
+A cave expanse so large the walls can barely be seen through distant fog. with giant stalactites/rock columns obscuring vision closer to the arena.
 
-Before the boss fight begins, parts of his moving snake body should appear off in the distance coiling up and around the environment to give him an impossibly large sense of scale compared to previous enemies the player has encountered.
-
-Environment Modifier: Uneven Rough Terrain
+Environment Modifier: Uneven Terrain
 
 
 {{< image_gallery images="./level_3_001.webp,./level_3_002.webp" >}}
+
+- Enemies
+	- Swarmer
+	- Missile
+	- Sniper
+	- Treasure
+	- Roamer
+	- Sponge
 
 ## **Cerberus**
 There are certain rules that are typically followed for the "first boss" in an action video game. It is not untypical for the first boss to be treated as a glorified tutorial, however, that need not be the case for this guy. I want Cerberus to 100% be the first major wall the player has to overcome.
@@ -353,15 +359,10 @@ Player Objective:
 Attack the Catalyst inside Cerberus's mouth. The creature holding the Catalyst will occasionally back away into the abyss and send out enemies for the player to deal with.
 The other 2 Cerberus heads will navigate semi-randomly around the arena and unleash simple attacks, Managing the player's attention in all different directions will be the main source of difficulty in this fight.
 
-Attack Patterns:
-
-- Enemies
-	- Swarmer
-	- Missile
-	- Sniper
-	- Treasure
-	- Roamer
-	- Sponge
+- Attack Patterns:
+	- Rapid Fire enemy spawn portals
+	- Either of the two side heads can crash down near the edge of the arena.
+	- Need more. Write stuff down later
 
 ---
 
@@ -404,21 +405,14 @@ Environment Modifier: Broken up arena. Player will have to jump between sections
 
 ## Level 6: *Heresy - The Heretic*
 **{{< fontcolor color="#715e5c" >}}Eclipse{{< /fontcolor >}}**
-
-Environment info goes here (Dark Souls 3 Final boss reference)
+Desolate wasteland covered in ash. have distant silhouettes of manmade structures. The arena will be extra large to account for the boss fight and shift to a even more bleak Eclipse like environment when the boss spawns and also have fog roll in obscuring the edges of the arena.
 
 Environment Modifier: Extra Large Arena
 
 {{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
 
 
-After the player does a short loop of fighting the Catalyst and defeating enemies and such. The Catalyst will stop spawning enemies and the music and ambience will fade out. The Catalyst will fly high up into the skybox and create a eclipse-like scenery (Recreate environment from DarkSouls 3's Lord of Cinder fight). It will then spawn in the boss
-
-## **The Heretic**
-
-{{< image_gallery images="./heretic_001.webp,./heretic_002.webp,./heretic_003.webp,heretic_004.webp" >}}
-
-The Heretic is a human-like creature that has the upper torso of a man and
+After the player does a short loop of fighting the Catalyst and defeating enemies and such. The Catalyst will stop spawning enemies and the music and ambience will fade out. The Catalyst will fly high up into the skybox and create a eclipse-like scenery (Recreate environment from DarkSouls 3's Lord of Cinder fight). The Heretic boss will then spawn out of the Catalyst
 
 - Enemies
 	- Swarmer
@@ -429,6 +423,22 @@ The Heretic is a human-like creature that has the upper torso of a man and
 	- Snake
 	- Roamer
 	- Sponge
+
+## **The Heretic**
+
+{{< image_gallery images="./heretic_001.webp,./heretic_002.webp,./heretic_003.webp,heretic_004.webp" >}}
+
+The Heretic is a human-like creature held together by rough looking metal components. Hovers over the arena using a jetpack mounted when his legs would be.
+Both his guns have the same appearance as the players' and the Heretic's moveset will have similarities with what the player can do: (Different fire modes, sliceshots, etc)
+
+- Attack Patterns:
+	- Points both guns straight up into the sky, both guns switch to wide firemode and then unleashes a barrage of bullets that track to the player's position at the time of the shot
+	- Throws out sliceshots that have tangible form that fall behind the fog of the arena and then cut through the center across
+	- Narrow sniper shot, his laser sight will track the player for a moment and stop right before he shoots off a shot
+	- Holds both guns together directly towards the player. Rings connect and begins charging a big explosion attack. Strong homing on player, give the projectile clear "You gotta sliceshot this" features. (I'll need to teach player using the Shield enemy a specific thing to associate with SliceShots and use it on his attack here.) After the player slices the shot, it'll bounce back towards the Heretic and stun him. Allowing the player to damage them
+
+On the last big shot the Heretic uses, instead of taking the hit and getting stunned, he will instead cut the blast in half with the two halves flying off into the distance and then fly down into the arena at the player's level. His shields will go down for the remainder of the fight and the player will have to finish him quickly while fighting close quarters.
+
 
 ---
 
