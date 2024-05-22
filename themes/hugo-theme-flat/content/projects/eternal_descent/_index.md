@@ -160,7 +160,7 @@ Each run through the game will also automatically record a demo that can be play
 Because of the length of the game and certain factors that may not be completely deterministic, Each demo will end right when the Catalyst breaches through the level and then a new demo recording will start right when the next level begins. Preventing de-syncs will be vital. I'll need to do some proper research before I start implementing this
 
 I have a few options for the backend:
-- Self-hosted (Rent out a VPS ($10ish a month) and spin up my own database)
+- Self-hosted (Rent out a VPS ($10 a month) and spin up my own database)
 	- Pros:
 		- Everything would be self-hosted. Full-control of data.
 		- Account validation would be platform agnostic and allow easy release to all store-fronts. (Steam, GoG, etc)
@@ -169,6 +169,7 @@ I have a few options for the backend:
 		- Would likely add months of development time if I implemented this myself. (Big Issue)
 		- I have no experience with something like this at a large-scale. Unique issues WILL happen that'd I'd have no choice but to fix.
 		- Securing down and setting up a backup system for the Database would fall on me.
+		- Maintaining would be more of a involved process.
 		- No friend integration with Steam
 - SilentWolf (Free Cloud option)
 	- Pros:
@@ -177,7 +178,8 @@ I have a few options for the backend:
 	- Cons:
 		- May be technically impossible (Strict data limits. Demo recordings will definitely not fit in the 40KB I have available per user on SilentWolf) (I could potentially reach out to SilentWolf and offer to pay for higher limits?)
 		- Would require players to sign-up for a service I have no real control over. SilentWolf could one day get compromised and then Eternal Descent account details getting leaked would be my fault.
-		- Not self-hosted. I can't say 100% I trust these people to have control over this data.
+		- The service itself may not be around in the future. They could shut down and then I'd have to transfer over the database to another service.
+		- Not self-hosted. I can't say 100% I trust these people to have control over the data.
 		- No friend integration with Steam
 - SteamWorks
 	- Pros:
