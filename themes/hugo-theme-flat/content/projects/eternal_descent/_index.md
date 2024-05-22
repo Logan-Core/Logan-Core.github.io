@@ -2,7 +2,7 @@
 author = "Logan Core"
 title = "Eternal Descent - Design Document"
 date = 2024-05-10
-last_updated = 2024-05-20
+last_updated = 2024-05-21
 show_comments = false
 hide_list_items = true
 +++
@@ -21,6 +21,9 @@ Design everything with intent. Avoid arbitrary decisions
 
 {{% button href="./#what-is-this-game-about" color="#8B43A9" font-color="#020202 "%}}What is this game about?{{% /button %}}
 {{% button href="./#schedule" color="#ffdf00" font-color="#020202 "%}}Schedule{{% /button %}}
+{{% button href="./technical_document" color="#1b00e0" font-color="#FFFFFF "%}}Technical Document{{% /button %}}
+
+
 
 {{< /expand >}}
 
@@ -28,13 +31,15 @@ Design everything with intent. Avoid arbitrary decisions
 
 Eternal Descent is a Single player First-person shooter which tasks the player with a simple goal:
 
-You're stuck in a small arena and must survive the onslaught of enemies long enough to defeat the [Catalyst](./#the-catalyst) and unlock the path to the next level.
+Survive the onslaught of enemies long enough to defeat the [Catalyst](./#the-catalyst) and unlock the path to the next level.
 
 ---
 
 The game will be level-based with deaths restarting the player at level 1. Nothing will be carried over between attempts. The player will have the same starting conditions every run and only by playing and gaining experience will they be able to progress further.
 
-The game will be built with quick-restarts in mind. The game will be tuned to be more difficult than average and feature a online leaderboard where other users can compete!
+The game will be tuned to be more difficult than average and will be designed with quick-restarts in mind. (A full run through the game should take no longer than 20 minutes)
+
+Eternal Descent will feature an online leaderboard where other users can compete for the best times!
 
 ---
 
@@ -153,6 +158,35 @@ Start listing things here. Cleanup/organize later:
 
 Each run through the game will also automatically record a demo that can be played back later for leaderboard validation and for review and such.
 Because of the length of the game and certain factors that may not be completely deterministic, Each demo will end right when the Catalyst breaches through the level and then a new demo recording will start right when the next level begins. Preventing de-syncs will be vital. I'll need to do some proper research before I start implementing this
+
+I have a few options for the backend:
+- Self-hosted (Rent out a VPS ($10ish a month) and spin up my own database)
+	- Pros:
+		- Everything would be self-hosted. Full-control of data.
+		- Account validation would be platform agnostic and allow easy release to all store-fronts. (Steam, GoG, etc)
+		- I could automate account creation and have it tie to some other form of user validation.
+	- Cons:
+		- Would likely add months of development time if I implemented this myself. (Big Issue)
+		- I have no experience with something like this at a large-scale. Unique issues WILL happen that'd I'd have no choice but to fix.
+		- Securing down and setting up a backup system for the Database would fall on me.
+		- No friend integration with Steam
+- SilentWolf (Free Cloud option)
+	- Pros:
+		- Really good documentation and easy integration with Godot
+		- Account validation would be platform agnostic and allow easy release to all store-fronts. (Steam, GoG, etc)
+	- Cons:
+		- May be technically impossible (Strict data limits. Demo recordings will definitely not fit in the 40KB I have available per user on SilentWolf) (I could potentially reach out to SilentWolf and offer to pay for higher limits?)
+		- Would require players to sign-up for a service I have no real control over. SilentWolf could one day get compromised and then Eternal Descent account details getting leaked would be my fault.
+		- Not self-hosted. I can't say 100% I trust these people to have control over this data.
+		- No friend integration with Steam
+- SteamWorks
+	- Pros:
+		- Would be semi-easy to implement (Lots of people have done it before and documentation looks simple enough)
+		- Having friend integration with Steam would make comparing times easy
+		- I can store a stupid amount of data per entry using SteamCloud integration (Demo recordings should only end up being a couple hundred KB. Would have to find some way of keeping track and referencing these SteamCloud files from the leaderboard though.)
+	- Cons:
+		- Would lock me into the Steam ecosystem and game couldn't be released to other storefronts without a new leaderboard-system.
+
 
 The game will have one Achievement:
 	Catalyst: Reach the Bottom
@@ -568,7 +602,8 @@ Estimated Project Completion:
 - [ ] Technical Design Document Finished. (Leave nothing out, check everything top to bottom and then just follow the pseudocode)
 ---
 ## Week 6 2024-06-17:
-- [ ] Remake Schedule with more accurate Time Estimates ( Every 6 Weeks )
+- [ ] Remake Schedule with more accurate time estimates ( Every 6 Weeks )
+- [ ] Start implementing player-movement-controller
 ---
 ## Week 7 2024-06-24:
 - [ ] Entry Goes Here
@@ -596,7 +631,8 @@ Estimated Project Completion:
 - [ ] Entry Goes Here 3
 ---
 ## Week 12 2024-07-29:
-- [ ] Remake Schedule with more accurate Time Estimates ( Every 6 Weeks )
+- [ ] Remake Schedule with more accurate time estimates ( Every 6 Weeks )
+- [ ] Make Discord Server + Start Planning Marketing Strategy
 ---
 
 ---
