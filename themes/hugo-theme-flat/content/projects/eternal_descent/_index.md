@@ -384,6 +384,8 @@ Environment Modifier: Uneven Terrain
 	- Sponge
 
 ## **Cerberus**
+{{< image_gallery images="./cerberus_test_anim_001.webp" >}}
+
 There are certain rules that are typically followed for the "first boss" in an action video game. It is not untypical for the first boss to be treated as a glorified tutorial, however, that need not be the case for this guy. I want Cerberus to 100% be the first major wall the player has to overcome.
 
 Intro:
