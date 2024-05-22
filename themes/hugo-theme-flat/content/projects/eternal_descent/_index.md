@@ -2,7 +2,7 @@
 author = "Logan Core"
 title = "Eternal Descent - Design Document"
 date = 2024-05-10
-last_updated = 2024-05-21
+last_updated = 2024-05-22
 show_comments = false
 hide_list_items = true
 +++
@@ -37,7 +37,7 @@ Survive the onslaught of enemies long enough to defeat the [Catalyst](./#the-cat
 
 The game will be level-based with deaths restarting the player at level 1. Nothing will be carried over between attempts. The player will have the same starting conditions every run and only by playing and gaining experience will they be able to progress further.
 
-The game will be tuned to be more difficult than average and will be designed with quick-restarts in mind. (A full run through the game should take no longer than 20 minutes)
+The game will be tuned to be more difficult than average and be designed with quick-restarts in mind. (A full run through the game should take no longer than 20 minutes)
 
 Eternal Descent will feature an online leaderboard where other users can compete for the best times!
 
@@ -55,6 +55,17 @@ Once the player deals enough damage to the Catalyst. It will retreat by crashing
 
 ---
 
+## How will players learn to play my game?
+
+For each time the game is launched, the very first attempt will give the player a short in-game tutorial before the first level, showing the objective and the required mechanics they’ll need to know in order to play. The tutorial will operate as follows:
+1. Player spawns in a empty grey void. The Catalyst floats silently above near the player.
+2. After the player attacks the Catalyst (There's nothing else to do, The player will eventually try shooting it). The Catalyst will react violently and begin flying around and appear to be taking damage.
+3. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer effectively reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. This will allow the player to damage the Catalyst again and after the player damages the Catalyst enough, it'll fly away from the player and crash through the floor leaving a portal for the player to follow to level 1.
+Certainly! Here's the corrected version:
+
+	"For each time the game is launched, the very first attempt will give the player a short in-game tutorial before the first level, showing the objective and the required mechanics they’ll need to know in order to play. The tutorial will operate as follows:"
+---
+
 ## What do the first few minutes of Eternal Descent look like?:
 1. The player launches the game from Steam.
 2. A few splashscreens are presented to the player: "Epilepsy warning", "Logan_Core credit", "Created in Godot". (Can be skipped to get into menu faster)
@@ -66,8 +77,8 @@ Once the player deals enough damage to the Catalyst. It will retreat by crashing
 	- [Options](./#options)
 	- Quit
 5. Player Selects Play
-6. Transition into gameplay, starting the player off in a infinite empty grey void. The Catalyst floats silently above near the player.
-7. This is a quick tutorial to show the player the objective. Once the player attacks the Catalyst (There's nothing else to do, The player will eventually try shooting it). The Catalyst will react violently and begin flying around and appear to be taking damage. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer effectively reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. Once the player damages the Catalyst enough, it'll fly above the center of the arena and crash through leaving a portal for the player to follow to level 1.
+6. Transition into [tutorial](./#how-will-players-learn-to-play-my-game)
+7. Player completes [tutorial](./#how-will-players-learn-to-play-my-game)
 8. The Score Timer starts and the main gameplay loop begins:
 	- The Catalyst floats around the outskirts of the level shooting out portals that enemies will spawn from.
 	- The player deals enough damage to the Catalyst, causing it to flee. Opening a portal on the floor that'll expand slowly that the player will eventually have to fall into to reach the next level.
@@ -375,7 +386,7 @@ A cave expanse so large the walls can barely be seen through distant fog. with g
 Environment Modifier: Uneven Terrain
 
 
-{{< image_gallery images="./level_3_001.webp,./level_3_002.webp" >}}
+{{< image_gallery images="./level_3_001.webp,./level_3_002.webp,./level_3_003.webp" >}}
 
 - Enemies
 	- Swarmer
@@ -410,7 +421,7 @@ Surrounded by exotic jungle in all directions. The arena takes on the apperence 
 
 Environment Modifier: Floor Spike Traps
 
-{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
+{{< image_gallery images="./level_4_001.webp" >}}
 
 - Enemies
 	- Swarmer
