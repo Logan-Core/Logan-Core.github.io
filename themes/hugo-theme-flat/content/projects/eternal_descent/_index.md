@@ -477,7 +477,7 @@ After the player does a short loop of fighting the Catalyst and defeating enemie
 
 {{< image_gallery images="./heretic_001.webp,./heretic_002.webp,./heretic_003.webp,heretic_004.webp" >}}
 
-The Heretic is a human-like creature held together by rough looking metal components. Hovers over the arena using a jetpack mounted when his legs would be.
+The Heretic is a human-like creature held together by rough looking metal components. Hovers over the arena using a jetpack mounted where his legs would be.
 Both his guns have the same appearance as the players' and the Heretic's moveset will have similarities with what the player can do: (Different fire modes, sliceshots, etc)
 
 - Attack Patterns:
