@@ -2,7 +2,7 @@
 author = "Logan Core"
 title = "Eternal Descent - Design Document"
 date = 2024-05-10
-last_updated = 2024-05-22
+last_updated = 2024-05-23
 show_comments = false
 hide_list_items = true
 +++
@@ -19,7 +19,9 @@ Design everything with intent. Avoid arbitrary decisions
 
 {{< expand "Quick Navigation" >}}
 
-{{% button href="./#what-is-this-game-about" color="#8B43A9" font-color="#020202 "%}}What is this game about?{{% /button %}}
+
+
+{{% button href="./#levels" color="#8B43A9" font-color="#020202 "%}}Levels{{% /button %}}
 {{% button href="./#schedule" color="#ffdf00" font-color="#020202 "%}}Schedule{{% /button %}}
 {{% button href="./technical_document" color="#1b00e0" font-color="#FFFFFF "%}}Technical Document{{% /button %}}
 
@@ -170,34 +172,38 @@ Start listing things here. Cleanup/organize later:
 Each run through the game will also automatically record a demo that can be played back later for leaderboard validation and for review and such.
 Because of the length of the game and certain factors that may not be completely deterministic, Each demo will end right when the Catalyst breaches through the level and then a new demo recording will start right when the next level begins. Preventing de-syncs will be vital. I'll need to do some proper research before I start implementing this
 
-I have a few options for the backend:
+I won't be able to use physics for anything gameplay related (GodotPhysics and the JoltPhysics Plugin both can't guarantee deterministic results). Physics will only be used for non-gameplay features. (Particles, decorations, etc)
+
+---
+
+I have a few options for the Leaderboard backend:
 - Self-hosted (Rent out a VPS ($10 a month) and spin up my own database)
-	- Pros:
+	- **Pros**:
 		- Everything would be self-hosted. Full-control of data.
 		- Account validation would be platform agnostic and allow easy release to all store-fronts. (Steam, GoG, etc)
 		- I could automate account creation and have it tie to some other form of user validation.
-	- Cons:
+	- **Cons**:
 		- Would likely add months of development time if I implemented this myself. (Big Issue)
 		- I have no experience with something like this at a large-scale. Unique issues WILL happen that'd I'd have no choice but to fix.
 		- Securing down and setting up a backup system for the Database would fall on me.
 		- Maintaining would be more of a involved process.
 		- No friend integration with Steam
 - SilentWolf (Free Cloud option)
-	- Pros:
+	- **Pros**:
 		- Really good documentation and easy integration with Godot
 		- Account validation would be platform agnostic and allow easy release to all store-fronts. (Steam, GoG, etc)
-	- Cons:
+	- **Cons**:
 		- May be technically impossible (Strict data limits. Demo recordings will definitely not fit in the 40KB I have available per user on SilentWolf) (I could potentially reach out to SilentWolf and offer to pay for higher limits?)
-		- Would require players to sign-up for a service I have no real control over. SilentWolf could one day get compromised and then Eternal Descent account details getting leaked would be my fault.
+		- Would require players to sign-up for a service I have no real control over. (Adding **any** friction to the playing process is a huge issue. I wouldn't want to sign up for a account like this so I shouldn't force players either.) SilentWolf could also one day get compromised and then Eternal Descent account details getting leaked would be my fault.
 		- The service itself may not be around in the future. They could shut down and then I'd have to transfer over the database to another service.
 		- Not self-hosted. I can't say 100% I trust these people to have control over the data.
 		- No friend integration with Steam
 - SteamWorks
-	- Pros:
+	- **Pros**:
 		- Would be semi-easy to implement (Lots of people have done it before and documentation looks simple enough)
 		- Having friend integration with Steam would make comparing times easy
 		- I can store a stupid amount of data per entry using SteamCloud integration (Demo recordings should only end up being a couple hundred KB. Would have to find some way of keeping track and referencing these SteamCloud files from the leaderboard though.)
-	- Cons:
+	- **Cons**:
 		- Would lock me into the Steam ecosystem and game couldn't be released to other storefronts without a new leaderboard-system.
 
 
@@ -323,7 +329,7 @@ Does not have any knowledge of the player. Floats low to the ground and roams th
 ---
 
 ## Sponge
-Enemy that absorbs shots likes a magnet and can be effectively killed by switching to wide muzzle mode and filling them up until they burst. Completely armored, no sliceshot
+Enemy that absorbs shots like a magnet and can be effectively killed by switching to wide muzzle mode and filling them up until they burst. Completely armored, no sliceshot
 
 ---
 
