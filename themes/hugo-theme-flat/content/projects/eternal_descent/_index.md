@@ -550,7 +550,7 @@ Super Large Catalyst spawning smaller versions of itself.
 
 If the score timer is above a certain amount after the Catalyst has been destroyed and we can determine the player is going for a "Time Spent Alive" highscore, the Catalyst will open up one last portal that will send the player to Level 10. otherwise, play the ending cinematic and show the player's stats. Update Main menu as a reward
 
-{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
+{{< image_gallery images="./level_9_001.webp" >}}
 
 - Enemies
 	- Swarmer
@@ -571,7 +571,7 @@ If the score timer is above a certain amount after the Catalyst has been destroy
 A special final level that is only accessible if the player is making a attempt for the "Time Spent Alive" leaderboard. (Players who are going at normal speed through game will instead get the ending after killing the Catalyst and won't be sent here.)
 This will be a infinite gauntlet where the enemies no longer spawn from portals but appear from the surrounding environment. This is the last opportunity for the player to stretch out the score timer for higher placement on the "Time Spent Alive" leaderboard.
 
-{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
+{{< image_gallery images="./level_10_001.webp,./level_10_002.webp" >}}
 
 - Enemies
 	- Swarmer
