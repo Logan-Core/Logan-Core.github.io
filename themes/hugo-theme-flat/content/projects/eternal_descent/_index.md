@@ -2,7 +2,7 @@
 author = "Logan Core"
 title = "Eternal Descent - Design Document"
 date = 2024-05-10
-last_updated = 2024-05-23
+last_updated = 2024-05-26
 show_comments = false
 hide_list_items = true
 +++
@@ -21,9 +21,10 @@ Design everything with intent. Avoid arbitrary decisions
 
 
 
-{{% button href="./#levels" color="#8B43A9" font-color="#020202 "%}}Levels{{% /button %}}
+<!-- {{% button href="./#levels" color="#8B43A9" font-color="#020202 "%}}Levels{{% /button %}} -->
 {{% button href="./#schedule" color="#ffdf00" font-color="#020202 "%}}Schedule{{% /button %}}
 {{% button href="./technical_document" color="#1b00e0" font-color="#FFFFFF "%}}Technical Document{{% /button %}}
+{{% button href="./store_asset_images" color="#161C24" font-color="#C4C2BF "%}}Store Image Assets{{% /button %}}
 
 
 
@@ -224,7 +225,7 @@ Defeat and absorb the golden "Treasure" enemy that spawns from the Catalyst on 5
 2. Major boost to weapon damage. Minor Boost to other stats. Projectiles change shape to something more pointy (Level 3)
 3. Major boost to Firerate, absolute stream of bullets at this level. (Flame effect out gun exhaust) (Level 5)
 4. Boost to all Weapon stats (Flame effect turns into plasma. Projectiles now shine a special color) (Level 7)
-5. SliceShot Cooldown removed & Range/Area increased (Show overflowing line of energy along gun tip. Gun becomes golden) (Level 9)
+5. 2nd Gun appears in left hand. (Show overflowing line of energy along gun tip. Guns becomes golden. Sliceshot on 2nd gun will have inverted camera controls) (Level 9)
 
 
 # Default Player Controls:
@@ -284,51 +285,100 @@ The enemy names don't really matter. They won't be presented to the player in an
 {{< image_gallery images="./enemy_basic_shapes.webp" >}}
 
 ## Swarmer
+- Enemy Purpose:
+	- The weakest enemy that is not much of a threat to the player if they are moving around but can become a major hassle if they're left alone to form with other groups that spawn and cause their frenzy stat to skyrocket! Can be sprinkled into any wave to control how much the player is "engaged"
+
 The simplest enemy. Loosely flies towards the player at all times. Spawns in large groups which will often cause the Catalyst to activate armor and due to the large amount that spawn at once, Swarmers will quickly amalgamate into frenzied swarms that fly faster and at tighter angles towards the player.
+
 
 ---
 
 ## Tripwire
+- Enemy Purpose:
+		- WRITE STUFF HERE
+
 A post-shaped walking quadruped with a ball top that can connect with other Tripwires to create short barriers the player can either jump over, cut with their Sliceshot to remove the immediate obstacle or attack either Tripwire post directly to destroy the pair.
 
 ---
 
 ## Missile
+- Enemy Purpose:
+	- Having a enemy that is faster than the player will immediately cause their attention to focus when they hear the recognizable sound of a Missile heading their way.
+
 A "sharp-looking" flying creature that hones in on the player at very fast speeds. Should emit a recognizable sound to warn the player they are incoming.
 
 ---
 
 ## Sniper
+- Enemy Purpose:
+	- WRITE STUFF HERE
+
 Enemy that hangs back floating in the distance. Lobs explosive shots into the arena. The player will need to adjust gun muzzle in order to hit these enemies.
 
 ---
 
 ## Shield
+- Enemy Purpose:
+	- WRITE STUFF HERE
+
 Large Octagon-shaped enemy that slowly approaches the player with a consistent speed. Has no frenzy ability and has segments of armor that the player can cut around using their Sliceshot
 
 ---
 
 ## Treasure
+- Enemy Purpose:
+	- WRITE STUFF HERE
+
 Golden mini Catalyst-looking enemy that moves around in a unpredictable pattern. Spawns from the Catalyst on specific levels after enough damage has been dealt (50%). Defeating it upgrades the player's weapons (May change my mind on this guy later. Weapon upgrades are important and the process to acquire them may need to be more special)
 
 ---
 
 ## Snake
+- Enemy Purpose:
+	- WRITE STUFF HERE
+
 Mini Cerberus guy that appears near the edge of the arena, will swipe at players that walk near it. (Needs to have a very recognizable sound for when it spawns. Player getting caught off guard by one of these guys would be unfair)
 
 ---
 
 ## Spawner Portal
-The portals the Catalyst shoot out around the arena. The portals will remain and will spawn in a small wave of enemies every 15ish seconds.
+- Enemy Purpose:
+	- Source of almost all enemies. Vital to game loop
+
+The portals the Catalyst shoot out around the arena. The portals will remain and will spawn in a small wave of enemies every 25ish seconds.
+
+Each portal the Catalyst shoots out will have one set of enemies it can spawn.
+
+Portals will change in colors based on how much HP they have left, very slowly regenerate if left alone
+
+- Multiple Tiers:
+	1. Small Dark Blue (Portals for the first few levels) (Enemies limited)
+	2. Medium Purple
+	3. Large Red
+
 
 ---
 
 ## Roamer
+- Enemy Purpose:
+	- WRITE STUFF HERE
+
 Does not have any knowledge of the player. Floats low to the ground and roams the arena in a random fashion.
 
 ---
 
+## Protector
+- Enemy Purpose:
+	- The Protector's ability force the player to prioritize killing these guys over everything else. Can be spawned along with a wave to force the player into a "panic" situation
+
+While active in the arena. Spawn portals cannot be destroyed. They will be very large and tower over the other enemies. Susceptible to a single sliceshot or by sheer bullet volume
+
+---
+
 ## Sponge
+- Enemy Purpose:
+	- WRITE STUFF HERE
+
 Enemy that absorbs shots like a magnet and can be effectively killed by switching to wide muzzle mode and filling them up until they burst. Completely armored, no sliceshot
 
 ---
@@ -389,7 +439,7 @@ Environment Modifier: Lightning
 **{{< fontcolor color="#83855f" >}}Large Cave{{< /fontcolor >}}**
 A cave expanse so large the walls can barely be seen through distant fog. with giant stalactites/rock columns obscuring vision closer to the arena.
 
-Environment Modifier: Uneven Terrain
+Environment Modifier: Rock Columns Near Arena Edge
 
 
 {{< image_gallery images="./level_3_001.webp,./level_3_002.webp,./level_3_003.webp" >}}
@@ -423,11 +473,11 @@ The other 2 Cerberus heads will navigate semi-randomly around the arena and unle
 
 ## Level 4: *Greed*
 **{{< fontcolor color="#0c9d0b" >}}Abandoned Jungle Temple{{< /fontcolor >}}**
-Surrounded by exotic jungle in all directions. The arena takes on the apperence of a Jungle Temple with a grid pattern on the floor with spike traps scattered around that the player will have to avoid
+Surrounded by exotic jungle in all directions. The arena will have a grid pattern with spike traps scattered around that the player will have to avoid
 
 Environment Modifier: Floor Spike Traps
 
-{{< image_gallery images="./level_4_001.webp" >}}
+{{< image_gallery images="./level_4_001.webp,./level_4_002.webp" >}}
 
 - Enemies
 	- Swarmer
@@ -459,15 +509,15 @@ Environment Modifier: Broken up arena. Player will have to jump between sections
 ---
 
 ## Level 6: *Heresy - The Heretic*
-**{{< fontcolor color="#715e5c" >}}Eclipse{{< /fontcolor >}}**
-Desolate wasteland covered in ash. have distant silhouettes of manmade structures. The arena will be extra large to account for the boss fight and shift to a even more bleak Eclipse like environment when the boss spawns and also have fog roll in obscuring the edges of the arena.
+**{{< fontcolor color="#715e5c" >}}Desert Eclipse{{< /fontcolor >}}**
+Vast open desert. have distant silhouettes of manmade structures (Pyramids, columns, etc). To account for the boss fight, the arena will drop partway through and allow the player more movement. Have fog obscuring the edges of the newly-sized arena.
 
 Environment Modifier: Extra Large Arena
 
-{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
+{{< image_gallery images="./level_6_002.webp,./level_6_001.webp" >}}
 
 
-After the player does a short loop of fighting the Catalyst and defeating enemies and such. The Catalyst will stop spawning enemies and the music and ambience will fade out. The Catalyst will fly high up into the skybox and create a eclipse-like scenery (Recreate environment from DarkSouls 3's Lord of Cinder fight). The Heretic boss will then spawn out of the Catalyst
+After the player does a short loop of fighting the Catalyst and defeating enemies and such. The Catalyst will stop spawning enemies and the music and ambience will fade out. The Catalyst will fly high up into the skybox and create a eclipse-like scenery (Recreate environment from DarkSouls 3's Lord of Cinder fight). The Arena will shake and then fall down onto the sand allowing the player more movement. The Heretic boss will then spawn out of the Catalyst
 
 - Enemies
 	- Swarmer
@@ -483,16 +533,16 @@ After the player does a short loop of fighting the Catalyst and defeating enemie
 
 {{< image_gallery images="./heretic_001.webp,./heretic_002.webp,./heretic_003.webp,heretic_004.webp" >}}
 
-The Heretic is a human-like creature held together by rough looking metal components. Hovers over the arena using a jetpack mounted where his legs would be.
+The Heretic is a human-like creature held together by mechanical hardware. Hovers over the arena using a jetpack mounted where his legs would be.
 Both his guns have the same appearance as the players' and the Heretic's moveset will have similarities with what the player can do: (Different fire modes, sliceshots, etc)
 
 - Attack Patterns:
 	- Points both guns straight up into the sky, both guns switch to wide firemode and then unleashes a barrage of bullets that track to the player's position at the time of the shot
-	- Throws out sliceshots that have tangible form that fall behind the fog of the arena and then cut through the center across
+	- Throws out sliceshots that have tangible form that fall behind the fog of the arena and then cut across towards the player
 	- Narrow sniper shot, his laser sight will track the player for a moment and stop right before he shoots off a shot
-	- Holds both guns together directly towards the player. Rings connect and begins charging a big explosion attack. Strong homing on player, give the projectile clear "You gotta sliceshot this" features. (I'll need to teach player using the Shield enemy a specific thing to associate with SliceShots and use it on his attack here.) After the player slices the shot, it'll bounce back towards the Heretic and stun him. Allowing the player to damage them
+	- Holds both guns together directly towards the player. Rings connect and begins charging a big explosion attack. Strong homing on player, give the projectile clear "You gotta sliceshot this" features. (I'll need to teach player earlier in the game a specific thing to associate with SliceShots and use it on his attack here.) After the player slices the shot, it'll bounce back towards the Heretic and stun him. Allowing the player to damage them
 
-On the last big shot the Heretic uses, instead of taking the hit and getting stunned, he will instead cut the blast in half with the two halves flying off into the distance and then fly down into the arena at the player's level. His shields will go down for the remainder of the fight and the player will have to finish him quickly while fighting close quarters.
+On the last big shot the Heretic uses, instead of taking the hit and getting stunned, he will instead cut the blast in half and then fly down into the arena at the player's level. His shields will go down for the remainder of the fight and the player will have to finish him quickly while fighting close quarters.
 
 
 ---
@@ -600,9 +650,9 @@ Estimated Project Completion:
 - [x] Initialize Godot project / Git repo
 ---
 ## Week 2 2024-05-20:
-- [ ] Add Placeholder Template Artwork (Follow SteamWork Guidelines. Everything needs to be at specific resolutions)
+- [x] Add Placeholder Template Artwork (Follow SteamWork Guidelines. Everything needs to be at specific resolutions)
 - [ ] Bring somebody up to speed and sanity check documentation together
-- [ ] Start writing out Technical Design Document
+- [x] Start writing out Technical Design Document
 ---
 ## Week 3 2024-05-27:
 - [ ] Begin modeling Environments and get a idea for modeling time estimation (Add Environment modeling into schedule after you get estimate)

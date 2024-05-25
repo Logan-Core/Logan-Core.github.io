@@ -2,7 +2,7 @@
 author = "Logan Core"
 title = "Eternal Descent - Technical Design Document"
 date = 2024-05-20
-last_updated = 2024-05-23
+last_updated = 2024-05-26
 show_comments = false
 hide_list_items = true
 +++
