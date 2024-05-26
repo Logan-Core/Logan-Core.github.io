@@ -19,14 +19,10 @@ Design everything with intent. Avoid arbitrary decisions
 
 {{< expand "Quick Navigation" >}}
 
-
-
 <!-- {{% button href="./#levels" color="#8B43A9" font-color="#020202 "%}}Levels{{% /button %}} -->
 {{% button href="./#schedule" color="#ffdf00" font-color="#020202 "%}}Schedule{{% /button %}}
 {{% button href="./technical_document" color="#1b00e0" font-color="#FFFFFF "%}}Technical Document{{% /button %}}
 {{% button href="./store_asset_images" color="#161C24" font-color="#C4C2BF "%}}Store Image Assets{{% /button %}}
-
-
 
 {{< /expand >}}
 
@@ -38,17 +34,36 @@ Survive the onslaught of enemies long enough to defeat the [Catalyst](./#the-cat
 
 ---
 
-The game will be level-based with deaths restarting the player at level 1. Nothing will be carried over between attempts. The player will have the same starting conditions every run and only by playing and gaining experience will they be able to progress further.
+Eternal Descent will feature 10 levels with boss fights on Levels 3, 6, and 9.
 
-The game will be tuned to be more difficult than average and be designed with quick-restarts in mind. (A full run through the game should take no longer than 20 minutes)
+[Level 10](./#level-10-hell---wall-of-flesh) will be a special level that can only be accessed under certain conditions
+
+Deaths will restart the player at Level 1. Nothing will be carried over between attempts. The player will have the same starting conditions every attempt and only by playing and gaining experience will they be able to progress further.
+
+The game will be tuned to be more difficult than average and be designed with quick-restarts in mind. (A full run through the game should take no longer than 15-20 minutes) (The expected percentage of players who should be able to reach the end should stay under 10%)
 
 Eternal Descent will feature an online leaderboard where other users can compete for the best times!
 
 ---
 
-Enemies will spawn in waves, which the player will need to deal with before the next group spawns. Enemies from previous waves will stay in the arena indefinitely until they are killed. So, if they are not dealt with, the player will quickly find themselves overwhelmed.
+The Catalyst will shoot out portals that enemies will spawn out of in waves every 20ish seconds.
 
-Some enemies will also have a "Frenzy" stat that is influenced by the amount of others enemies surrounding them. If enemies start to bunch up and the arena gets crowded. The enemies' "Frenzy" stat will increase and change their behavior making them a more dangerous threat.
+The player will need to handle destroying these portals and keeping enemies under control before new waves spawn. Enemies will stay in the arena indefinitely until they are killed.
+
+---
+
+The player's strategy priority will probably look like this:
+1. Defeat the Catalyst and complete the level
+2. Destroy spawner portals
+3. Manage enemies in arena and avoid being overwhelmed.
+
+There will also be built-in game mechanics that will help prevent any obvious dominant game-strategies from developing:
+1. Too many enemies alive will cause the Catalyst to "armor-up" preventing damage
+2. Too many enemies in the arena will cause the [Frenzy](./#frenzy) to increase exponentially pretty much guaranteeing a quick death
+3. [Protector](./#protector) enemies will start spawning in later levels, protecting spawner portals and forcing the player's focus onto another target
+
+### Frenzy
+Some enemies will have a "Frenzy" stat that is influenced by the amount of others enemies surrounding them. If enemies start to bunch up and the arena gets crowded. The enemies' "Frenzy" will increase and change their behavior making them a more dangerous threat.
 
 ---
 
@@ -66,7 +81,8 @@ For each time the game is launched, the very first attempt will give the player 
 3. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer effectively reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. This will allow the player to damage the Catalyst again and after the player damages the Catalyst enough, it'll fly away from the player and crash through the floor leaving a portal for the player to follow to level 1.
 Certainly! Here's the corrected version:
 
-	"For each time the game is launched, the very first attempt will give the player a short in-game tutorial before the first level, showing the objective and the required mechanics they’ll need to know in order to play. The tutorial will operate as follows:"
+For each time the game is launched, the very first attempt will give the player a short in-game tutorial before the first level, showing the objective and the required mechanics they’ll need to know in order to play. The tutorial will operate as follows:"
+
 ---
 
 ## What do the first few minutes of Eternal Descent look like?:
@@ -104,7 +120,7 @@ There will be 10 total levels, each loosely representing a layer of hell from Da
 9. [Treachery - Catalyst](./#level-9-treachery---catalyst)
 10. [Hell - Wall of Flesh](./#level-10-hell---wall-of-flesh)
 
-It should be noted that the game itself won't have a story. All the player needs to know is to just to keep descending down. I'm just planning on borrowing from Dante's Inferno for imagery and inspiration. Astute observers may notice the references but that's about it.
+The game itself won't have a story. All the player needs to know is to just keep descending down. I'm just planning on borrowing from Dante's Inferno for imagery and inspiration. Some people may notice the references but that's about it.
 
 ---
 
@@ -248,10 +264,8 @@ Allow Player to rebind these from options:
 The distinctive feature of the player's gun will be its ability to adjust the muzzle angle to affect the characteristics of the shots that are fired.
 The mousewheel will be used to smoothly transition from narrow and wide fire modes:
 
-When the gun's muzzle is set all the way to either the Narrow or Wide firemode, it should click into place and give the player some ability related to the current mode:
-I.E (When the gun is set to full narrow, the slice shot extends out further, etc.) (This actually may complicate things too much for the player. Will have to prototype/playtest)
 
-- Narrow:
+<!--- Narrow:
 	- Low FireRate
 	- High Damage per Bullet
 	- Perfect Accuracy
@@ -261,7 +275,18 @@ I.E (When the gun is set to full narrow, the slice shot extends out further, etc
 	- High FireRate
 	- Low Damage per Bullet
 	- Spreadshot Accuracy
-	- Slower projectile speed
+	- Slower projectile -->
+
+
+- Narrow:
+	- Low Damage per Bullet
+	- Very fast bullet speed (Near Hitscan)
+	- Using the Mousewheel, the player can smoothly transition between the two modes.
+	- Constant Stream of bullets
+- Wide:
+	- High Damage per Bullet (Shots explode on contact causing AOE Damage)
+	- Very slow bullet speed (You have to lead moving targets)
+	- Short cooldown between shots (Resembles a Rocket launcher)
 
 The projectiles will not be hitscan. Each individual bullet will have velocity and have flight time between the gun to the target.
 The projectiles will be colored based on the amount of damage they deal.
