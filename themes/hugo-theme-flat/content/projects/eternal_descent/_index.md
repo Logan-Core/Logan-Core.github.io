@@ -30,7 +30,7 @@ Design everything with intent. Avoid arbitrary decisions
 
 Eternal Descent is a Single player First-person shooter which tasks the player with a simple goal:
 
-Survive the onslaught of enemies long enough to defeat the [Catalyst](./#the-catalyst) and unlock the path to the next level.
+Survive the onslaught of enemies long enough on each level to defeat the [Catalyst](./#the-catalyst).
 
 ---
 
@@ -38,7 +38,7 @@ Eternal Descent will feature 10 levels with boss fights on Levels 3, 6, and 9
 
 Each level will take place on a small circular arena that is surrounded by unique landscapes that each feature some environment modifier
 
-[Level 10](./#level-10-hell---wall-of-flesh) will be a special level that can only be accessed under certain conditions
+[Level 10](./#level-10-hell---wall-of-flesh) will be a special level that can only be accessed under specific conditions
 
 Deaths will restart the player at Level 1. Nothing will be carried over between attempts. The player will have the same starting conditions every attempt and only by playing and gaining experience will they be able to progress further.
 
@@ -76,7 +76,7 @@ Some enemies will have a "Frenzy" stat that is influenced by the amount of other
 For each time the game is launched, the very first attempt will give the player a short in-game tutorial before the first level. This will teach the player the objective of the game and the required mechanics they’ll need to know in order to play:
 1. Player spawns in a empty grey void. The Catalyst floats silently above near the player.
 2. After the player attacks the Catalyst (There's nothing else to do, The player will eventually try shooting it). The Catalyst will react violently and begin flying around and appear to be taking damage.
-3. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer effectively reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. This will allow the player to damage the Catalyst again and after the player damages the Catalyst enough, it'll fly away from the player and crash through the floor leaving a portal for the player to follow to level 1.
+3. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer effectively reach it. A Mousewheel icon will appear teaching the player the [gun muzzle mechanic](./#gun). This will allow the player to damage the Catalyst again and after the player damages the Catalyst enough, it'll fly away from the player and crash through the floor leaving a portal for the player to follow to level 1.
 
 ---
 
@@ -120,6 +120,9 @@ The game won't have a story. All the player needs to know is to just keep descen
 ---
 
 # The Catalyst:
+
+{{< image_gallery images="./game_example_placeholder.webp" >}}
+
 The Catalyst is a floating white orb and serves as the main antagonist of the game. It will shoot out portals that new enemies will spawn from and must be defeated by the player on each level in order to progress further.
 
 The Catalyst will have some form of armor that'll activate when too many enemies are left alive. This will force the player's attention between fighting the Catalyst and also the enemies it spawns.
@@ -234,9 +237,9 @@ The player will die in one hit. (Enemies must have predictable patterns that the
 Defeat and absorb the golden "Treasure" enemy that breaks off the Catalyst after damaging it enough on specific levels
 1. Boost to all stats. Gun's material goes from dull grey to shiny metal (Level 1)
 2. Major boost to weapon damage. Minor Boost to other stats. Bullets change to more point shape (Level 3)
-3. Major boost to Firerate. (Flame effect out gun exhaust) (Level 5)
-4. Boost to all stats (Flame effect turns into plasma. Gun becomes golden. Projectiles now shine a special color and have a different sound) (Level 7)
-5. 2nd Gun appears in left hand. Everything doubled. (Show overflowing line of energy along gun tip. Sliceshot on 2nd gun will have inverted camera controls) (Level 9)
+3. Major boost to Firerate. (Flame effect out gun exhaust) (Level 6)
+4. Boost to all stats (Flame effect turns into plasma. Gun becomes golden. Projectiles now shine a special color and have a different sound) (Level 9)
+5. 2nd Gun appears in left hand. Everything doubled. (Show overflowing line of energy along gun tip. Sliceshot on 2nd gun will have inverted camera controls) (Level 9 - Second Phase of Boss Fight)
 
 
 # Default Player Controls:
@@ -253,8 +256,7 @@ Allow Player to rebind these from options:
 - [TAB] Toggle HUD Elements
 
 # Gun
-{{< image_gallery images="./weapon_001.webp" >}}
-
+{{< image_gallery images="./weapon_001.webp,./gun_test_example.webp" >}}
 
 The distinctive feature of the player's gun will be its ability to adjust the muzzle angle to affect the characteristics of the shots that are fired.
 The mousewheel will be used to smoothly transition from narrow and wide fire modes:
@@ -378,6 +380,7 @@ Does not have any knowledge of the player. Floats low to the ground and roams th
 - Enemy Purpose:
 	- The Protector's ability force the player to prioritize killing these guys over everything else. Can be spawned along with a wave to force the player into a "panic" situation
 
+A rotating large totem enemy. Spawns off the edge of the arena and rotates in place. Has a weak point that revolves around
 While active in the arena. Spawn portals cannot be destroyed. They will be very large and tower over the other enemies. Susceptible to a single sliceshot or by sheer bullet volume
 
 ---
@@ -414,31 +417,24 @@ The first level in the game has a very important role to fill. The player will s
 
 Most players will be expected to reset hundreds of times in order to gain the skills and experience needed to complete a full run through the game. By the end, players that stick to it will definitely become so familiar with this level they could pretty much do it blindfolded.
 
-More so than later levels, Level 1 needs to have near-perfect "invisible" appeal. Something that draws the player in and help alleviate the pain of having lost their previous attempt. The ability to "master" a level and breeze through it would be a good fit here. Many of the specific qualities I'm looking for will be difficult to write down but either way, out of every level in the game, this one will be under the most scrutiny and have the most revisions for sure.
+More so than later levels, Level 1 needs to have near-perfect "invisible" appeal. Something that draws the player in and help alleviate the pain of having lost their previous attempt. The player must be able to exercise mastery of the game on this level and breeze through it by executing effective but risky tactics. Many of the specific qualities I'm looking for will be difficult to write down, but regardless, out of every level in the game, this one will be under the most scrutiny and have the most revisions for sure.
 
-- Enemies
-	- Swarmer
-	- Missile
-	- Roamer
-	- Treasure
-
+- Enemies Spawn Pattern
+	- Fill this out later
+	- Treasure spawns on this level after the Catalyst has taken enough damage
 
 ## Level 2: *Lust*
 **{{< fontcolor color="#1b00e0" >}}Rough Ocean{{< /fontcolor >}}**
 Ocean environment with the arena floating slightly above the water.
-The ocean should continue off into the horizon in all directions and maybe have the weather change dynamically from sunny to stormy partway through the level?
+The ocean should continue off into the horizon in all directions and weather will change dynamically from sunny to stormy after the Catalyst has taken enough damage
 
 Environment Modifier: Lightning
 
 
 {{< image_gallery images="./level_2_002.webp,./level_2_001.webp,./level_2_003.webp,./level_2_004.webp" >}}
 
-- Enemies
-	- Swarmer
-	- Missile
-	- Sniper
-	- Roamer
-	- Sponge
+- Enemies Spawn Pattern
+	- Fill this out later
 
 ---
 
@@ -451,13 +447,9 @@ Environment Modifier: Rock Columns Near Arena Edge
 
 {{< image_gallery images="./level_3_001.webp,./level_3_002.webp,./level_3_003.webp" >}}
 
-- Enemies
-	- Swarmer
-	- Missile
-	- Sniper
-	- Treasure
-	- Roamer
-	- Sponge
+- Enemies Spawn Pattern
+	- Fill this out later
+	- Treasure spawns on this level after the Catalyst has taken enough damage
 
 ## **Cerberus**
 {{< image_gallery images="./cerberus_test_anim_001.webp" >}}
@@ -486,13 +478,8 @@ Environment Modifier: Floor Spike Traps
 
 {{< image_gallery images="./level_4_001.webp,./level_4_002.webp" >}}
 
-- Enemies
-	- Swarmer
-	- Tripwire
-	- Missile
-	- Snake
-	- Roamer
-	- Sponge
+- Enemies Spawn Pattern
+	- Fill this out later
 
 ---
 
@@ -504,14 +491,8 @@ Environment Modifier: Broken up arena. Player will have to jump between sections
 
 {{< image_gallery images="./level_5_001.webp,./level_5_002.webp" >}}
 
-- Enemies
-	- Swarmer
-	- Missile
-	- Sniper
-	- Shield
-	- Treasure
-	- Roamer
-	- Sponge
+- Enemies Spawn Pattern
+	- Fill this out later
 
 ---
 
@@ -526,15 +507,9 @@ Environment Modifier: Extra Large Arena
 
 After the player does a short loop of fighting the Catalyst and defeating enemies and such. The Catalyst will stop spawning enemies and the music and ambience will fade out. The Catalyst will fly high up into the skybox and create a eclipse-like scenery (Recreate environment from DarkSouls 3's Lord of Cinder fight). The Arena will shake and then fall down onto the sand allowing the player more movement. The Heretic boss will then spawn out of the Catalyst
 
-- Enemies
-	- Swarmer
-	- Tripwire
-	- Missile
-	- Sniper
-	- Shield
-	- Snake
-	- Roamer
-	- Sponge
+- Enemies Spawn Pattern
+	- Fill this out later
+	- Treasure spawns on this level after the Catalyst has taken enough damage
 
 ## **The Heretic**
 
@@ -563,16 +538,8 @@ Environment Modifier: Explosive Rocks
 
 {{< image_gallery images="./level_7_001.webp,./level_7_002.webp" >}}
 
-- Enemies
-	- Swarmer
-	- Tripwire
-	- Missile
-	- Sniper
-	- Shield
-	- Treasure
-	- Snake
-	- Roamer
-	- Sponge
+- Enemies Spawn Pattern
+	- Fill this out later
 
 ## Level 8: *Fraud*
 **{{< fontcolor color="#ffffff" >}}Space, Stars, and Galaxies{{< /fontcolor >}}**
@@ -581,17 +548,10 @@ Environment info goes here
 
 Environment Modifier: None
 
-{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
+{{< image_gallery images="./level_8_002.webp,./level_8_001.webp" >}}
 
-- Enemies
-	- Swarmer
-	- Tripwire
-	- Missile
-	- Sniper
-	- Shield
-	- Snake
-	- Roamer
-	- Sponge
+- Enemies Spawn Pattern
+	- Fill this out later
 
 ## Level 9: *Treachery - Catalyst*
 **{{< fontcolor color="#5a5a5a" >}}Night Stormy Sky{{< /fontcolor >}}**
@@ -609,16 +569,9 @@ If the score timer is above a certain amount after the Catalyst has been destroy
 
 {{< image_gallery images="./level_9_001.webp" >}}
 
-- Enemies
-	- Swarmer
-	- Tripwire
-	- Missile
-	- Sniper
-	- Shield
-	- Treasure
-	- Snake
-	- Roamer
-	- Sponge
+- Enemies Spawn Pattern
+	- Fill this out later
+	- Treasure spawns on this level after the Catalyst has taken enough damage and right before the 2nd phase of the boss fight
 
 ---
 
@@ -630,16 +583,8 @@ This will be a infinite gauntlet where the enemies no longer spawn from portals 
 
 {{< image_gallery images="./level_10_001.webp,./level_10_002.webp" >}}
 
-- Enemies
-	- Swarmer
-	- Tripwire
-	- Missile
-	- Sniper
-	- Shield
-	- Treasure
-	- Snake
-	- Roamer
-	- Sponge
+- Enemies Spawn Pattern
+	- Fill this out later
 
 ---
 ---

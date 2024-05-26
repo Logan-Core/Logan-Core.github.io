@@ -25,14 +25,22 @@ Add logo image
 
 ## Demo Recordings
 ### High-level Overview:
-Capture the Player's inputs along with information about the initial game state and play it back overriding the normal player controls witht eh playback from the recorded inputs.
+Capture the Player's inputs along with information about the initial game state and play it back overriding the normal player controls with the playback from the recorded inputs.
 
 Information that needs to be recorded:
 - Player inputs (Move all input logic to physics_process? Ignore delta and everything should be at a fixed-timestep) (Just record the frames of press and release: "W+50 W-24" and the filesizes hopefully shouldn't be too crazy) (Physics won't be deterministic though so I'll need to design game logic around fixed stuff)
 - RNG Seed (RNG seed will be derived from current time so record that as well and crosscheck regenerating the seed gives the same value for validation / desync testing)
-- Computer TimeDate stamp at beginning and each of each level ()
+- RNG Seed could also be set and just rotate the enviroment around to make ti appear that thigns are different?
+- Computer TimeDate stamp at beginning and each of each level (Obviously people's computers may not be set to exact time but keeping track of the difference between levels will help prevent any obviously splicing)
 - Expected Level Stats (If the simulated game doesn't match up with the expected stats, we can assume it desynced.)
 - Hidden Cheat Prevention validation stuff (hidden obfuscated stats that can be reviewed if there is a discrepancy)
+
+
+Automatic game simulation validation for high-scoring runs?
+
+Manual Validation for top scoring runs? Have runs appear as legitimate on client machines but hold off on displaying score to other players until run has been validated?
+
+Shadowbanning system: Players who are caught cheating will have their scores marked and they won't appear on other people's leaderboards but for the cheater themself, it will appear where they expect it to
 
 
 ---
