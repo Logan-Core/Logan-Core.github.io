@@ -34,7 +34,9 @@ Survive the onslaught of enemies long enough to defeat the [Catalyst](./#the-cat
 
 ---
 
-Eternal Descent will feature 10 levels with boss fights on Levels 3, 6, and 9.
+Eternal Descent will feature 10 levels with boss fights on Levels 3, 6, and 9
+
+Each level will take place on a small circular arena that is surrounded by unique landscapes that each feature some environment modifier
 
 [Level 10](./#level-10-hell---wall-of-flesh) will be a special level that can only be accessed under certain conditions
 
@@ -46,9 +48,11 @@ Eternal Descent will feature an online leaderboard where other users can compete
 
 ---
 
-The Catalyst will shoot out portals that enemies will spawn out of in waves every 20ish seconds.
+The [Catalyst](./#the-catalyst) is a floating white orb and serves as the main antagonist of the game. It will float around the outskirts of each level and shoot out portals that new enemies will spawn from.
 
 The player will need to handle destroying these portals and keeping enemies under control before new waves spawn. Enemies will stay in the arena indefinitely until they are killed.
+
+Once the player deals enough damage to the Catalyst. It will retreat by crashing through the level, leaving a portal for the player to follow.
 
 ---
 
@@ -57,7 +61,7 @@ The player's strategy priority will probably look like this:
 2. Destroy spawner portals
 3. Manage enemies in arena and avoid being overwhelmed.
 
-There will also be built-in game mechanics that will help prevent any obvious dominant game-strategies from developing:
+There will also be game mechanics that will help prevent any obvious dominant game-strategies from developing:
 1. Too many enemies alive will cause the Catalyst to "armor-up" preventing damage
 2. Too many enemies in the arena will cause the [Frenzy](./#frenzy) to increase exponentially pretty much guaranteeing a quick death
 3. [Protector](./#protector) enemies will start spawning in later levels, protecting spawner portals and forcing the player's focus onto another target
@@ -67,21 +71,12 @@ Some enemies will have a "Frenzy" stat that is influenced by the amount of other
 
 ---
 
-The Catalyst is a floating orb and serves as the main antagonist of the game. It will float around the outskirts of each level and shoot out portals that new enemies will spawn from.
-
-Once the player deals enough damage to the Catalyst. It will retreat by crashing through the level, leaving a portal for the player to follow.
-
----
-
 ## How will players learn to play my game?
 
-For each time the game is launched, the very first attempt will give the player a short in-game tutorial before the first level, showing the objective and the required mechanics they’ll need to know in order to play. The tutorial will operate as follows:
+For each time the game is launched, the very first attempt will give the player a short in-game tutorial before the first level. This will teach the player the objective of the game and the required mechanics they’ll need to know in order to play:
 1. Player spawns in a empty grey void. The Catalyst floats silently above near the player.
 2. After the player attacks the Catalyst (There's nothing else to do, The player will eventually try shooting it). The Catalyst will react violently and begin flying around and appear to be taking damage.
 3. The Catalyst will eventually fly far enough away to the point where the default mode of the gun can no longer effectively reach it. A Mousewheel icon will appear teaching the player the gun muzzle mechanic. This will allow the player to damage the Catalyst again and after the player damages the Catalyst enough, it'll fly away from the player and crash through the floor leaving a portal for the player to follow to level 1.
-Certainly! Here's the corrected version:
-
-For each time the game is launched, the very first attempt will give the player a short in-game tutorial before the first level, showing the objective and the required mechanics they’ll need to know in order to play. The tutorial will operate as follows:"
 
 ---
 
@@ -101,11 +96,11 @@ For each time the game is launched, the very first attempt will give the player 
 8. The Score Timer starts and the main gameplay loop begins:
 	- The Catalyst floats around the outskirts of the level shooting out portals that enemies will spawn from.
 	- The player deals enough damage to the Catalyst, causing it to flee. Opening a portal on the floor that'll expand slowly that the player will eventually have to fall into to reach the next level.
-	- This cycle repeats. Each level should take around 2 minutes, with earlier levels offering more chances to finish quickly. (There will be fewer armor moments for the Catalyst and less time spent waiting around for waves and such.) Expert players should be able to speed through the earlier levels to some extent.
+	- This cycle repeats. Each level should take around 2 minutes, with earlier levels offering more chances to finish quickly. Expert players should be able to speed through the earlier levels to some extent and exercise some mastery of the game.
 	- Boss fights on every third level. Final boss on Level 9.
 9. When the player dies. Show stats, basic leaderboard info and lastly show how far down the player made it on the attempt. (It's important to show the Player that there are a finite number of levels. I want the player to understand that there is an ending to play for and that the game isn't an infinite shooter where the only goal is to get a high score.)
 10. Prompt the player to restart, return to main menu, or quit.
-11. When the player presses the restart button. Start the player midway through the first portal already transitioning into level 1. Skip the intro/tutorial until the next time the game is launched.
+11. When the player presses the restart button. Start the player in the grey tutorial void but with the portal to Level 1 already opened. Skip the intro/tutorial until the next time the game is launched.
 ---
 
 There will be 10 total levels, each loosely representing a layer of hell from Dante's Inferno.
@@ -120,12 +115,12 @@ There will be 10 total levels, each loosely representing a layer of hell from Da
 9. [Treachery - Catalyst](./#level-9-treachery---catalyst)
 10. [Hell - Wall of Flesh](./#level-10-hell---wall-of-flesh)
 
-The game itself won't have a story. All the player needs to know is to just keep descending down. I'm just planning on borrowing from Dante's Inferno for imagery and inspiration. Some people may notice the references but that's about it.
+The game won't have a story. All the player needs to know is to just keep descending down and fight the Catalyst. I'm just planning on borrowing from Dante's Inferno for imagery and inspiration. Some people may notice the references but that's about it.
 
 ---
 
 # The Catalyst:
-The Catalyst appears as a floating white orb that distorts surrounding light and serves as the main antagonist of the game. It will shoot out portals that new enemies will spawn from and must be defeated by the player on each level in order to progress further.
+The Catalyst is a floating white orb and serves as the main antagonist of the game. It will shoot out portals that new enemies will spawn from and must be defeated by the player on each level in order to progress further.
 
 The Catalyst will have some form of armor that'll activate when too many enemies are left alive. This will force the player's attention between fighting the Catalyst and also the enemies it spawns.
 
@@ -141,7 +136,7 @@ I want to incentivize two different ways of playing the game:
 	- Levels are infinite and players can choose to stay on a level and ignore the catalyst while they rack up kills and time spent alive.
 	Early levels will start by linearly increasing in difficulty while later levels will be more erratic and unforgiving
 	I.E (Reaching the 5 minute mark on Level 1 should be very difficult but reaching that same time on Level 8 should be humanly impossible)
-	- After the player finishes the game by destroying the Catalyst on Level 9. If the score timer is above a certain threshold, the player will instead be sent to a secret Level 10 where they'll have one final opportunity to stretch out the timer before ultimately dying.
+	- After the player finishes the game by destroying the Catalyst on Level 9. If the score timer is above a certain threshold, the player will instead be sent to a secret [Level 10](./#level-10-hell---wall-of-flesh) where they'll have one final opportunity to stretch out the timer before ultimately dying.
 
 After the Catalysts escapes, the shockwave it creates will erase all remaining enemies and the music and scenery will instantly change to signify to the player that the level is complete. The score timer will pause. At the player's leisure or until the portal expands far enough, the player will fall into the portal and follow the Catalyst to the next level.
 
@@ -236,12 +231,12 @@ The player will die in one hit. (Enemies must have predictable patterns that the
 
 # Upgrading
 
-Defeat and absorb the golden "Treasure" enemy that spawns from the Catalyst on 5 specific levels
-1. Boost to all Weapon stats. Gun's material goes from dull grey to shiny metal (Level 1)
-2. Major boost to weapon damage. Minor Boost to other stats. Projectiles change shape to something more pointy (Level 3)
-3. Major boost to Firerate, absolute stream of bullets at this level. (Flame effect out gun exhaust) (Level 5)
-4. Boost to all Weapon stats (Flame effect turns into plasma. Projectiles now shine a special color) (Level 7)
-5. 2nd Gun appears in left hand. (Show overflowing line of energy along gun tip. Guns becomes golden. Sliceshot on 2nd gun will have inverted camera controls) (Level 9)
+Defeat and absorb the golden "Treasure" enemy that breaks off the Catalyst after damaging it enough on specific levels
+1. Boost to all stats. Gun's material goes from dull grey to shiny metal (Level 1)
+2. Major boost to weapon damage. Minor Boost to other stats. Bullets change to more point shape (Level 3)
+3. Major boost to Firerate. (Flame effect out gun exhaust) (Level 5)
+4. Boost to all stats (Flame effect turns into plasma. Gun becomes golden. Projectiles now shine a special color and have a different sound) (Level 7)
+5. 2nd Gun appears in left hand. Everything doubled. (Show overflowing line of energy along gun tip. Sliceshot on 2nd gun will have inverted camera controls) (Level 9)
 
 
 # Default Player Controls:
@@ -252,7 +247,7 @@ Allow Player to rebind these from options:
 - [Space] Jump
 - [Mousewheel UP] Adjust Gun Muzzle
 - [Mousewheel DOWN] Adjust Gun Muzzle
-- [1 2 3 4] Quick Adjust Gun Muzzle
+- [1 2 3 4 5] Quick Adjust Gun Muzzle
 - [Escape] Return to Main Menu
 - [R] Quick Restart (Should also work from death screen)
 - [TAB] Toggle HUD Elements
@@ -264,37 +259,24 @@ Allow Player to rebind these from options:
 The distinctive feature of the player's gun will be its ability to adjust the muzzle angle to affect the characteristics of the shots that are fired.
 The mousewheel will be used to smoothly transition from narrow and wide fire modes:
 
-
-<!--- Narrow:
-	- Low FireRate
-	- High Damage per Bullet
-	- Perfect Accuracy
-	- Very fast projectile speed
-- Using the Mousewheel, the player can smoothly transition between the two modes.
-- Wide:
-	- High FireRate
-	- Low Damage per Bullet
-	- Spreadshot Accuracy
-	- Slower projectile -->
-
-
 - Narrow:
 	- Low Damage per Bullet
 	- Very fast bullet speed (Near Hitscan)
-	- Using the Mousewheel, the player can smoothly transition between the two modes.
 	- Constant Stream of bullets
+- Using the Mousewheel, the player can smoothly transition between the two modes (50% Narrow / 50% Wide would balance the gun's stats between the 2 modes).
 - Wide:
 	- High Damage per Bullet (Shots explode on contact causing AOE Damage)
 	- Very slow bullet speed (You have to lead moving targets)
 	- Short cooldown between shots (Resembles a Rocket launcher)
 
-The projectiles will not be hitscan. Each individual bullet will have velocity and have flight time between the gun to the target.
-The projectiles will be colored based on the amount of damage they deal.
+The bullets will not be hitscan. Each individual bullet will have velocity and have flight time between the gun to the target.
+
+The bullets themselves will have visual representation based on the gun's muzzle mode. Shots fired from wide mode will appear to be more "blocky" and large. "Sharp" and small for Narrow shots
 
 # Slice Shots
 The slice shot is a short-range wide angle hitscan weapon. Most enemies caught in the path of the slice will be cut cleanly and instantly have their hurtbox collisions disabled.
 
-The relative velocity of the camera should determine the angle of the slice. I.E (If the player is rotating the camera to the right with no vertical motion, the slice should travel flat horizontally from the left to the right // If the camera is rotating up and to right at the same speed, the slice should travel at a 45degree angle following that path)
+The relative movement of the camera should determine the angle of the slice. I.E (If the player is rotating the camera to the right with no vertical motion, the slice should travel flat horizontally from the left to the right // If the camera is rotating up and to right at the same speed, the slice should travel at a 45degree angle following that path)
 
 The two semi-rings around the end of the gun tip should rotate along with the camera movement to give the player visual feedback on where the slice will go (a very soft motor whirl sound could also be cool)
 
@@ -573,13 +555,13 @@ On the last big shot the Heretic uses, instead of taking the hit and getting stu
 ---
 
 ## Level 7: *Violence*
-**{{< fontcolor color="#f42514" >}}Volcano Hellscape{{< /fontcolor >}}**
+**{{< fontcolor color="#f42514" >}}Volcano{{< /fontcolor >}}**
 
 Environment info goes here
 
 Environment Modifier: Explosive Rocks
 
-{{< image_gallery images="./level_1_001.webp,./level_1_002.webp,./level_1_003.webp" >}}
+{{< image_gallery images="./level_7_001.webp,./level_7_002.webp" >}}
 
 - Enemies
 	- Swarmer
@@ -667,7 +649,7 @@ Don't forget to record timelapse footage for Archive!
 
 {{% notice note %}}
 Estimated Project Completion:
-███▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ 3%
+████▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ 4%
 {{% /notice %}}
 
 ## Week 1 2024-05-13:
@@ -676,26 +658,26 @@ Estimated Project Completion:
 ---
 ## Week 2 2024-05-20:
 - [x] Add Placeholder Template Artwork (Follow SteamWork Guidelines. Everything needs to be at specific resolutions)
-- [ ] Bring somebody up to speed and sanity check documentation together
+- [ ] Bring someone up to speed and sanity check documentation together (Revise major oversights)
 - [x] Start writing out Technical Design Document
 ---
 ## Week 3 2024-05-27:
-- [ ] Begin modeling Environments and get a idea for modeling time estimation (Add Environment modeling into schedule after you get estimate)
+- [ ] Begin environment modeling and get a idea for time estimation (Add environment modeling into schedule after you get estimate)
 - [ ] Research Similar Games (Revise Design Documentation)
 - [ ] Finalize Enemy Designs
 - [ ] Begin structuring Godot project (add in boilerplate stuff I'll definitely need)
-- [ ] Technical Design Document at least 50% complete
+- [ ] Technical Document Logic Flowchart complete
 ---
 ## Week 4 2024-06-03:
 - [ ] Build entity benchmark prototype and see if Godot can support thousands of bullets/enemies on screen without object pooling or compute shaders.
-- [ ] Non-boss Enemy Models Blocked out
+- [ ] Non-boss Enemy Models Blocked out (flat shaded silhouettes are very important!)
 - [ ] Experiment with logo designs. (Market research and see what people think)
 - [ ] Initial Technical Design Document Draft Finished
 ---
 ## Week 5 2024-06-10:
 - [ ] Non-boss Enemy Models Detailed and Textured
 - [ ] Game Logo finished
-- [ ] Technical Design Document Finished. (Leave nothing out, check everything top to bottom and then just follow the pseudocode)
+- [ ] Technical Document pseudocode transcription finished. (Leave nothing out, check everything top to bottom)
 ---
 ## Week 6 2024-06-17:
 - [ ] Remake Schedule with more accurate time estimates ( Every 6 Weeks )
@@ -729,6 +711,7 @@ Estimated Project Completion:
 ## Week 12 2024-07-29:
 - [ ] Remake Schedule with more accurate time estimates ( Every 6 Weeks )
 - [ ] Make Discord Server + Start Planning Marketing Strategy
+- [ ] Boss tasks (reschedule)
 ---
 
 ---
