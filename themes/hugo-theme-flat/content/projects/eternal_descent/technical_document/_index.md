@@ -14,6 +14,7 @@ Add logo image
 {{% button href="../" color="#ffdf00" font-color="#000000 "%}}Design Document{{% /button %}}
 ---
 
+[tldraw file](./technical_docs_4.tldr)
 
 ## UI / Menu Structure
 

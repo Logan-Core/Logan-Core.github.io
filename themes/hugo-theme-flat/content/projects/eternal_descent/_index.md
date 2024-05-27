@@ -15,6 +15,8 @@ Add logo image
 
 Design everything with intent. Avoid arbitrary decisions
 
+If you're gonna add features, make sure it makes the game deeper, not just more complex.
+
 {{< image_gallery images="./test_anim_image.webp" >}}
 
 {{< expand "Quick Navigation" >}}
@@ -30,19 +32,19 @@ Design everything with intent. Avoid arbitrary decisions
 
 Eternal Descent is a Single player First-person shooter which tasks the player with a simple goal:
 
-Survive the onslaught of enemies long enough on each level to defeat the [Catalyst](./#the-catalyst).
+Reach the next level by surviving the onslaught of enemies and defeating the [Catalyst](./#the-catalyst).
 
 ---
 
 Eternal Descent will feature 10 levels with boss fights on Levels 3, 6, and 9
 
-Each level will take place on a small circular arena that is surrounded by unique landscapes that each feature some environment modifier
-
-[Level 10](./#level-10-hell---wall-of-flesh) will be a special level that can only be accessed under specific conditions
+Each level will take place on a small circular arena that is surrounded by unique landscapes that each feature some environment modifier that affects the arena
 
 Deaths will restart the player at Level 1. Nothing will be carried over between attempts. The player will have the same starting conditions every attempt and only by playing and gaining experience will they be able to progress further.
 
-The game will be tuned to be more difficult than average and be designed with quick-restarts in mind. (A full run through the game should take no longer than 15-20 minutes) (The expected percentage of players who should be able to reach the end should stay under 10%)
+The game will end on [Level 9](./#level-9-treachery---catalyst) after destroying the [Catalyst](./#the-catalyst). However, there will be a special [Level 10](./#level-10-hell---wall-of-flesh) that can only be accessed under specific conditions
+
+The game will be tuned to be more difficult than average and be designed with quick-restarts in mind. (A full run through the game should take no longer than 15 minutes) (The expected percentage of players who should be able to reach the end should stay near 10%)
 
 Eternal Descent will feature an online leaderboard where other users can compete for the best times!
 
@@ -63,7 +65,7 @@ The player's strategy priority will probably look like this:
 
 There will also be game mechanics that will help prevent any obvious dominant game-strategies from developing:
 1. Too many enemies alive will cause the Catalyst to "armor-up" preventing damage
-2. Too many enemies in the arena will cause the [Frenzy](./#frenzy) to increase exponentially pretty much guaranteeing a quick death
+2. Too many enemies in the arena will cause the [Frenzy](./#frenzy) to increase exponentially
 3. [Protector](./#protector) enemies will start spawning in later levels, protecting spawner portals and forcing the player's focus onto another target
 
 ### Frenzy
@@ -133,15 +135,20 @@ After enough damage has been dealt to the Catalyst, it will float high above the
 Each level will be infinite and have a repeating enemy spawn pattern that loops every minute or so, getting more difficult as time goes on.
 
 I want to incentivize two different ways of playing the game:
-1. Go for the fastest time.
-	- Defeating the Catalyst as fast as possible (This will be the expected form of play for most players and the default view on the Leaderboard)
-2. Go for the longest time.
-	- Levels are infinite and players can choose to stay on a level and ignore the catalyst while they rack up kills and time spent alive.
-	Early levels will start by linearly increasing in difficulty while later levels will be more erratic and unforgiving
-	I.E (Reaching the 5 minute mark on Level 1 should be very difficult but reaching that same time on Level 8 should be humanly impossible)
-	- After the player finishes the game by destroying the Catalyst on Level 9. If the score timer is above a certain threshold, the player will instead be sent to a secret [Level 10](./#level-10-hell---wall-of-flesh) where they'll have one final opportunity to stretch out the timer before ultimately dying.
+1. **Go for the fastest time**
+- Finish levels as fast as possible and destroy the Catalyst (This will be the expected form of play for most players and the default view on the Leaderboard)
+- At the beginning of each level, a separate score timer will start counting. If the player completes the level, the time from that level is added to the main score clock. However, if the player dies, this individual level timer is wiped, ensuring that their fastest time score remains accurate. (The player will only be credited with the time up to the previous level or until the Catalyst is destroyed)
 
-After the Catalysts escapes, the shockwave it creates will erase all remaining enemies and the music and scenery will instantly change to signify to the player that the level is complete. The score timer will pause. At the player's leisure or until the portal expands far enough, the player will fall into the portal and follow the Catalyst to the next level.
+
+2. **Go for the longest time**
+- Levels are infinite and players can choose to stay on a level and ignore the catalyst while they rack up kills and time spent alive.
+Early levels will start by linearly increasing in difficulty while later levels will be more erratic and unforgiving
+I.E (Reaching the 5 minute mark on Level 1 should be very difficult but reaching that same time on Level 8 should be humanly impossible)
+- After the player finishes the game by destroying the Catalyst on Level 9. If the score timer is above a certain threshold, the player will instead be sent to a secret [Level 10](./#level-10-hell---wall-of-flesh) where they'll have one final opportunity to stretch out the timer before ultimately dying.
+
+---
+
+After the Catalysts escapes, the shockwave it creates will erase all remaining enemies and the music and scenery will instantly change to signify to the player that the level is complete. The score timer will pause. At the player's leisure or until the portal expands far enough, the player will fall into the portal and follow the Catalyst to the next level. (This short pause before the next level is good for the "tense and release" method of keeping a player engaged for longer periods of time)
 
 ---
 
@@ -184,10 +191,12 @@ Start listing things here. Cleanup/organize later:
 ## Leaderboard
 
 
-Each run through the game will also automatically record a demo that can be played back later for leaderboard validation and for review and such.
+Each run through the game will also automatically record a demo by recording the player's inputs and can be played back later for leaderboard validation and for replays and such.
 Because of the length of the game and certain factors that may not be completely deterministic, Each demo will end right when the Catalyst breaches through the level and then a new demo recording will start right when the next level begins. Preventing de-syncs will be vital. I'll need to do some proper research before I start implementing this
 
 I won't be able to use physics for anything gameplay related (GodotPhysics and the JoltPhysics Plugin both can't guarantee deterministic results). Physics will only be used for non-gameplay features. (Particles, decorations, etc)
+
+The technical documentation will include all the cheat/exploit prevention stuff I'll have to include.
 
 ---
 
@@ -196,7 +205,7 @@ I have a few options for the Leaderboard backend:
 	- **Pros**:
 		- Everything would be self-hosted. Full-control of data.
 		- Account validation would be platform agnostic and allow easy release to all store-fronts. (Steam, GoG, etc)
-		- I could automate account creation and have it tie to some other form of user validation.
+		- I could automate account creation and have it tie to some other form of user validation. Until the player verifies their account
 	- **Cons**:
 		- Would likely add months of development time if I implemented this myself. (Big Issue)
 		- I have no experience with something like this at a large-scale. Unique issues WILL happen that'd I'd have no choice but to fix.
@@ -219,11 +228,16 @@ I have a few options for the Leaderboard backend:
 		- Having friend integration with Steam would make comparing times easy
 		- I can store a stupid amount of data per entry using SteamCloud integration (Demo recordings should only end up being a couple hundred KB. Would have to find some way of keeping track and referencing these SteamCloud files from the leaderboard though.)
 	- **Cons**:
-		- Would lock me into the Steam ecosystem and game couldn't be released to other storefronts without a new leaderboard-system.
+		- Would lock me into the Steam ecosystem and game couldn't be released to other storefronts without a new *separate* leaderboard-system.
 
-
+---
+## Rewards and Unlockables
 The game will have one Achievement:
 	Catalyst: Reach the Bottom
+
+Defeating the Catalyst will change the background on the main menu
+
+Reaching Level 10 will add additional scenery to the background on the main menu
 
 ---
 
@@ -236,7 +250,7 @@ The player will die in one hit. (Enemies must have predictable patterns that the
 
 Defeat and absorb the golden "Treasure" enemy that breaks off the Catalyst after damaging it enough on specific levels
 1. Boost to all stats. Gun's material goes from dull grey to shiny metal (Level 1)
-2. Major boost to weapon damage. Minor Boost to other stats. Bullets change to more point shape (Level 3)
+2. Major boost to weapon damage. Minor Boost to other stats. Bullets change to more pointy shape (Level 3)
 3. Major boost to Firerate. (Flame effect out gun exhaust) (Level 6)
 4. Boost to all stats (Flame effect turns into plasma. Gun becomes golden. Projectiles now shine a special color and have a different sound) (Level 9)
 5. 2nd Gun appears in left hand. Everything doubled. (Show overflowing line of energy along gun tip. Sliceshot on 2nd gun will have inverted camera controls) (Level 9 - Second Phase of Boss Fight)
@@ -278,7 +292,7 @@ The bullets themselves will have visual representation based on the gun's muzzle
 # Slice Shots
 The slice shot is a short-range wide angle hitscan weapon. Most enemies caught in the path of the slice will be cut cleanly and instantly have their hurtbox collisions disabled.
 
-The relative movement of the camera should determine the angle of the slice. I.E (If the player is rotating the camera to the right with no vertical motion, the slice should travel flat horizontally from the left to the right // If the camera is rotating up and to right at the same speed, the slice should travel at a 45degree angle following that path)
+The relative movement of the camera should determine the angle of the slice. I.E (If the player is rotating the camera to the right with no vertical motion, the slice should travel flat horizontally from the left to the right // If the camera is rotating up and to right at the same speed, the slice should travel up at a 45degree angle following that path)
 
 The two semi-rings around the end of the gun tip should rotate along with the camera movement to give the player visual feedback on where the slice will go (a very soft motor whirl sound could also be cool)
 
@@ -291,11 +305,11 @@ The Slice Shot will be very strong but it will have some major drawbacks:
 ## Enemy List
 The enemy names don't really matter. They won't be presented to the player in any form. Just need names so I can refer to them when making the game
 
-{{< image_gallery images="./enemy_basic_shapes.webp" >}}
+---
 
 ## Swarmer
 - Enemy Purpose:
-	- The weakest enemy that is not much of a threat to the player if they are moving around but can become a major hassle if they're left alone to form with other groups that spawn and cause their frenzy stat to skyrocket! Can be sprinkled into any wave to control how much the player is "engaged"
+	- The weakest enemy that is not much of a threat to the player as long as they stay moving. But they can't be ignored or else they'll form with other groups that spawn and cause their frenzy stat to skyrocket! Can be sprinkled into any wave to control how much the player is "engaged"
 
 The simplest enemy. Loosely flies towards the player at all times. Spawns in large groups which will often cause the Catalyst to activate armor and due to the large amount that spawn at once, Swarmers will quickly amalgamate into frenzied swarms that fly faster and at tighter angles towards the player.
 
@@ -304,9 +318,9 @@ The simplest enemy. Loosely flies towards the player at all times. Spawns in lar
 
 ## Tripwire
 - Enemy Purpose:
-		- WRITE STUFF HERE
+		- A "support enemy that is weak and low priority to the player compared to other enemies but can easily trip them up if they aren't paying attention"
 
-A post-shaped walking quadruped with a ball top that can connect with other Tripwires to create short barriers the player can either jump over, cut with their Sliceshot to remove the immediate obstacle or attack either Tripwire post directly to destroy the pair.
+A post-shaped walking quadruped with a ball top that can connect with other Tripwires to create short electric barriers that the player can jump over, cut with their Sliceshot, or attack the Tripwire directly to destroy the pair.
 
 ---
 
@@ -358,13 +372,12 @@ The portals the Catalyst shoot out around the arena. The portals will remain and
 
 Each portal the Catalyst shoots out will have one set of enemies it can spawn.
 
-Portals will change in colors based on how much HP they have left, very slowly regenerate if left alone
+Portals will change to less saturated colors based on how much HP they have left, very slowly regenerate if left alone
 
 - Multiple Tiers:
-	1. Small Dark Blue (Portals for the first few levels) (Enemies limited)
+	1. Small Dark Blue (Portals for the first few levels)
 	2. Medium Purple
 	3. Large Red
-
 
 ---
 
@@ -381,7 +394,7 @@ Does not have any knowledge of the player. Floats low to the ground and roams th
 	- The Protector's ability force the player to prioritize killing these guys over everything else. Can be spawned along with a wave to force the player into a "panic" situation
 
 A rotating large totem enemy. Spawns off the edge of the arena and rotates in place. Has a weak point that revolves around
-While active in the arena. Spawn portals cannot be destroyed. They will be very large and tower over the other enemies. Susceptible to a single sliceshot or by sheer bullet volume
+While active in the arena. Spawn portals cannot be destroyed. They will be very large and tower over the other enemies.
 
 ---
 
@@ -389,7 +402,7 @@ While active in the arena. Spawn portals cannot be destroyed. They will be very 
 - Enemy Purpose:
 	- WRITE STUFF HERE
 
-Enemy that absorbs shots like a magnet and can be effectively killed by switching to wide muzzle mode and filling them up until they burst. Completely armored, no sliceshot
+Enemy that absorbs shots like a magnet and can be effectively killed by switching to the narrow faster firerate muzzle mode and filling them up until they burst. Completely armored, no sliceshot
 
 ---
 
@@ -415,7 +428,7 @@ Environment Modifier: None
 
 The first level in the game has a very important role to fill. The player will spend MOST of the time here.
 
-Most players will be expected to reset hundreds of times in order to gain the skills and experience needed to complete a full run through the game. By the end, players that stick to it will definitely become so familiar with this level they could pretty much do it blindfolded.
+Players will be expected to reset hundreds of times in order to gain the skills and experience needed to complete a full run through the game. By the end, players that stick to it will definitely become so familiar with this level they could pretty much do it blindfolded.
 
 More so than later levels, Level 1 needs to have near-perfect "invisible" appeal. Something that draws the player in and help alleviate the pain of having lost their previous attempt. The player must be able to exercise mastery of the game on this level and breeze through it by executing effective but risky tactics. Many of the specific qualities I'm looking for will be difficult to write down, but regardless, out of every level in the game, this one will be under the most scrutiny and have the most revisions for sure.
 
@@ -440,7 +453,7 @@ Environment Modifier: Lightning
 
 ## Level 3: *Gluttony - Cerberus*
 **{{< fontcolor color="#83855f" >}}Large Cave{{< /fontcolor >}}**
-A cave expanse so large the walls can barely be seen through distant fog. with giant stalactites/rock columns obscuring vision closer to the arena.
+The walls of this cave system will barely be visible past distant fog. Giant stalactites/rock columns obscuring vision closer to the arena.
 
 Environment Modifier: Rock Columns Near Arena Edge
 
@@ -454,7 +467,7 @@ Environment Modifier: Rock Columns Near Arena Edge
 ## **Cerberus**
 {{< image_gallery images="./cerberus_test_anim_001.webp" >}}
 
-There are certain rules that are typically followed for the "first boss" in an action video game. It is not untypical for the first boss to be treated as a glorified tutorial, however, that need not be the case for this guy. I want Cerberus to 100% be the first major wall the player has to overcome.
+There are certain rules that are typically followed for the "first boss" in a video game. It is not untypical for the first boss to be treated as a glorified tutorial, however, that need not be the case for this guy. I want Cerberus to 100% be the first major wall the player has to overcome.
 
 Intro:
 The player drops into the arena from the previous level and after the player finishes the standard loop of the Catalyst spawning enemies and such. The Catalyst will floats quietly above the edge of the arena. Rumbling sounds are played and Cerberus's body which has already been visible off in the distance will begin to move. A few moments later, a large creature with the body of a snake jets up to the left of the Catalyst, then a second on the right, and finally a third one jets up higher than the others directly behind the catalyst and chomps down on it, A vertical slit eyeball pupil appears on the catalyst and then the fight begins
@@ -498,14 +511,14 @@ Environment Modifier: Broken up arena. Player will have to jump between sections
 
 ## Level 6: *Heresy - The Heretic*
 **{{< fontcolor color="#715e5c" >}}Desert Eclipse{{< /fontcolor >}}**
-Vast open desert. have distant silhouettes of manmade structures (Pyramids, columns, etc). To account for the boss fight, the arena will drop partway through and allow the player more movement. Have fog obscuring the edges of the newly-sized arena.
+Vast open desert. have distant silhouettes of manmade structures (Pyramids, columns, etc). The arena will drop prior to the boss fight and allow the player way more movement. Have fog obscuring the edges of the newly-sized arena.
 
 Environment Modifier: Extra Large Arena
 
 {{< image_gallery images="./level_6_002.webp,./level_6_001.webp" >}}
 
 
-After the player does a short loop of fighting the Catalyst and defeating enemies and such. The Catalyst will stop spawning enemies and the music and ambience will fade out. The Catalyst will fly high up into the skybox and create a eclipse-like scenery (Recreate environment from DarkSouls 3's Lord of Cinder fight). The Arena will shake and then fall down onto the sand allowing the player more movement. The Heretic boss will then spawn out of the Catalyst
+After the player does a short loop of fighting the Catalyst and defeating enemies and such. The Catalyst will stop spawning enemies and the music and ambience will fade out. The Catalyst will fly high up into the skybox and create a eclipse-like scenery (Recreate environment from DarkSouls 3's Lord of Cinder fight). The Arena will shake and then fall down onto the sand allowing the player more movement. The Heretic boss will then spawn out of a extra large portal fired by the Catalyst
 
 - Enemies Spawn Pattern
 	- Fill this out later
@@ -521,7 +534,7 @@ Both his guns have the same appearance as the players' and the Heretic's moveset
 - Attack Patterns:
 	- Points both guns straight up into the sky, both guns switch to wide firemode and then unleashes a barrage of bullets that track to the player's position at the time of the shot
 	- Throws out sliceshots that have tangible form that fall behind the fog of the arena and then cut across towards the player
-	- Narrow sniper shot, his laser sight will track the player for a moment and stop right before he shoots off a shot
+	- Sniper shot, his laser sight will track the player for a moment and stop right before he shoots off a shot
 	- Holds both guns together directly towards the player. Rings connect and begins charging a big explosion attack. Strong homing on player, give the projectile clear "You gotta sliceshot this" features. (I'll need to teach player earlier in the game a specific thing to associate with SliceShots and use it on his attack here.) After the player slices the shot, it'll bounce back towards the Heretic and stun him. Allowing the player to damage them
 
 On the last big shot the Heretic uses, instead of taking the hit and getting stunned, he will instead cut the blast in half and then fly down into the arena at the player's level. His shields will go down for the remainder of the fight and the player will have to finish him quickly while fighting close quarters.
@@ -565,7 +578,7 @@ phase 2:
 Environment info goes here Night Sky Falling through clouds (Tornado-like with lightning)
 Super Large Catalyst spawning smaller versions of itself.
 
-If the score timer is above a certain amount after the Catalyst has been destroyed and we can determine the player is going for a "Time Spent Alive" highscore, the Catalyst will open up one last portal that will send the player to Level 10. otherwise, play the ending cinematic and show the player's stats. Update Main menu as a reward
+If the score timer is above a certain amount after the Catalyst has been destroyed, the Catalyst will open up one last portal that will send the player to Level 10. otherwise, play the ending cinematic and show the player's stats. Update main menu as a reward
 
 {{< image_gallery images="./level_9_001.webp" >}}
 
@@ -578,8 +591,12 @@ If the score timer is above a certain amount after the Catalyst has been destroy
 ## Level 10: *Hell - Wall of Flesh*
 **{{< fontcolor color="#FF0000" >}}Hell{{< /fontcolor >}}**
 
+Environment Modifier: Shrinking Arena
+
 A special final level that is only accessible if the player is making a attempt for the "Time Spent Alive" leaderboard. (Players who are going at normal speed through game will instead get the ending after killing the Catalyst and won't be sent here.)
 This will be a infinite gauntlet where the enemies no longer spawn from portals but appear from the surrounding environment. This is the last opportunity for the player to stretch out the score timer for higher placement on the "Time Spent Alive" leaderboard.
+
+The Arena will crumble away starting from the edges and working its way inwards. After a certain point, the player will simply have no other option but die and have their score submitted
 
 {{< image_gallery images="./level_10_001.webp,./level_10_002.webp" >}}
 
@@ -594,7 +611,7 @@ Don't forget to record timelapse footage for Archive!
 
 {{% notice note %}}
 Estimated Project Completion:
-████▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ 4%
+███▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ 3%
 {{% /notice %}}
 
 ## Week 1 2024-05-13:
@@ -607,10 +624,10 @@ Estimated Project Completion:
 - [x] Start writing out Technical Design Document
 ---
 ## Week 3 2024-05-27:
-- [ ] Begin environment modeling and get a idea for time estimation (Add environment modeling into schedule after you get estimate)
+- [ ] Begin environment modeling and get a idea for time estimation (Add environment modeling into schedule after you get estimate) (Experiment with shaders and use AO/Normal maps!)
 - [ ] Research Similar Games (Revise Design Documentation)
 - [ ] Finalize Enemy Designs
-- [ ] Begin structuring Godot project (add in boilerplate stuff I'll definitely need)
+- [ ] Begin structuring Godot project (Add in folder structure and add in boilerplate stuff I'll definitely end up using)
 - [ ] Technical Document Logic Flowchart complete
 ---
 ## Week 4 2024-06-03:
@@ -657,6 +674,36 @@ Estimated Project Completion:
 - [ ] Remake Schedule with more accurate time estimates ( Every 6 Weeks )
 - [ ] Make Discord Server + Start Planning Marketing Strategy
 - [ ] Boss tasks (reschedule)
+---
+## Week 13 2024-08-05:
+- [ ] Entry Goes Here
+- [ ] Entry Goes Here 2
+- [ ] Entry Goes Here 3
+---
+## Week 14 2024-08-12:
+- [ ] Entry Goes Here
+- [ ] Entry Goes Here 2
+- [ ] Entry Goes Here 3
+---
+## Week 15 2024-08-19:
+- [ ] Entry Goes Here
+- [ ] Entry Goes Here 2
+- [ ] Entry Goes Here 3
+---
+## Week 16 2024-08-26:
+- [ ] Entry Goes Here
+- [ ] Entry Goes Here 2
+- [ ] Entry Goes Here 3
+---
+## Week 17 2024-09-02:
+- [ ] Entry Goes Here
+- [ ] Entry Goes Here 2
+- [ ] Entry Goes Here 3
+---
+## Week 18 2024-09-09:
+- [ ] Remake Schedule with more accurate time estimates ( Every 6 Weeks )
+- [ ] Sign up for SteamWorks account, pay SteamDirect Fee, and get AppID
+- [ ] Start planning playtesting schedule (Game demo recording needs to be ready by this point)
 ---
 
 ---
