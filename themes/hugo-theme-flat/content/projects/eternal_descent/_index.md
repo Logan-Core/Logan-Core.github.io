@@ -191,7 +191,7 @@ Start listing things here. Cleanup/organize later:
 ## Leaderboard
 
 
-Each run through the game will also automatically record a demo by recording the player's inputs and can be played back later for leaderboard validation and for replays and such.
+Each run through the game will automatically record a demo by recording the player's inputs and can then be played back later for leaderboard validation.
 Because of the length of the game and certain factors that may not be completely deterministic, Each demo will end right when the Catalyst breaches through the level and then a new demo recording will start right when the next level begins. Preventing de-syncs will be vital. I'll need to do some proper research before I start implementing this
 
 I won't be able to use physics for anything gameplay related (GodotPhysics and the JoltPhysics Plugin both can't guarantee deterministic results). Physics will only be used for non-gameplay features. (Particles, decorations, etc)
@@ -205,12 +205,11 @@ I have a few options for the Leaderboard backend:
 	- **Pros**:
 		- Everything would be self-hosted. Full-control of data.
 		- Account validation would be platform agnostic and allow easy release to all store-fronts. (Steam, GoG, etc)
-		- I could automate account creation and have it tie to some other form of user validation. Until the player verifies their account
+		- I could automate account creation and have it tie to some other form of user validation. I can give player control on when to verify their account
 	- **Cons**:
 		- Would likely add months of development time if I implemented this myself. (Big Issue)
 		- I have no experience with something like this at a large-scale. Unique issues WILL happen that'd I'd have no choice but to fix.
-		- Securing down and setting up a backup system for the Database would fall on me.
-		- Maintaining would be more of a involved process.
+		- Securing down and setting up a backup system for this would be vital and require maintaining for life pretty much.
 		- No friend integration with Steam
 - SilentWolf (Free Cloud option)
 	- **Pros**:
@@ -226,14 +225,13 @@ I have a few options for the Leaderboard backend:
 	- **Pros**:
 		- Would be semi-easy to implement (Lots of people have done it before and documentation looks simple enough)
 		- Having friend integration with Steam would make comparing times easy
-		- I can store a stupid amount of data per entry using SteamCloud integration (Demo recordings should only end up being a couple hundred KB. Would have to find some way of keeping track and referencing these SteamCloud files from the leaderboard though.)
+		- I can store a stupid amount of data per entry using SteamCloud integration (Demo recordings should only end up being a couple hundred KB. Would have to find some way of keeping track and referencing these SteamCloud files from the leaderboard entries though.)
 	- **Cons**:
 		- Would lock me into the Steam ecosystem and game couldn't be released to other storefronts without a new *separate* leaderboard-system.
 
 ---
 ## Rewards and Unlockables
-The game will have one Achievement:
-	Catalyst: Reach the Bottom
+The game will have one Achievement: [ Catalyst: Reach the Bottom ]
 
 Defeating the Catalyst will change the background on the main menu
 
@@ -284,6 +282,8 @@ The mousewheel will be used to smoothly transition from narrow and wide fire mod
 	- High Damage per Bullet (Shots explode on contact causing AOE Damage)
 	- Very slow bullet speed (You have to lead moving targets)
 	- Short cooldown between shots (Resembles a Rocket launcher)
+
+I want the player to have to use both modes. I'll have specific enemies that are weak to specific gun muzzle modes (Snipers for narrow, Shields for wide, etc)
 
 The bullets will not be hitscan. Each individual bullet will have velocity and have flight time between the gun to the target.
 
@@ -344,7 +344,7 @@ Enemy that hangs back floating in the distance. Lobs explosive shots into the ar
 - Enemy Purpose:
 	- WRITE STUFF HERE
 
-Large Octagon-shaped enemy that slowly approaches the player with a consistent speed. Has no frenzy ability and has segments of armor that the player can cut around using their Sliceshot
+Large Octagon-shaped enemy that slowly approaches the player with a consistent speed. Has no frenzy ability and has segments of armor that the player can cut around using their Sliceshot or by exploding using the gun's wide muzzle mode AOE effect
 
 ---
 
@@ -368,7 +368,7 @@ Mini Cerberus guy that appears near the edge of the arena, will swipe at players
 - Enemy Purpose:
 	- Source of almost all enemies. Vital to game loop
 
-The portals the Catalyst shoot out around the arena. The portals will remain and will spawn in a small wave of enemies every 25ish seconds.
+The portals the Catalyst shoot out around the arena. The portals will remain until destroyed by the player and will each portal will spawn in a small wave of enemies every 25ish seconds.
 
 Each portal the Catalyst shoots out will have one set of enemies it can spawn.
 
@@ -672,7 +672,7 @@ Estimated Project Completion:
 ---
 ## Week 12 2024-07-29:
 - [ ] Remake Schedule with more accurate time estimates ( Every 6 Weeks )
-- [ ] Make Discord Server + Start Planning Marketing Strategy
+- [ ] Purchase Domains, Make Discord Server, and Start Planning Marketing Strategy
 - [ ] Boss tasks (reschedule)
 ---
 ## Week 13 2024-08-05:
@@ -703,7 +703,7 @@ Estimated Project Completion:
 ## Week 18 2024-09-09:
 - [ ] Remake Schedule with more accurate time estimates ( Every 6 Weeks )
 - [ ] Sign up for SteamWorks account, pay SteamDirect Fee, and get AppID
-- [ ] Start planning playtesting schedule (Game demo recording needs to be ready by this point)
+- [ ] Start planning playtesting schedule (Game demo recording + dedicated feedback button on main menu)
 ---
 
 ---
