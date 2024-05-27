@@ -644,6 +644,7 @@ Estimated Project Completion:
 ## Week 6 2024-06-17:
 - [ ] Remake Schedule with more accurate time estimates ( Every 6 Weeks )
 - [ ] Start implementing player-movement-controller
+- [ ] Start planning ahead for sound design (Start producing in August)
 ---
 ## Week 7 2024-06-24:
 - [ ] Entry Goes Here
