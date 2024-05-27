@@ -1,7 +1,7 @@
 +++
 author = "Logan Core"
-title = "Eternal Descent - Technical Design Document"
-date = 2024-05-20
+title = "Eternal Descent - Store Asset Images"
+date = 2024-05-26
 last_updated = 2024-05-26
 show_comments = false
 hide_list_items = true
