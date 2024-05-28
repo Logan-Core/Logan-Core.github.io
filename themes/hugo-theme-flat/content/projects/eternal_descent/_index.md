@@ -309,16 +309,18 @@ The enemy names don't really matter. They won't be presented to the player in an
 
 ## Swarmer
 - Enemy Purpose:
-	- The weakest enemy that is not much of a threat to the player as long as they stay moving. But they can't be ignored or else they'll form with other groups that spawn and cause their frenzy stat to skyrocket! Can be sprinkled into any wave to control how much the player is "engaged"
+	- Will be the primary motivator for the player to keep moving at all times. Can be sprinkled into any wave to control how much the player is "engaged"
 
-The simplest enemy. Loosely flies towards the player at all times. Spawns in large groups which will often cause the Catalyst to activate armor and due to the large amount that spawn at once, Swarmers will quickly amalgamate into frenzied swarms that fly faster and at tighter angles towards the player.
+The weakest enemy that is not much of a threat to the player as long as they stay moving. But they can't be ignored or else they'll form with other groups that spawn and cause their frenzy stat to skyrocket!
+
+The simplest enemy. That spawns alongside most other enemies. Loosely flies towards the player at all times. Spawns in large groups which will often cause the Catalyst to activate armor and due to the large amount that spawn at once, Swarmers will quickly amalgamate into frenzied swarms that fly faster and at tighter angles towards the player.
 
 
 ---
 
 ## Tripwire
 - Enemy Purpose:
-		- A "support enemy that is weak and low priority to the player compared to other enemies but can easily trip them up if they aren't paying attention"
+		- A "support" enemy that is weak and low priority to the player compared to other enemies but can easily trip them up if they aren't paying attention
 
 A post-shaped walking quadruped with a ball top that can connect with other Tripwires to create short electric barriers that the player can jump over, cut with their Sliceshot, or attack the Tripwire directly to destroy the pair.
 
@@ -326,7 +328,7 @@ A post-shaped walking quadruped with a ball top that can connect with other Trip
 
 ## Missile
 - Enemy Purpose:
-	- Having a enemy that is faster than the player will immediately cause their attention to focus when they hear the recognizable sound of a Missile heading their way.
+	- This enemy is faster than the player on the ground. Players will quickly learn to associate the sound they emit with imminent death unless they take out the threat. (Overrides Player's Priority)
 
 A "sharp-looking" flying creature that hones in on the player at very fast speeds. Should emit a recognizable sound to warn the player they are incoming.
 
@@ -334,34 +336,53 @@ A "sharp-looking" flying creature that hones in on the player at very fast speed
 
 ## Sniper
 - Enemy Purpose:
-	- WRITE STUFF HERE
+	- Can only be effectively killed by the narrow weapon mode. Having a enemy that "hangs back" will give each arena more apparent depth to the player and make fights feel larger than they actually are. (Overrides Player's Weapon)
 
-Enemy that hangs back floating in the distance. Lobs explosive shots into the arena. The player will need to adjust gun muzzle in order to hit these enemies.
+Enemy that hangs back floating in the distance. Laser sight to player and begin locking on. Stop tracking and then fire the shot. The player will need to adjust gun muzzle in order to hit these enemies.
 
 ---
 
 ## Shield
 - Enemy Purpose:
-	- WRITE STUFF HERE
+	- Can only be effectively killed by the wide weapon mode or a well aimed SliceShot. (Overrides Player's Weapon)
 
-Large Octagon-shaped enemy that slowly approaches the player with a consistent speed. Has no frenzy ability and has segments of armor that the player can cut around using their Sliceshot or by exploding using the gun's wide muzzle mode AOE effect
-
----
-
-## Treasure
-- Enemy Purpose:
-	- WRITE STUFF HERE
-
-Golden mini Catalyst-looking enemy that moves around in a unpredictable pattern. Spawns from the Catalyst on specific levels after enough damage has been dealt (50%). Defeating it upgrades the player's weapons (May change my mind on this guy later. Weapon upgrades are important and the process to acquire them may need to be more special)
+Large Octagon-shaped enemy that slowly approaches the player on the ground with a consistent speed. Has no frenzy ability and has segments of armor that the player can cut around using their SliceShot or by exploding using the gun's wide muzzle mode explosion AOE effect
 
 ---
 
 ## Snake
 - Enemy Purpose:
-	- WRITE STUFF HERE
+	- Will force the player closer to the center which immediately makes avoiding enemies more difficult. (Overrides Player Movement)
 
 Mini Cerberus guy that appears near the edge of the arena, will swipe at players that walk near it. (Needs to have a very recognizable sound for when it spawns. Player getting caught off guard by one of these guys would be unfair)
 
+---
+
+## Roamer
+- Enemy Purpose:
+	- A "wildcard" in the lineup. Players will come to learn the patterns of all other enemies but will have no choice but to stay alert and keep tabs on these guys
+
+Does not have any knowledge of the player. Floats low to the ground and roams around the center of the arena in a random fashion.
+
+---
+
+## Sponge
+{{< image_gallery images="./enemy_sponge_001.webp,./enemy_sponge_002.webp,./enemy_sponge_003.webp,./enemy_sponge_004.webp" >}}
+- Enemy Purpose:
+	- Can only be effectively killed by the narrow weapon mode. This enemy disrupts the player's bullets and will be a prime target regardless of if the player actually wants to deal with this guy immediately (Overrides Player's Weapon & Priority)
+
+Enemy that absorbs shots like a magnet and can be effectively killed by switching to the narrow weapon mode and filling them up until they burst. Shots get absorbed and become inert (no explosions) Completely armored, no SliceShot
+
+---
+
+## Protector
+- Enemy Purpose:
+	- The Protector's ability force the player to prioritize killing these guys over everything else. Can be spawned along with a wave to force the player into a "panic" situation (Overrides Player Priority)
+
+A rotating large totem enemy. Spawns off the edge of the arena and rotates in place. Has a weak point that revolves around
+While active in the arena. Spawn portals cannot be destroyed. They will be very large and tower over the other enemies.
+
+---
 ---
 
 ## Spawner Portal
@@ -381,38 +402,15 @@ Portals will change to less saturated colors based on how much HP they have left
 
 ---
 
-## Roamer
+## Treasure
 - Enemy Purpose:
 	- WRITE STUFF HERE
 
-Does not have any knowledge of the player. Floats low to the ground and roams the arena in a random fashion.
+Golden mini Catalyst-looking enemy that moves around in a unpredictable pattern. Spawns from the Catalyst on specific levels after enough damage has been dealt (50%). Defeating it upgrades the player's weapons (May change my mind on this guy later. Weapon upgrades are important and the process to acquire them may need to be more special)
 
 ---
-
-## Protector
-- Enemy Purpose:
-	- The Protector's ability force the player to prioritize killing these guys over everything else. Can be spawned along with a wave to force the player into a "panic" situation
-
-A rotating large totem enemy. Spawns off the edge of the arena and rotates in place. Has a weak point that revolves around
-While active in the arena. Spawn portals cannot be destroyed. They will be very large and tower over the other enemies.
-
 ---
-
-## Sponge
-- Enemy Purpose:
-	- WRITE STUFF HERE
-
-Enemy that absorbs shots like a magnet and can be effectively killed by switching to the narrow faster firerate muzzle mode and filling them up until they burst. Completely armored, no sliceshot
-
 ---
-
-## Enemy info
-Enemy Info
-
----
-
-
-
 
 ## Levels
 ## Level 1: *Limbo*
@@ -620,7 +618,7 @@ Estimated Project Completion:
 ---
 ## Week 2 2024-05-20:
 - [x] Add Placeholder Template Artwork (Follow SteamWork Guidelines. Everything needs to be at specific resolutions)
-- [ ] Bring someone up to speed and sanity check documentation together (Revise major oversights)
+- [x] Bring someone up to speed and sanity check documentation together (Revise major oversights)
 - [x] Start writing out Technical Design Document
 ---
 ## Week 3 2024-05-27:
