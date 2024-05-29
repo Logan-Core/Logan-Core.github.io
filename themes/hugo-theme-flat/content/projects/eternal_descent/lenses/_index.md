@@ -18,117 +18,128 @@ Add logo image
 
 
 TABLE OF LENSES:
-## 1 The Lens of Emotion
-## 2 The Lens of Essential Experience
-## 3 The Lens of the Venue
-## 4 The Lens of Surprise
-## 5 The Lens of Fun
-## 6 The Lens of Curiosity
-## 7 The Lens of Endogenous Value
-## 8 The Lens of Problem Solving
-## 9 The Lens of the Elemental Tetrad
-## 10 The Lens of Holographic Design
-## 11 The Lens of Unification
-## 12 The Lens of Resonance
-## 13 The Lens of Infinite Inspiration
-## 14 The Lens of the Problem Statement
-## 15 The Lens of the Eight Filters
-## 16 The Lens of Risk Mitigation
-## 17 The Lens of the Toy
-## 18 The Lens of Passion
-## 19 The Lens of the Player
-## 20 The Lens of Pleasure
-## 21 The Lens of Flow
-## 22 The Lens of Needs
-## 23 The Lens of Motivation
-## 24 The Lens of Novelty
-## 25 The Lens of Judgment
-## 26 The Lens of Functional Space
-## 27 The Lens of Time
-## 28 The Lens of the State Machine
-## 29 The Lens of Secrets
-## 30 The Lens of Emergence
-## 31 The Lens of Action
-## 32 The Lens of Goals
-## 33 The Lens of Rules
-## 34 The Lens of Skill
-## 35 The Lens of Expected Value
-## 36 The Lens of Chance
-## 37 The Lens of Fairness
-## 38 The Lens of Challenge
-## 39 The Lens of Meaningful Choices
-## 40 The Lens of Triangularity
-## 41 The Lens of Skill vs. Chance
-## 42 The Lens of Head and Hands
-## 43 The Lens of Competition
-## 44 The Lens of Cooperation
-## 45 The Lens of Competition vs. Cooperation
-## 46 The Lens of Reward
-## 47 The Lens of Punishment
-## 48 The Lens of Simplicity/Complexity
-## 49 The Lens of Elegance
-## 50 The Lens of Character
-## 51 The Lens of Imagination
-## 52 The Lens of Economy
-## 53 The Lens of Balance
-## 54 The Lens of Accessibility
-## 55 The Lens of Visible Progress
-## 56 The Lens of Parallelism
-## 57 The Lens of the Pyramid
-## 58 The Lens of the Puzzle
-## 59 The Lens of Control
-## 60 The Lens of Physical Interface
-## 61 The Lens of Virtual Interface
-## 62 The Lens of Transparency
-## 63 The Lens of Feedback
-## 64 The Lens of Juiciness
-## 65 The Lens of Primality
-## 66 The Lens of Channels and Dimensions
-## 67 The Lens of Modes
-## 68 The Lens of Moments
-## 69 The Lens of the Interest Curve
-## 70 The Lens of Inherent Interest
-## 71 The Lens of Beauty
-## 72 The Lens of Projection
-## 73 The Lens of the Story Machine
-## 74 The Lens of the Obstacle
-## 75 The Lens of Simplicity and Transcendence
-## 76 The Lens of the Hero’s Journey
-## 77 The Lens of the Weirdest Thing
-## 78 The Lens of Story
-## 79 The Lens of Freedom
-## 80 The Lens of Help
-## 81 The Lens of Indirect Control
-## 82 The Lens of Collusion
-## 83 The Lens of Fantasy
-## 84 The Lens of the World
-## 85 The Lens of the Avatar
-## 86 The Lens of Character Function
-## 87 The Lens of Character Traits
-## 88 The Lens of the Interpersonal Circumplex
-## 89 The Lens of the Character Web
-## 90 The Lens of Status
-## 91 The Lens of Character Transformation
-## 92 The Lens of Inner Contradiction
-## 93 The Lens of The Nameless Quality
-## 94 The Lens of Atmosphere
-## 95 The Lens of Spectation
-## 96 The Lens of Friendship
+## 1 Emotion
+- What emotions/feelings do I want the player to experience?:
+	- Intense euphoria of having accomplished something they didn't even know they were capable of.
+	- The game is difficult. however, those that stick to it long enough will have no choice but to learn it and get better. Holding that victory away from them until **they** rise to challenge is something many games don't do anymore and I'd like myself and others to experience.
+- How can I bridge the gap between between the emotions/feelings the player is actually having and the emotions/feelings I'd like them to have?:
+	- I can't account for all possible initial-skill levels of players but I should be able get enough statistics from playtesters to fine-tune the balance of each level so that the majority of players are engaged just the right amount.
+## 2 Essential Experience
+- What is essential to the experience?:
+	- Near-perfect invisible appeal across the entire game. Too many games from people in my position just play and feel "cheap" and ungenuine. That's clearly not the truth, people wouldn't spend the 1000's of hours bringing these games to reality if they didn't believe in it themselves but that doesn't excuse the fact that time/energy gets put in the wrong things and major game decisions are made haphazardly and without consideration about how it'll affect the experience of the actual player. I want to avoid that at all cost and will have to nurture the game and introspect my own thoughts and feelings about the state of the game from the first steps to the moment it's released out in the world
+## 3 Venue
+- What venue do I expect the player to be in while playing?:
+	- Almost exclusively privately at a desk. No controller support removes the ability to take the game on the go and even if it did, it wouldn't make a great fit. Mouse and keyboard are relistically the only way to play the game and that'll force the venue to be sitting down at the desk.
+- Does the venue have special properties that'll influence the game?:
+	- The player will likely have privacy, which will synergize with the absolute requirement of dedicated focus and attention. The inverse is true, however, and would make having real-life spectators difficult, but that shouldn't affect most people obviously.
+## 4 Surprise
+## 5 Fun
+## 6 Curiosity
+## 7 Endogenous Value
+## 8 Problem Solving
+## 9 Elemental Tetrad
+## 10 Holographic Design
+## 11 Unification
+## 12 Resonance
+## 13 Infinite Inspiration
+## 14 Problem Statement
+## 15 Eight Filters
+## 16 Risk Mitigation
+## 17 Toy
+## 18 Passion
+## 19 Player
+## 20 Pleasure
+## 21 Flow
+## 22 Needs
+## 23 Motivation
+## 24 Novelty
+## 25 Judgment
+## 26 Functional Space
+## 27 Time
+## 28 State Machine
+## 29 Secrets
+## 30 Emergence
+## 31 Action
+## 32 Goals
+## 33 Rules
+## 34 Skill
+## 35 Expected Value
+## 36 Chance
+## 37 Fairness
+## 38 Challenge
+## 39 Meaningful Choices
+## 40 Triangularity
+## 41 Skill vs. Chance
+## 42 Head and Hands
+## 43 Competition
+## 44 Cooperation
+## 45 Competition vs. Cooperation
+## 46 Reward
+## 47 Punishment
+## 48 Simplicity/Complexity
+## 49 Elegance
+## 50 Character
+## 51 Imagination
+## 52 Economy
+## 53 Balance
+## 54 Accessibility
+## 55 Visible Progress
+## 56 Parallelism
+## 57 Pyramid
+## 58 Puzzle
+## 59 Control
+## 60 Physical Interface
+## 61 Virtual Interface
+## 62 Transparency
+## 63 Feedback
+## 64 Juiciness
+## 65 Primality
+## 66 Channels and Dimensions
+## 67 Modes
+## 68 Moments
+## 69 Interest Curve
+## 70 Inherent Interest
+## 71 Beauty
+## 72 Projection
+## 73 Story Machine
+## 74 Obstacle
+## 75 Simplicity and Transcendence
+## 76 Hero’s Journey
+## 77 Weirdest Thing
+## 78 Story
+## 79 Freedom
+## 80 Help
+## 81 Indirect Control
+## 82 Collusion
+## 83 Fantasy
+## 84 World
+## 85 Avatar
+## 86 Character Function
+## 87 Character Traits
+## 88 Interpersonal Circumplex
+## 89 Character Web
+## 90 Status
+## 91 Character Transformation
+## 92 Inner Contradiction
+## 93 The Nameless Quality
+## 94 Atmosphere
+## 95 Spectation
+## 96 Friendship
 N/A
-## 97 The Lens of Expression
-## 98 The Lens of Community
-## 99 The Lens of Griefing
-## 100 The Lens of Love
-## 101 The Lens of the Team
-## 102 The Lens of Documentation
-## 103 The Lens of Playtesting
-## 104 The Lens of Technology
-## 105 The Lens of the Crystal Ball
-## 106 The Lens of Utopia
-## 107 The Lens of the Client
-## 108 The Lens of the Pitch
-## 109 The Lens of Profit
-## 110 The Lens of Transformation
-## 111 The Lens of Responsibility
-## 112 The Lens of the Raven
-## ∞ The Lens of Your Secret Purpose
+## 97 Expression
+## 98 Community
+## 99 Griefing
+## 100 Love
+## 101 Team
+## 102 Documentation
+## 103 Playtesting
+## 104 Technology
+## 105 Crystal Ball
+## 106 Utopia
+## 107 Client
+## 108 Pitch
+## 109 Profit
+## 110 Transformation
+## 111 Responsibility
+## 112 Raven
+## ∞ Your Secret Purpose
