@@ -25,6 +25,7 @@ If you're gonna add features, make sure it makes the game deeper, not just more 
 {{% button href="./#schedule" color="#ffdf00" font-color="#020202 "%}}Schedule{{% /button %}}
 {{% button href="./technical_document" color="#1b00e0" font-color="#FFFFFF "%}}Technical Document{{% /button %}}
 {{% button href="./store_asset_images" color="#161C24" font-color="#C4C2BF "%}}Store Image Assets{{% /button %}}
+{{% button href="./lenses" color="#ffffff" font-color="#C4C2BF "%}}Lenses{{% /button %}}
 
 {{< /expand >}}
 
@@ -123,7 +124,7 @@ The game won't have a story. All the player needs to know is to just keep descen
 
 # The Catalyst:
 
-{{< image_gallery images="./game_example_placeholder.webp" >}}
+{{< image_gallery images="./catalyst.webp,./game_example_placeholder.webp" >}}
 
 The Catalyst is a floating white orb and serves as the main antagonist of the game. It will shoot out portals that new enemies will spawn from and must be defeated by the player on each level in order to progress further.
 
@@ -308,6 +309,7 @@ The enemy names don't really matter. They won't be presented to the player in an
 ---
 
 ## Swarmer
+{{< image_gallery images="./enemy_swarmer.webp" >}}
 - Enemy Purpose:
 	- Will be the primary motivator for the player to keep moving at all times. Can be sprinkled into any wave to control how much the player is "engaged"
 
@@ -315,18 +317,19 @@ The weakest enemy that is not much of a threat to the player as long as they sta
 
 The simplest enemy. That spawns alongside most other enemies. Loosely flies towards the player at all times. Spawns in large groups which will often cause the Catalyst to activate armor and due to the large amount that spawn at once, Swarmers will quickly amalgamate into frenzied swarms that fly faster and at tighter angles towards the player.
 
-
 ---
 
-## Tripwire
+## Roamer
+{{< image_gallery images="./enemy_roamer.webp" >}}
 - Enemy Purpose:
-		- A "support" enemy that is weak and low priority to the player compared to other enemies but can easily trip them up if they aren't paying attention
+	- A "wildcard" in the lineup. Players will come to learn the patterns of all other enemies but will have no choice but to stay alert and keep tabs on these guys
 
-A post-shaped walking quadruped with a ball top that can connect with other Tripwires to create short electric barriers that the player can jump over, cut with their Sliceshot, or attack the Tripwire directly to destroy the pair.
+Does not have any knowledge of the player. Floats low to the ground and roams around the center of the arena in a random fashion.
 
 ---
 
 ## Missile
+{{< image_gallery images="./enemy_missile.webp" >}}
 - Enemy Purpose:
 	- This enemy is faster than the player on the ground. Players will quickly learn to associate the sound they emit with imminent death unless they take out the threat. (Overrides Player's Priority)
 
@@ -335,6 +338,7 @@ A "sharp-looking" flying creature that hones in on the player at very fast speed
 ---
 
 ## Sniper
+{{< image_gallery images="./enemy_sniper.webp" >}}
 - Enemy Purpose:
 	- Can only be effectively killed by the narrow weapon mode. Having a enemy that "hangs back" will give each arena more apparent depth to the player and make fights feel larger than they actually are. (Overrides Player's Weapon)
 
@@ -343,6 +347,7 @@ Enemy that hangs back floating in the distance. Laser sight to player and begin 
 ---
 
 ## Shield
+{{< image_gallery images="./enemy_shield.webp" >}}
 - Enemy Purpose:
 	- Can only be effectively killed by the wide weapon mode or a well aimed SliceShot. (Overrides Player's Weapon)
 
@@ -351,6 +356,7 @@ Large Octagon-shaped enemy that slowly approaches the player on the ground with 
 ---
 
 ## Snake
+{{< image_gallery images="./enemy_snake.webp" >}}
 - Enemy Purpose:
 	- Will force the player closer to the center which immediately makes avoiding enemies more difficult. (Overrides Player Movement)
 
@@ -358,16 +364,17 @@ Mini Cerberus guy that appears near the edge of the arena, will swipe at players
 
 ---
 
-## Roamer
+## Tripwire
+{{< image_gallery images="./enemy_tripwire.webp" >}}
 - Enemy Purpose:
-	- A "wildcard" in the lineup. Players will come to learn the patterns of all other enemies but will have no choice but to stay alert and keep tabs on these guys
+		- A "support" enemy that is weak and low priority to the player compared to other enemies but can easily trip them up if they aren't paying attention
 
-Does not have any knowledge of the player. Floats low to the ground and roams around the center of the arena in a random fashion.
+A post-shaped walking quadruped with a ball top that can connect with other Tripwires to create short electric barriers that the player can jump over, cut with their Sliceshot, or attack the Tripwire directly to destroy the pair.
 
 ---
 
 ## Sponge
-{{< image_gallery images="./enemy_sponge_001.webp,./enemy_sponge_002.webp,./enemy_sponge_003.webp,./enemy_sponge_004.webp" >}}
+{{< image_gallery images="./enemy_sponge.webp" >}}
 - Enemy Purpose:
 	- Can only be effectively killed by the narrow weapon mode. This enemy disrupts the player's bullets and will be a prime target regardless of if the player actually wants to deal with this guy immediately (Overrides Player's Weapon & Priority)
 
@@ -376,6 +383,7 @@ Enemy that absorbs shots like a magnet and can be effectively killed by switchin
 ---
 
 ## Protector
+{{< image_gallery images="./enemy_protector.webp" >}}
 - Enemy Purpose:
 	- The Protector's ability force the player to prioritize killing these guys over everything else. Can be spawned along with a wave to force the player into a "panic" situation (Overrides Player Priority)
 
@@ -410,6 +418,10 @@ Golden mini Catalyst-looking enemy that moves around in a unpredictable pattern.
 
 ---
 ---
+---
+
+{{< image_gallery images="./enemy_size_chart.webp" >}}
+
 ---
 
 ## Levels
@@ -604,6 +616,13 @@ The Arena will crumble away starting from the edges and working its way inwards.
 ---
 ---
 ---
+
+## List of similar games
+- [Devil Daggers](https://store.steampowered.com/app/422970/Devil_Daggers/) $10
+- [HYPER DEMON](https://store.steampowered.com/app/1743850/HYPER_DEMON/) $15
+- [Swarmlake](https://store.steampowered.com/app/793350/Swarmlake/) $3
+- [Grave Gunner](https://store.steampowered.com/app/2701900/Grave_Gunner/) $??
+
 ## Schedule
 Don't forget to record timelapse footage for Archive!
 
@@ -623,15 +642,16 @@ Estimated Project Completion:
 ---
 ## Week 3 2024-05-27:
 - [ ] Begin environment modeling and get a idea for time estimation (Add environment modeling into schedule after you get estimate) (Experiment with shaders and use AO/Normal maps!)
-- [ ] Research Similar Games (Revise Design Documentation)
-- [ ] Finalize Enemy Designs
-- [ ] Begin structuring Godot project (Add in folder structure and add in boilerplate stuff I'll definitely end up using)
+- [x] Research Similar Games (Revise Design Documentation)
+- [x] Finalize Enemy Designs
+- [x] Add folder structure to Godot project
+- [ ] Add some boiler-plate stuff to Godot project
 - [ ] Technical Document Logic Flowchart complete
 ---
 ## Week 4 2024-06-03:
-- [ ] Build entity benchmark prototype and see if Godot can support thousands of bullets/enemies on screen without object pooling or compute shaders.
 - [ ] Non-boss Enemy Models Blocked out (flat shaded silhouettes are very important!)
 - [ ] Experiment with logo designs. (Market research and see what people think)
+- [ ] Build entity benchmark prototype and see if Godot can support thousands of bullets/enemies on screen without object pooling or compute shaders.
 - [ ] Initial Technical Design Document Draft Finished
 ---
 ## Week 5 2024-06-10:
