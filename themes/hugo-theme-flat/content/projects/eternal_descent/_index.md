@@ -120,6 +120,10 @@ There will be 10 total levels, each loosely representing a layer of hell from Da
 
 The game won't have a story. All the player needs to know is to just keep descending down and fight the Catalyst. I'm just planning on borrowing from Dante's Inferno for imagery and inspiration. Some people may notice the references but that's about it.
 
+## Main Menu
+{{< image_gallery images="./main_menu_mockup_001.webp" >}}
+
+
 ---
 
 # The Catalyst:

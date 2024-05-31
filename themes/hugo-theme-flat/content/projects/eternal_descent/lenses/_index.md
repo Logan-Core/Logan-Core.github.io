@@ -33,8 +33,17 @@ TABLE OF LENSES:
 - Does the venue have special properties that'll influence the game?:
 	- The player will likely have privacy, which will synergize with the absolute requirement of dedicated focus and attention. The inverse is true, however, and would make having real-life spectators difficult, but that shouldn't affect most people obviously.
 ## 4 Surprise
+- What will surprise players when the play the game?
+	- Some of the stuff I imagine the player would be surprised about will be on the store page / marketing and players will know about it before hand. So instead I'd say the the simple elegance of the player's gun. They'll be stuck with it for the game and I believe they'll be surprised with all the things you can do it with just the muzzle-switching mechanic
 ## 5 Fun
+- What parts of the game are fun?
+	- The high-risk/high-reward game loop. Players will always be under immediate threat of dying and needing to restart. There will be some fun synergy of keeping the enemies under control and focusing damage on the Catalyst.
+- What parts need to be more fun?
+	- The "busy-work" of returning to the later levels after dying. Players losing 10+ minutes of progress is not ok. I still want that to happen but I need to find some way of making the process of getting there more fun even if the player is frustrated
 ## 6 Curiosity
+- What questions are put into the player's mind?:
+	- The idea of reaching the bottom surely. It'll be difficult and players will have to work for it. But, universally every player will wonder about what's coming up next and what'll happen when they reach there.
+	- The gun will change dramatically between upgrades, the player will like feeling more powerful and each upgrade they acquire will uniquely make them more so. They'll wonder what's next and the final upgrade on Level 9 should blow their minds.
 ## 7 Endogenous Value
 ## 8 Problem Solving
 ## 9 Elemental Tetrad
