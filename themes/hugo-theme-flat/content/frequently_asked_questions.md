@@ -13,8 +13,14 @@ categories = [
 
 ---
 
-## **Are you on any other social media websites?**
+## **Social Media Accounts:**
 
-Outside of this blog and the [archive channel](https://www.youtube.com/@LoganCore/featured),
+[YouTube](https://www.youtube.com/@LoganCore )
 
-I do not post on any other social media sites. Please contact me via email if you need to reach me.
+[Twitch](https://www.twitch.tv/logan_core)
+
+[Ko-Fi](https://ko-fi.com/logan_core)
+
+[Mastodon](https://mastodon.social/@logan_core)
+
+[Instagram](https://www.instagram.com/logancoresoftware/)
