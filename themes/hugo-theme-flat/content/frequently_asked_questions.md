@@ -21,8 +21,6 @@ categories = [
 
 [Ko-Fi](https://ko-fi.com/logan_core)
 
-[Mastodon](https://mastodon.social/@logan_core)
-
 [Instagram](https://www.instagram.com/logancoresoftware/)
 
 [Bluesky](https://bsky.app/profile/logancore.bsky.social)
