@@ -1,0 +1,10 @@
+<iframe id="dynamic-iframe"
+    width="100%"
+    height="{{ .Get "height" | default "500" }}"
+    src="{{ .Page.RelPermalink }}{{ .Get "src" }}"
+    frameborder="{{ .Get "frameborder" | default "0" }}"
+    style="{{ .Get "style" | default "height: 500px; border: none;" }}; display: block; overflow: hidden;"
+    allowfullscreen
+    title="{{ .Get "title" | default "Embedded Content" }}"
+>
+</iframe>
