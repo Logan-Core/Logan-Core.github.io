@@ -10,39 +10,39 @@
 
 	<div class="tip">
 		{{ if (.PublishDate) }}
-		Posted: 
+		Posted:
 		<time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006/01/02" }}</time>
 		<br>
 		{{end}}
 		{{ if and (.Params.last_updated) (ne .PublishDate .Params.last_updated) }}
-		Last Updated: 
+		Last Updated:
 		<time datetime="{{ .Params.last_updated }}">{{ (time .Params.last_updated).Format "2006/01/02" }}</time>
 		{{ end }}
 	</div>
 
 
-<div class="post-navigation-container"> 
+<div class="post-navigation-container">
  <div class="taxonomies">
       {{ with .Params.categories }}
       <div>
-      Category: 
+      Category:
          {{ range . }}
-            <a href="/{{ . | urlize }}">{{ . }}</a> 
+            <a href="/{{ . | urlize }}">{{ . }}</a>
          {{ end }}
       </div>
       {{ end }}
    </div>
 
-  <div class="navigation-links"> 
-    {{ if and (not .Params.hide_navigation) .PrevInSection }} 
+  <div class="navigation-links">
+    {{ if and (not .Params.hide_navigation) .PrevInSection }}
       <a class="nav-link nav-link-prev" href="{{ .PrevInSection.Permalink }}"><b><-- </b>{{ .PrevInSection.Title }}</a>
     {{ else }}
       <div class="nav-link nav-link-prev"></div> {{ end }}
 
-    {{ if and (not .Params.hide_navigation) .NextInSection }} 
+    {{ if and (not .Params.hide_navigation) .NextInSection }}
       <a class="nav-link nav-link-next" href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }}<b> --></b></a>
     {{ end }}
- </div> 
+ </div>
 </div>
 
 
@@ -55,11 +55,19 @@
         {{ .Content }}
     </div>
 
+
+
+
+
     {{ if .Params.show_comments }}
         <hr />
 		{{ partial "comment.html" . }}
-		
+
     {{ end }}
+
+
+
+
 </section>
 
 {{ end }}

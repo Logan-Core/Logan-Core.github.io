@@ -58,7 +58,7 @@ pre = """<a href="/privacy/">Privacy Policy</a>"""
 
 [[menus.main]]
 pageref = "frequently_asked_questions"
-name = "Contact & FAQ"
+name = "Contact/FAQ"
 weight = 80
 
 [[menus.main]]
@@ -67,19 +67,32 @@ name = "Search"
 weight = 81
 
 
-# Sub Menus
 [[menus.main]]
-name = "Category"
-weight = 60
-
-[[menus.main]]
-parent = "Category"
 name = "Blog"
 url = "/blog/"
 weight = 61
 
 [[menus.main]]
-parent = "Category"
 name = "Projects"
 url = "/projects/"
 weight = 62
+
+
+
+
+# Sub Menus
+# [[menus.main]]
+# name = "Category"
+# weight = 60
+#
+# [[menus.main]]
+# parent = "Category"
+# name = "Blog"
+# url = "/blog/"
+# weight = 61
+#
+# [[menus.main]]
+# parent = "Category"
+# name = "Projects"
+# url = "/projects/"
+# weight = 62

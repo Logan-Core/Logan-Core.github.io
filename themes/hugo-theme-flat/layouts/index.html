@@ -3,6 +3,7 @@
 <div class="max-wrapper">
     <div id="list-page">
         {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+        {{ $pages = where $pages "Params.hide_list_items" "ne" true }}
         {{ $paginator := .Paginate $pages }}
 		
         {{ range $paginator.Pages }}

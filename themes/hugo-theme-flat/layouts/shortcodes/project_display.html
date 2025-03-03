@@ -1,0 +1,42 @@
+<style>
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .gallery-item {
+    flex: 1 1 calc(33.33% - 10px);
+    max-width: calc(33.33% - 10px);
+    margin-bottom: 10px;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+  }
+
+  .gallery-item img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+  }
+</style>
+
+{{ if eq (mod (len .Params) 2) 0 }}
+  <div class="gallery">
+    {{ range $index, $value := .Params }}
+      {{ if eq (mod $index 2) 0 }}
+        <div class="gallery-item">
+          <a href="{{ index $.Params (add $index 1) }}">
+            <img src="{{ $value }}" alt="Gallery image" />
+          </a>
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+{{ else }}
+  <p>Please provide pairs of image URLs and target URLs.</p>
+{{ end }}
