@@ -18,7 +18,7 @@ categories = [
 {{< project_display 
 	"/images/social_media_account_images/youtube.webp" "https://www.youtube.com/@LoganCore"
 	"/images/social_media_account_images/twitch.webp" "https://www.twitch.tv/logan_core"
-	"/images/social_media_account_images/kofi.webp" "https://www.twitch.tv/logan_core"
+	"/images/social_media_account_images/kofi.webp" "https://ko-fi.com/logan_core"
 	"/images/social_media_account_images/bluesky.webp" "https://bsky.app/profile/logancore.bsky.social"
 >}}
 
