@@ -9,6 +9,20 @@ body {
 	background-size: 100%
 }
 
+#static-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background: url("img/caution_banner.png") center center no-repeat;
+    background-size: cover;  /* or "contain" if you want it all visible */
+
+    z-index: 999999;         /* higher than anything else */
+    pointer-events: none;    /* or "auto" if you want clicks blocked too */
+}
+
 /* Background color of the left panel. */
 header {
     background: #FFFFFF;
