@@ -11,6 +11,7 @@ hide_list_items = true
   "/images/project_buttons/bullfrog_burnie.webp" "./bullfrog_burnie"
   "/images/project_buttons/wormington_adventure.webp" "./wormington_adventure"
   "/images/project_buttons/core_chat_overlay.webp" "./core_chat_overlay"
+  "/images/project_buttons/mycelium_menace.webp" "./mycelium_menace"
 >}}
 
 
