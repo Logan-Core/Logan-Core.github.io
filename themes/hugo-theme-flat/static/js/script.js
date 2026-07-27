@@ -4,50 +4,66 @@ let audio = null;
 let volumeSlider = null;
 
 let audioOffset = 0;
-let syncInterval = null;
+
+let syncRunning = false;
+let lastSyncTime = 0;
+
+let isAudioPlaying = false;
+
+
+// Web Audio API
+let audioContext = null;
+let audioSource = null;
+let gainNode = null;
 
 
 
+// Initialize when page loads
 document.addEventListener("DOMContentLoaded", () => {
-
-    console.log("Script loaded");
-
-    console.log("videoId:", window.videoId);
-    console.log("audioFile:", window.audioFile);
-    console.log("audioOffset:", window.audioOffset);
-
 
     audioOffset = Number(window.audioOffset) || 0;
 
-
-    // IMPORTANT:
-    // Initialize YouTube first so audio cannot break the player
-    waitForYouTube();
-
-
-    // Setup MP3 after
     setupAudio();
+    waitForYouTube();
 
 });
 
 
 
+// Resync after returning from a background tab
+document.addEventListener("visibilitychange", () => {
+
+    if (!document.hidden) {
+
+        setTimeout(() => {
+
+            if (
+                player &&
+                audio &&
+                player.getPlayerState() === YT.PlayerState.PLAYING
+            ) {
+
+                hardSync();
+
+            }
+
+        }, 100);
+
+    }
+
+});
 
 
+
+// Wait for YouTube iframe API
 function waitForYouTube() {
 
     if (typeof YT === "undefined" || !YT.Player) {
 
-        console.log("Waiting for YouTube API...");
-
         setTimeout(waitForYouTube, 250);
-
         return;
 
     }
-
-
-    console.log("YouTube API ready");
 
 
     player = new YT.Player("player", {
@@ -57,24 +73,17 @@ function waitForYouTube() {
 
         videoId: window.videoId,
 
-
         playerVars: {
-
             controls: 1,
             modestbranding: 1,
             rel: 0,
             disablekb: 0,
             playsinline: 1
-
         },
 
-
         events: {
-
             onReady: playerReady,
-
             onStateChange: playerStateChanged
-
         }
 
     });
@@ -83,30 +92,14 @@ function waitForYouTube() {
 
 
 
-
-
+// Setup MP3 audio element
 function setupAudio() {
 
-    try {
-
-        audio = document.getElementById("audio");
-        volumeSlider = document.getElementById("volume");
+    audio = document.getElementById("audio");
+    volumeSlider = document.getElementById("volume");
 
 
-        if (!audio) {
-
-            console.log("No audio element found");
-
-            return;
-
-        }
-
-
-        if (!window.audioFile ||
-            window.audioFile.trim() === "") {
-
-            console.log("No audio track");
-
+    if (!audio || !window.audioFile) {
 
         const status =
         document.getElementById("audio-status");
@@ -114,95 +107,48 @@ function setupAudio() {
 
         if (status) {
 
+            status.textContent = "No music track found";
             status.style.display = "block";
-            status.textContent =
-            "No music track found";
 
         }
 
-
         return;
 
-            }
+    }
+
+
+    // Required for Web Audio API
+    audio.crossOrigin = "anonymous";
+
+    audio.src = window.audioFile;
+    audio.load();
 
 
 
-            console.log(
-                "Loading audio:",
-                window.audioFile
-            );
+    const volumeControl =
+    document.getElementById("volume-control");
 
 
-            audio.src = window.audioFile;
-            audio.load();
+    if (volumeControl) {
 
+        volumeControl.style.display = "flex";
 
-
-            // Show volume controls
-            const volumeControl =
-            document.getElementById("volume-control");
-
-
-            if (volumeControl) {
-
-                volumeControl.style.display = "flex";
-
-            }
+    }
 
 
 
-            if (volumeSlider) {
+    if (volumeSlider) {
 
-                volumeSlider.addEventListener(
-                    "input",
-                    () => {
+        volumeSlider.addEventListener("input", () => {
 
-                        audio.volume =
-                        Number(volumeSlider.value) / 100;
+            if (gainNode) {
 
-                    }
-                );
-
-
-                audio.volume =
+                gainNode.gain.value =
                 Number(volumeSlider.value) / 100;
 
             }
 
-
-
-            audio.addEventListener(
-                "canplay",
-                () => {
-
-                    console.log(
-                        "MP3 ready"
-                    );
-
-                }
-            );
-
-
-
-            audio.addEventListener(
-                "error",
-                () => {
-
-                    console.error(
-                        "Audio error:",
-                        audio.error
-                    );
-
-                }
-            );
-
-
-    } catch(error) {
-
-        console.error(
-            "Audio setup failed:",
-            error
-        );
+        });
 
     }
 
@@ -210,36 +156,76 @@ function setupAudio() {
 
 
 
+// Create Web Audio gain chain
+function setupGain() {
+
+    if (gainNode || !audio) {
+
+        return;
+
+    }
 
 
-function playerReady() {
-
-    console.log(
-        "YouTube player ready"
-    );
+    audioContext = new AudioContext();
 
 
-    syncInterval =
-    setInterval(
-        syncAudio,
-        500
+    audioSource =
+    audioContext.createMediaElementSource(audio);
+
+
+    gainNode =
+    audioContext.createGain();
+
+
+    gainNode.gain.value =
+    Number(volumeSlider?.value || 100) / 100;
+
+
+    audioSource.connect(gainNode);
+
+    gainNode.connect(
+        audioContext.destination
     );
 
 }
 
 
 
+// Start background-safe sync loop
+function playerReady() {
+
+    if (!syncRunning) {
+
+        syncRunning = true;
+
+        requestAnimationFrame(syncLoop);
+
+    }
+
+}
 
 
+
+// Periodic sync check
+function syncLoop(timestamp) {
+
+    if (timestamp - lastSyncTime > 2000) {
+
+        syncAudio();
+
+        lastSyncTime = timestamp;
+
+    }
+
+
+    requestAnimationFrame(syncLoop);
+
+}
+
+
+
+// Handle YouTube playback state
 function playerStateChanged(event) {
-
-
-    console.log(
-        "Player state:",
-        event.data
-    );
-
-
 
     if (!audio || !audio.src) {
 
@@ -248,107 +234,84 @@ function playerStateChanged(event) {
     }
 
 
-
-    switch(event.data) {
+    switch (event.data) {
 
 
         case YT.PlayerState.PLAYING:
 
-
-            console.log(
-                "Starting MP3"
-            );
+            setupGain();
 
 
-            audio.playbackRate = 1;
+            if (
+                audioContext &&
+                audioContext.state === "suspended"
+            ) {
+
+                audioContext.resume();
+
+            }
 
 
-            audio.play()
 
-            .then(() => {
+            if (!isAudioPlaying) {
 
-                console.log(
-                    "MP3 playing"
-                );
+                audio.playbackRate = 1;
 
 
-                setTimeout(
-                    hardSync,
-                    500
-                );
+                audio.play()
 
+                .then(() => {
 
-            })
+                    isAudioPlaying = true;
 
-            .catch(error => {
+                    hardSync();
 
-                console.error(
-                    "MP3 play failed:",
-                    error
-                );
+                })
 
-            });
+                .catch(error => {
 
+                    console.error(
+                        "Audio playback failed:",
+                        error
+                    );
+
+                });
+
+            }
 
             break;
-
-
 
 
 
         case YT.PlayerState.PAUSED:
 
-
-            console.log(
-                "Pausing MP3"
-            );
-
-
             audio.pause();
 
-            audio.playbackRate = 1;
-
+            isAudioPlaying = false;
 
             break;
-
-
 
 
 
         case YT.PlayerState.BUFFERING:
 
-
-            console.log(
-                "Buffering"
-            );
-
-
             audio.pause();
 
+            isAudioPlaying = false;
 
             break;
-
-
 
 
 
         case YT.PlayerState.ENDED:
 
-
-            console.log(
-                "Video ended"
-            );
-
-
             audio.pause();
 
             audio.currentTime = 0;
 
-            audio.playbackRate = 1;
-
+            isAudioPlaying = false;
 
             break;
-
 
     }
 
@@ -356,138 +319,78 @@ function playerStateChanged(event) {
 
 
 
-
-
+// Keep MP3 aligned with YouTube
 function syncAudio() {
 
-
-    if (!player ||
+    if (
+        !player ||
         !audio ||
-        !audio.src) {
+        !audio.src ||
+        player.getPlayerState() !== YT.PlayerState.PLAYING
+    ) {
 
         return;
 
-        }
+    }
+
+
+    const targetTime =
+    Math.max(
+        0,
+        player.getCurrentTime() + audioOffset
+    );
+
+
+    const difference =
+    targetTime - audio.currentTime;
+
+
+    const absoluteDifference =
+    Math.abs(difference);
 
 
 
-        if (player.getPlayerState()
-            !== YT.PlayerState.PLAYING) {
+    // Small drift does not need correction
+    if (absoluteDifference < 0.15) {
 
-            return;
+        return;
 
-            }
-
-
-
-            const targetTime =
-            Math.max(
-                0,
-                player.getCurrentTime()
-                + audioOffset
-            );
+    }
 
 
 
-            const difference =
-            targetTime -
-            audio.currentTime;
+    console.log(
+        "Audio resync:",
+        difference.toFixed(3),
+                "seconds"
+    );
 
 
-
-            const absDifference =
-            Math.abs(difference);
-
-
-
-
-
-            // Large drift correction
-            if (absDifference > 2) {
-
-                console.log(
-                    "Large drift:",
-                    difference
-                );
-
-
-                hardSync();
-
-                return;
-
-            }
-
-
-
-
-
-            // Small drift correction
-            if (absDifference > 0.05) {
-
-
-                if (difference > 0) {
-
-                    // MP3 behind
-                    audio.playbackRate =
-                    1.005;
-
-
-                } else {
-
-                    // MP3 ahead
-                    audio.playbackRate =
-                    0.995;
-
-                }
-
-
-            } else {
-
-                audio.playbackRate =
-                1.0;
-
-            }
+    audio.currentTime = targetTime;
 
 }
 
 
 
-
-
+// Immediately align MP3 with YouTube
 function hardSync() {
 
-
-    if (!audio ||
-        !audio.src ||
-        !player) {
+    if (!player || !audio) {
 
         return;
 
-        }
+    }
 
 
-
-        const targetTime =
-        Math.max(
-            0,
-            player.getCurrentTime()
-            + audioOffset
-        );
+    const targetTime =
+    Math.max(
+        0,
+        player.getCurrentTime() + audioOffset
+    );
 
 
+    audio.currentTime = targetTime;
 
-        console.log(
-            "Hard sync:",
-            targetTime
-        );
-
-
-
-        audio.currentTime =
-        targetTime;
-
-
-        audio.playbackRate =
-        1.0;
+    audio.playbackRate = 1;
 
 }

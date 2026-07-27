@@ -1,5 +1,4 @@
 {{ $videoID := .Params.video_id }}
-
 {{ $video := index (where site.Data.manifest "id" $videoID) 0 }}
 
 {{ if not $video }}
@@ -7,8 +6,7 @@
 <h2>Video not found</h2>
 
 <p>
-    Could not find video ID:
-    {{ $videoID }}
+    Could not find video ID: {{ $videoID }}
 </p>
 
 {{ else }}
@@ -17,122 +15,99 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{{ $video.title }}</title>
 
+    <!-- YouTube API -->
     <script src="https://www.youtube.com/iframe_api"></script>
 
+    <!-- Site styles -->
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-
 </head>
 
 
 <body class="archive-video">
 
-
-<!--<h2 id="title">
-    {{ $video.title }}
-</h2>-->
-
-
-<div class="archive-content" data-pagefind-body>
-    {{ .Content }}
-</div>
+    <!-- Page content -->
+    <div class="archive-content" data-pagefind-body>
+        {{ .Content }}
+    </div>
 
 
-<div id="back-button-container">
-
-    <a id="back-button" href="{{ "/archive/" | relURL }}">
-        ← Back to Archive
-    </a>
-
-</div>
-
+    <!-- Navigation -->
+    <div id="back-button-container">
+        <a id="back-button" href="{{ "/archive/" | relURL }}">
+            ← Back to Archive
+        </a>
+    </div>
 
 
-<!-- YouTube player -->
-<div id="player"></div>
+    <!-- YouTube video player -->
+    <div id="player"></div>
 
 
+    {{ if $video.audio }}
 
-{{ if $video.audio }}
-
-<!-- Audio status -->
-<div id="audio-status" style="display:none;">
-</div>
+    <!-- Audio status -->
+    <div id="audio-status" style="display:none;"></div>
 
 
+    <!-- MP3 volume control -->
+    <div id="volume-control" style="display:none;">
 
-<!-- MP3 volume control -->
-<div id="volume-control" style="display:none;">
+        <label for="volume">
+            Music Volume
+        </label>
 
-    <label for="volume">
-        Music Volume
-    </label>
+        <input
+            id="volume"
+            type="range"
+            min="0"
+            max="300"
+            value="150">
 
-
-    <input
-        id="volume"
-        type="range"
-        min="0"
-        max="300"
-        value="150">
-
-</div>
+    </div>
 
 
-
-<!-- Synced MP3 -->
-<audio
-    id="audio"
-    preload="auto">
-</audio>
+    <!-- Synchronized MP3 audio -->
+    <audio id="audio" preload="auto"></audio>
 
 
-{{ else }}
+    {{ else }}
 
-<div id="audio-status">
-    No Music Track Available
-</div>
+    <!-- No audio available -->
+    <div id="audio-status">
+        No Music Track Available
+    </div>
 
-{{ end }}
-
-
-
-<script>
-
-window.videoId = "{{ $video.id }}";
+    {{ end }}
 
 
-{{ if $video.audio }}
+    <!-- Pass Hugo data to JavaScript -->
+    <script>
+        window.videoId = "{{ $video.id }}";
 
-window.audioFile =
-"{{ site.Params.audioBaseURL }}{{ $video.audio }}";
+        {{ if $video.audio }}
 
+        window.audioFile =
+            "{{ site.Params.audioBaseURL }}{{ $video.audio }}";
 
-window.audioOffset =
-{{ $video.offset }} / 1000;
+        window.audioOffset =
+            {{ $video.offset }} / 1000;
 
+        {{ else }}
 
-{{ else }}
+        window.audioFile = "";
+        window.audioOffset = 0;
 
-window.audioFile = "";
-
-window.audioOffset = 0;
-
-
-{{ end }}
-
-</script>
-
+        {{ end }}
+    </script>
 
 
-<script src="{{ "js/script.js" | relURL }}"></script>
-
+    <!-- Player logic -->
+    <script src="{{ "js/script.js" | relURL }}"></script>
 
 </body>
 
