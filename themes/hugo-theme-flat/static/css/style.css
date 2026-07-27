@@ -1695,3 +1695,7 @@ border: none;
 box-shadow: none;
 }
 
+.archive-video .anchor {
+  display: none;
+}
+
