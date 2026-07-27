@@ -23,6 +23,8 @@ tabWidth = 4
 
 [params]
 mainSections = ['blog','reviews']
+audioBaseURL = "https://archive.logancore.com/"
+
 
 ## uncomment belows and set proper values to enable remark42
 # [params.remark42]
@@ -56,6 +58,7 @@ pre = """<a href="/privacy/">Privacy Policy</a>"""
 
 
 
+
 [[menus.main]]
 pageref = "frequently_asked_questions"
 name = "Contact/FAQ"
@@ -77,6 +80,10 @@ name = "Projects"
 url = "/projects/"
 weight = 62
 
+[[menus.main]]
+name = "Archive"
+url = "/archive/"
+weight = 63
 
 
 

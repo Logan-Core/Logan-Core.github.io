@@ -1,0 +1,108 @@
+{{ $videoID := .Params.video_id }}
+
+{{ $video := index (where site.Data.manifest "id" $videoID) 0 }}
+
+{{ if not $video }}
+
+<h2>Video not found</h2>
+
+<p>
+    Could not find video ID:
+    {{ $videoID }}
+</p>
+
+{{ else }}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ $video.title }}</title>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+
+</head>
+
+
+<body class="archive-video">
+
+
+<h2 id="title">
+    {{ $video.title }}
+</h2>
+
+
+<div id="back-button-container">
+
+    <a id="back-button" href="{{ "/archive/" | relURL }}">
+        ← Back to Archive
+    </a>
+
+</div>
+
+
+<!-- YouTube player -->
+<div id="player"></div>
+
+
+
+<!-- Audio status -->
+<div id="audio-status" style="display:none;">
+</div>
+
+
+
+<!-- MP3 volume control -->
+<div id="volume-control" style="display:none;">
+
+    <label for="volume">
+        Music Volume
+    </label>
+
+
+    <input
+        id="volume"
+        type="range"
+        min="0"
+        max="300"
+        value="150">
+
+</div>
+
+
+
+<!-- Synced MP3 -->
+<audio
+    id="audio"
+    preload="auto">
+</audio>
+
+
+
+<script>
+window.videoId = "{{ $video.id }}";
+
+window.audioFile =
+"{{ site.Params.audioBaseURL }}{{ $video.audio }}";
+
+window.audioOffset =
+{{ $video.offset }} / 1000;
+</script>
+
+
+
+<script src="{{ "js/script.js" | relURL }}"></script>
+
+
+</body>
+
+</html>
+
+{{ end }}

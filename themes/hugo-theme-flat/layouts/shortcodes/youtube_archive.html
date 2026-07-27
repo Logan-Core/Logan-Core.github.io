@@ -1,0 +1,57 @@
+<style>
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform .2s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+}
+
+.gallery-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform .3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-title {
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+</style>
+
+<div class="gallery">
+{{ range site.Data.manifest }}
+<div class="gallery-item">
+    <a href="{{ "/archive/" | relURL }}{{ .id }}/">
+        <img
+            src="https://i.ytimg.com/vi/{{ .id }}/maxresdefault.jpg"
+            onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/{{ .id }}/hqdefault.jpg';"
+            alt="{{ .title }}">
+
+        <div class="gallery-title">{{ .title }}</div>
+    </a>
+</div>
+{{ end }}
+</div>

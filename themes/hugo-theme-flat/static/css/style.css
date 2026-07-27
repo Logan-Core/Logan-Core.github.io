@@ -1490,3 +1490,208 @@ text-align: left;
   padding: 0;
   margin: 0;
 }
+
+
+/***************************/
+/* setup archive video page */
+/***************************/
+
+.archive-video {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Video title */
+.archive-video #title {
+  width: 100%;
+  text-align: center;
+  color: var(--color-fg-font-quote);
+  font-size: var(--font-size-6);
+  margin: var(--len-2) 0 var(--len-3) 0;
+}
+
+
+/* Back button */
+#back-button-container {
+width: 100%;
+text-align: center;
+margin-bottom: var(--len-3);
+}
+
+#back-button {
+display: inline-block;
+
+padding: var(--len-1) var(--len-3);
+
+color: var(--color-fg-hyperlink);
+background-color: var(--color-bg-block);
+
+border: 1px solid var(--color-fg-tiny-line);
+border-radius: 4px;
+
+text-decoration: none;
+
+transition: background-color 0.25s, color 0.25s;
+}
+
+#back-button:hover {
+color: var(--color-fg-hyperlink-hover);
+background-color: var(--color-bg-pager-hover);
+}
+
+
+/* YouTube player */
+#player {
+width: 100%;
+max-width: 1280px;
+
+aspect-ratio: 16 / 9;
+
+margin: var(--len-3) auto;
+
+border: 3px solid var(--color-fg-tiny-line);
+background-color: #000;
+}
+
+
+/* iframe created by Youtube API */
+#player iframe {
+width: 100%;
+height: 100%;
+
+display: block;
+
+margin: 0 auto;
+}
+
+
+/* Audio controls */
+#audio-status {
+width: 75%;
+
+margin-top: var(--len-2);
+
+text-align: center;
+
+color: var(--color-fg-font-quote);
+}
+
+
+/* Custom volume controls */
+#volume-control {
+width: 75%;
+
+margin: var(--len-3) auto;
+
+padding: var(--len-2);
+
+background-color: var(--color-bg-block);
+
+border: 1px solid var(--color-fg-tiny-line);
+
+border-radius: 4px;
+
+text-align: center;
+}
+
+
+/* Archive audio volume control */
+#volume-control {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+margin: var(--len-3) auto;
+width: fit-content;
+
+text-align: center;
+}
+
+#volume-control label {
+margin-bottom: var(--len-2);
+color: var(--color-fg-font-normal);
+}
+
+#volume-control input[type="range"] {
+width: 250px;
+max-width: 80vw;
+}
+
+
+#volume {
+width: 80%;
+}
+
+
+/* Audio element */
+audio {
+  width: 75%;
+
+  margin: var(--len-3) auto;
+
+  display: block;
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+
+  #player {
+  width: 100%;
+  }
+
+
+  audio,
+  #volume-control,
+  #audio-status {
+  width: 100%;
+  }
+
+}
+
+/* Archive video page compact layout */
+#title {
+margin: var(--len-2) 0;
+}
+
+#back-button-container {
+margin: var(--len-1) 0;
+}
+
+#player {
+margin: var(--len-2) auto;
+}
+
+#audio-status {
+margin: 0;
+}
+
+#volume-control {
+margin: var(--len-2) auto;
+}
+
+audio {
+  margin: var(--len-2) auto;
+}
+
+
+/* Archive volume slider styling */
+#volume-control input[type="range"] {
+accent-color: var(--color-light-fg-hyperlink);
+}
+
+/* Remove default outlines from archive controls */
+#back-button,
+#back-button:focus,
+#back-button:active,
+#volume-control input[type="range"],
+#volume-control input[type="range"]:focus {
+outline: none;
+border: none;
+box-shadow: none;
+}
+

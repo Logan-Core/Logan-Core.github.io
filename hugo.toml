@@ -2,3 +2,5 @@ baseURL = 'https://logancore.com'
 languageCode = 'en-us'
 title = 'Logan Core'
 theme = 'hugo-theme-flat'
+disablePathToLower = true
+
