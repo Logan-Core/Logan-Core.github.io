@@ -13,6 +13,8 @@
     border-radius: 10px;
     overflow: hidden;
     transition: transform .2s;
+    padding: 14px;
+    box-sizing: border-box;
 }
 
 .gallery-item:hover {
@@ -27,15 +29,16 @@
 .gallery-item img {
     width: 100%;
     display: block;
+    border-radius: 6px;
     transition: transform .3s ease;
 }
 
 .gallery-item img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .gallery-title {
-    padding: 12px;
+    padding: 12px 4px 4px;
     text-align: center;
     font-weight: bold;
 }
