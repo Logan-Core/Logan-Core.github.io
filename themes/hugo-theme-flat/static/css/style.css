@@ -1492,6 +1492,15 @@ text-align: left;
 }
 
 
+
+
+
+
+
+
+
+
+
 /***************************/
 /* setup archive video page */
 /***************************/
@@ -1501,6 +1510,7 @@ text-align: left;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 
@@ -1508,9 +1518,11 @@ text-align: left;
 .archive-video #title {
   width: 100%;
   text-align: center;
+
   color: var(--color-fg-font-quote);
   font-size: var(--font-size-6);
-  margin: var(--len-2) 0 var(--len-3) 0;
+
+  margin: 0 0 var(--len-1) 0;
 }
 
 
@@ -1518,28 +1530,25 @@ text-align: left;
 #back-button-container {
 width: 100%;
 text-align: center;
-margin-bottom: var(--len-3);
+
+margin: 0 0 var(--len-1) 0;
 }
 
 #back-button {
 display: inline-block;
 
-padding: var(--len-1) var(--len-3);
+padding: 2px var(--len-2);
 
 color: var(--color-fg-hyperlink);
-background-color: var(--color-bg-block);
-
-border: 1px solid var(--color-fg-tiny-line);
-border-radius: 4px;
+background-color: transparent;
 
 text-decoration: none;
 
-transition: background-color 0.25s, color 0.25s;
+transition: color 0.25s;
 }
 
 #back-button:hover {
 color: var(--color-fg-hyperlink-hover);
-background-color: var(--color-bg-pager-hover);
 }
 
 
@@ -1550,141 +1559,92 @@ max-width: 1280px;
 
 aspect-ratio: 16 / 9;
 
-margin: var(--len-3) auto;
+margin: 0 auto var(--len-1) auto;
 
 border: 3px solid var(--color-fg-tiny-line);
 background-color: #000;
 }
 
 
-/* iframe created by Youtube API */
 #player iframe {
 width: 100%;
 height: 100%;
 
 display: block;
-
-margin: 0 auto;
 }
 
 
-/* Audio controls */
-#audio-status {
-width: 75%;
+/* Audio status */
+.archive-video #audio-status {
+  width: 100%;
 
-margin-top: var(--len-2);
+  margin: 0 0 var(--len-1) 0;
 
-text-align: center;
+  text-align: center;
 
-color: var(--color-fg-font-quote);
+  color: var(--color-fg-font-quote);
 }
 
 
-/* Custom volume controls */
-#volume-control {
-width: 75%;
+/* Volume control */
+.archive-video #volume-control {
+  display: flex;
 
-margin: var(--len-3) auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-padding: var(--len-2);
+  width: 350px;
+  max-width: 90%;
 
-background-color: var(--color-bg-block);
+  margin: 0 auto var(--len-1) auto;
 
-border: 1px solid var(--color-fg-tiny-line);
+  padding: var(--len-1);
 
-border-radius: 4px;
+  background-color: var(--color-bg-block);
 
-text-align: center;
+  border-radius: 4px;
+
+  text-align: center;
 }
 
 
-/* Archive audio volume control */
-#volume-control {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+.archive-video #volume-control label {
+  margin: 0 0 4px 0;
 
-margin: var(--len-3) auto;
-width: fit-content;
-
-text-align: center;
-}
-
-#volume-control label {
-margin-bottom: var(--len-2);
-color: var(--color-fg-font-normal);
-}
-
-#volume-control input[type="range"] {
-width: 250px;
-max-width: 80vw;
+  color: var(--color-fg-font-normal);
 }
 
 
-#volume {
-width: 80%;
+.archive-video #volume {
+  display: block;
+
+  width: 300px;
+  max-width: 80vw;
+
+  margin: 0 auto;
+
+  accent-color: var(--color-fg-hyperlink);
 }
 
 
 /* Audio element */
-audio {
+.archive-video audio {
   width: 75%;
 
-  margin: var(--len-3) auto;
+  margin: 0 auto;
 
   display: block;
 }
 
 
-/* Mobile adjustments */
-@media (max-width: 767px) {
-
-  #player {
-  width: 100%;
-  }
-
-
-  audio,
-  #volume-control,
-  #audio-status {
-  width: 100%;
-  }
-
-}
-
-/* Archive video page compact layout */
-#title {
-margin: var(--len-2) 0;
-}
-
-#back-button-container {
-margin: var(--len-1) 0;
-}
-
-#player {
-margin: var(--len-2) auto;
-}
-
-#audio-status {
-margin: 0;
-}
-
-#volume-control {
-margin: var(--len-2) auto;
-}
-
-audio {
-  margin: var(--len-2) auto;
+/* Hide reference chain icons */
+.archive-video .anchor {
+  display: none;
 }
 
 
-/* Archive volume slider styling */
-#volume-control input[type="range"] {
-accent-color: var(--color-light-fg-hyperlink);
-}
-
-/* Remove default outlines from archive controls */
+/* Remove outlines */
 #back-button,
 #back-button:focus,
 #back-button:active,
@@ -1695,7 +1655,27 @@ border: none;
 box-shadow: none;
 }
 
-.archive-video .anchor {
-  display: none;
-}
 
+/* Mobile */
+@media (max-width: 767px) {
+
+  #player {
+  width: 100%;
+  }
+
+
+  .archive-video #volume-control {
+    width: 90%;
+  }
+
+
+  .archive-video #volume {
+    width: 90%;
+  }
+
+
+  .archive-video audio {
+    width: 100%;
+  }
+
+}
