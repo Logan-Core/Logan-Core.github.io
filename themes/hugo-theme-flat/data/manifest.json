@@ -11,175 +11,233 @@
     "id": "3Z7TgrNlAPU",
     "title": "Guilty Gear Strive (July 26th, 2026)",
     "audio": "audio/2026-07-26 LoganCore (Guilty Gear Strive) (Logan).mp3",
-    "offset": 0
+    "offset": 0,
+    "chat": "chat/chat_log_2026-07-26_21-10-12.json",
+    "chatOffset": 591000
   },
   {
     "id": "AyWXRELyu6E",
     "title": "STRAFTAT / White Knuckle (July 22nd, 2026)",
     "audio": "audio/2026-07-22.mp3",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-07-22_19-46-33.json",
+    "chatOffset": 7183000
   },
   {
     "id": "Bie42ur8YBY",
     "title": "Deadlock / Guilty Gear Strive (June 22nd, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-06-22_21-31-06.json",
+    "chatOffset": 300000
   },
   {
     "id": "-PKrSVg6kms",
     "title": "Deadlock (June 17th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-06-17_21-11-43.json",
+    "chatOffset": 1542000
   },
   {
     "id": "GxEyg9tsweE",
     "title": "Deadlock / Guilty Gear Strive (June 7th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-06-07_22-03-26.json",
+    "chatOffset": 241000
   },
   {
     "id": "mr-BXv-WIBw",
     "title": "Deadlock / Guilty Gear Strive (June 1st, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-06-01_21-12-15_concat.json",
+    "chatOffset": 3410000
   },
   {
     "id": "33oC_sB-Dcw",
     "title": "Guilty Gear Strive (May 30th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-05-30_16-20-51_concat.json",
+    "chatOffset": 207000
   },
   {
     "id": "GNerZf0AVdY",
     "title": "Guilty Gear Strive / STRAFTAT (May 24th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-05-24_20-46-39.json",
+    "chatOffset": 389000
   },
   {
     "id": "wpX6RlP1KDI",
     "title": "Guilty Gear Strive (May 20th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-05-20_20-26-01.json",
+    "chatOffset": 412000
   },
   {
     "id": "yVOREDs5320",
     "title": "Guilty Gear Strive (May 17th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-05-17_18-54-27.json",
+    "chatOffset": 944000
   },
   {
     "id": "gXpGJv_yZfc",
     "title": "Guilty Gear Strive (May 13th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-05-13_14-50-52.json",
+    "chatOffset": 594000
   },
   {
     "id": "C2YBaizjKyA",
     "title": "Guilty Gear Strive (May 10th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-05-10_21-04-50.json",
+    "chatOffset": 1112000
   },
   {
     "id": "UEoRdG8804Q",
     "title": "Guilty Gear Strive (May 5th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-05-05_16-41-59.json",
+    "chatOffset": 141000
   },
   {
     "id": "eVxek3zsKNU",
     "title": "Guilty Gear Strive (May 3rd, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-05-03_23-00-30.json",
+    "chatOffset": 400000
   },
   {
     "id": "68gLXwkp-UE",
     "title": "Guilty Gear Strive (May 1st, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-05-02_00-16-59.json",
+    "chatOffset": 248000
   },
   {
     "id": "45Qe2ez1kn8",
     "title": "Guilty Gear Strive (April 26th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-04-26_20-36-57.json",
+    "chatOffset": 702000
   },
   {
     "id": "vR8bSSoQMqo",
     "title": "Guilty Gear Strive (April 9th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-04-10_00-22-24.json",
+    "chatOffset": 247000
   },
   {
     "id": "-aUmniDlI14",
     "title": "Guilty Gear Strive / STRAFTAT (April 6th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-04-06_22-23-30.json",
+    "chatOffset": -1862000
   },
   {
     "id": "0hNDD4oqPEI",
     "title": "Guilty Gear Strive / STRAFTAT (April 5th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-04-05_21-45-42.json",
+    "chatOffset": 346000
   },
   {
     "id": "RuDs29aYwpY",
     "title": "STRAFTAT (March 29th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-03-29_20-15-38.json",
+    "chatOffset": 1356000
   },
   {
     "id": "xHc-VhJcG3M",
     "title": "Guilty Gear Strive (March 22nd, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-03-22_17-32-14.json",
+    "chatOffset": 1742000
   },
   {
     "id": "IOx8Ou4-xqc",
     "title": "Guilty Gear Strive (March 15th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-03-15_21-34-59.json",
+    "chatOffset": 137000
   },
   {
     "id": "8QOPKOh_Uf8",
     "title": "Guilty Gear Strive (March 14th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-03-14_16-30-56.json",
+    "chatOffset": 497000
   },
   {
     "id": "iU2GGY5yEn4",
     "title": "Guilty Gear Strive (March 1st, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-03-01_16-52-47.json",
+    "chatOffset": 596000
   },
   {
     "id": "ESDtXWxYpOQ",
     "title": "Guilty Gear Strive (February 26th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-02-26_15-32-50.json",
+    "chatOffset": 151000
   },
   {
     "id": "R9Rci5Lpgpw",
     "title": "Guilty Gear Strive (February 24th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-02-24_16-04-54.json",
+    "chatOffset": 71000
   },
   {
     "id": "W_jHOP_yGMk",
     "title": "Guilty Gear Strive (February 22nd, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-02-22_17-52-38.json",
+    "chatOffset": 90000
   },
   {
     "id": "WSGa8aabjt8",
     "title": "Guilty Gear Strive (February 16th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-02-16_15-13-32.json",
+    "chatOffset": 506000
   },
   {
     "id": "Bi1K5Xm1mkE",
     "title": "Guilty Gear Strive (February 9th, 2026)",
     "audio": "",
-    "offset": -1350
+    "offset": -1350,
+    "chat": "chat/chat_log_2026-02-09_16-47-37.json",
+    "chatOffset": 39000
   },
   {
     "id": "dF0VCg9oqLY",
