@@ -15,99 +15,166 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>{{ $video.title }}</title>
 
-    <!-- YouTube API -->
     <script src="https://www.youtube.com/iframe_api"></script>
 
-    <!-- Site styles -->
-    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-</head>
+    <link
+        rel="stylesheet"
+        href="{{ "css/style.css" | relURL }}">
 
+</head>
 
 <body class="archive-video">
 
-    <!-- Page content -->
-    <div class="archive-content" data-pagefind-body>
-        {{ .Content }}
-    </div>
+<div class="archive-content" data-pagefind-body>
+
+{{ .Content }}
+
+</div>
 
 
-    <!-- Navigation -->
-    <div id="back-button-container">
-        <a id="back-button" href="{{ "/archive/" | relURL }}">
-            ← Back to Archive
-        </a>
-    </div>
+
+<div id="back-button-container">
+
+    <a
+        id="back-button"
+        href="{{ "/archive/" | relURL }}">
+
+        ← Back to Archive
+
+    </a>
+
+</div>
 
 
-    <!-- YouTube video player -->
-    <div id="player"></div>
 
+<div id="player-layout">
 
-    {{ if $video.audio }}
+    <div id="video-column">
 
-    <!-- Audio status -->
-    <div id="audio-status" style="display:none;"></div>
-
-
-    <!-- MP3 volume control -->
-    <div id="volume-control" style="display:none;">
-
-        <label for="volume">
-            Music Volume
-        </label>
-
-        <input
-            id="volume"
-            type="range"
-            min="0"
-            max="300"
-            value="150">
-
-    </div>
-
-
-    <!-- Synchronized MP3 audio -->
-    <audio id="audio" preload="auto"></audio>
-
-
-    {{ else }}
-
-    <!-- No audio available -->
-    <div id="audio-status">
-        No Music Track Available
-    </div>
-
-    {{ end }}
-
-
-    <!-- Pass Hugo data to JavaScript -->
-    <script>
-        window.videoId = "{{ $video.id }}";
+        <div id="player"></div>
 
         {{ if $video.audio }}
 
-        window.audioFile =
-            "{{ site.Params.audioBaseURL }}{{ $video.audio }}";
+        <div
+            id="audio-status"
+            style="display:none;">
+        </div>
 
-        window.audioOffset =
-            {{ $video.offset }} / 1000;
+        <div
+            id="volume-control"
+            style="display:none;">
+
+            <label for="volume">
+
+                Music Volume
+
+            </label>
+
+            <input
+                id="volume"
+                type="range"
+                min="0"
+                max="300"
+                value="150">
+
+        </div>
+
+        <audio
+            id="audio"
+            preload="auto">
+        </audio>
 
         {{ else }}
 
-        window.audioFile = "";
-        window.audioOffset = 0;
+        <div id="audio-status">
+
+            No Music Track Available
+
+        </div>
 
         {{ end }}
-    </script>
+
+    </div>
 
 
-    <!-- Player logic -->
-    <script src="{{ "js/script.js" | relURL }}"></script>
+
+    <div id="chat-column">
+
+        <div id="chat-header">
+
+
+            <button id="toggle-chat">
+
+                Hide Live Chat Replay
+
+            </button>
+
+        </div>
+
+        <div id="chat-container">
+
+            <div id="chat"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+window.videoId =
+"{{ $video.id }}";
+
+{{ if $video.audio }}
+
+window.audioFile =
+"{{ site.Params.audioBaseURL }}{{ $video.audio }}";
+
+window.audioOffset =
+{{ $video.offset }} / 1000;
+
+{{ else }}
+
+window.audioFile = "";
+window.audioOffset = 0;
+
+{{ end }}
+
+
+
+{{ if $video.chat }}
+
+window.chatFile =
+"{{ site.Params.chatBaseURL }}{{ $video.chat }}";
+
+{{ else }}
+
+window.chatFile = "";
+
+{{ end }}
+
+
+
+window.chatOffset =
+{{ default 0 $video.chatOffset }} / 1000;
+
+</script>
+
+<script
+src="{{ "js/script.js" | relURL }}">
+</script>
 
 </body>
 

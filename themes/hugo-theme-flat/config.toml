@@ -24,6 +24,7 @@ tabWidth = 4
 [params]
 mainSections = ['blog','reviews']
 audioBaseURL = "https://archive.logancore.com/"
+chatBaseURL = "/"
 
 
 ## uncomment belows and set proper values to enable remark42

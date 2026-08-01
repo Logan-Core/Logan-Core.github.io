@@ -3,7 +3,9 @@
     "id": "HB3ssCZZBAk",
     "title": "White Knuckle / STRAFTAT / Deadlock (July 27th, 2026)",
     "audio": "audio/2026-07-27 LoganCore (White Knuckle + STRAFTAT + Deadlock) (Logan, Ben, Trashben, MrPowerup, Lucifer, Blingmoney, NDBucket).mp3",
-    "offset": 0
+    "offset": 0,
+    "chat": "chat/chat_log_2026-07-27_21-23-28.json",
+    "chatOffset": 1154000
   },
   {
     "id": "3Z7TgrNlAPU",
