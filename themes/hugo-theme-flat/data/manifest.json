@@ -26,16 +26,16 @@
   {
     "id": "Bie42ur8YBY",
     "title": "Deadlock / Guilty Gear Strive (June 22nd, 2026)",
-    "audio": "",
-    "offset": -1350,
+    "audio": "audio/2026-06-22 LoganCore (Deadlock + Guilty Gear Strive).mp3",
+    "offset": 0,
     "chat": "chat/chat_log_2026-06-22_21-31-06.json",
     "chatOffset": 300000
   },
   {
     "id": "-PKrSVg6kms",
     "title": "Deadlock (June 17th, 2026)",
-    "audio": "",
-    "offset": -1350,
+    "audio": "audio/2026-06-17 LoganCore (Deadlock).mp3",
+    "offset": 0,
     "chat": "chat/chat_log_2026-06-17_21-11-43.json",
     "chatOffset": 1542000
   },
