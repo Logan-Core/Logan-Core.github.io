@@ -5,13 +5,12 @@
   },
   "plugins" : {
     "slideshow" : {
-      "active" : true,
+      "active" : false,
       "speed" : 1500,
       "time" : 9000,
       "random" : false,
       "image" : [
-        "img/weapondetails/box_1.gif",
-        "img/weapondetails/box_2.gif"
+        "img/maxwell_spin.gif"
       ]
     },
     "music" : {
